@@ -1,88 +1,896 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Careers | Meridian Gold Refinery</title>
-<meta name="description" content="Careers at Meridian Gold Refinery. Explore employment, internships, national service and graduate trainee opportunities.">
-<style>
-:root{ --gold:#d4af37; --gold2:#f3d879; --black:#050505; --dark:#0c0c0c; --dark2:#111; --white:#fff; --muted:#aaa; --line:rgba(212,175,55,.22); }
-*{ margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-body{ font-family:Arial,Helvetica,sans-serif; background:var(--black); color:#fff; line-height:1.7; }
-a{ text-decoration:none; color:inherit; }
-.top{ border-bottom:1px solid var(--line); padding:10px 6%; font-size:11px; letter-spacing:2px; color:#999; display:flex; justify-content:space-between; }
-header{ position:sticky; top:0; z-index:100; background:rgba(5,5,5,.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
-.nav{ max-width:1250px; margin:auto; padding:18px 6%; display:flex; justify-content:space-between; align-items:center; }
-.logo{ font-size:21px; font-weight:bold; letter-spacing:2px; }
-.logo span{ display:block; font-size:9px; color:var(--gold); letter-spacing:3px; }
-nav{ display:flex; gap:24px; }
-nav a{ font-size:11px; letter-spacing:1.3px; color:#ccc; }
-nav a:hover{ color:var(--gold); }
-.menu-btn{ display:none; background:transparent; border:1px solid var(--line); color:var(--gold); padding:7px 11px; font-size:22px; cursor:pointer; }
-.mobile-menu{ display:none; background:#090909; border-top:1px solid var(--line); padding:15px 6%; }
-.mobile-menu a{ display:block; padding:12px 0; border-bottom:1px solid #222; font-size:12px; letter-spacing:1px; color:#ddd; }
-.hero{ min-height:65vh; display:flex; align-items:center; background:radial-gradient(circle at 80% 40%,rgba(212,175,55,.18),transparent 30%), linear-gradient(120deg,#030303,#14110a,#050505); }
-.hero-content{ max-width:1250px; width:100%; margin:auto; padding:80px 6%; }
-.label{ color:var(--gold); font-size:11px; font-weight:bold; letter-spacing:4px; }
-h1{ font-size:clamp(44px,7vw,76px); line-height:1; margin:20px 0; }
-.hero p{ max-width:720px; color:#bbb; font-size:17px; }
-section{ padding:90px 6%; }
-.container{ max-width:1250px; margin:auto; }
-.heading{ margin-bottom:40px; }
-.heading small{ color:var(--gold); letter-spacing:3px; font-size:10px; font-weight:bold; }
-.heading h2{ font-size:clamp(31px,4vw,48px); line-height:1.1; margin-top:8px; }
-.heading p{ color:#999; max-width:760px; margin-top:14px; }
-.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.card{ background:linear-gradient(145deg,#151515,#090909); border:1px solid rgba(255,255,255,.08); padding:32px; transition:.3s; }
-.card:hover{ border-color:var(--gold); transform:translateY(-5px); }
-.card .num{ color:var(--gold); font-size:11px; letter-spacing:2px; margin-bottom:15px; }
-.card h3{ font-size:20px; margin-bottom:10px; }
-.card p{ font-size:14px; color:#999; }
-.vacancy{ background:#0c0c0c; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.opening{ padding:45px; border:1px solid var(--line); background:linear-gradient(135deg,#141414,#080808); text-align:center; }
-.opening-icon{ font-size:40px; color:var(--gold); margin-bottom:15px; }
-.opening h3{ font-size:26px; margin-bottom:12px; }
-.opening p{ color:#999; max-width:650px; margin:auto; }
-.notice{ margin-top:25px; padding:18px; border-left:3px solid var(--gold); background:#121212; color:#ccc; font-size:13px; }
-.people{ display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-.people-box{ background:#101010; padding:35px; border:1px solid rgba(255,255,255,.08); }
-.people-box h3{ font-size:24px; margin-bottom:15px; }
-.people-box p{ color:#999; }
-.number{ font-size:46px; color:var(--gold); font-weight:bold; }
-.facilities{ display:grid; grid-template-columns:repeat(3,1fr); gap:15px; margin-top:30px; }
-.facility{ padding:25px; background:#101010; border:1px solid rgba(255,255,255,.07); }
-.facility strong{ display:block; color:var(--gold); margin-bottom:7px; }
-.facility span{ color:#aaa; font-size:13px; }
-.training{ background:#0b0b0b; }
-.training-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; }
-.training-box{ padding:32px; border-top:2px solid var(--gold); background:#121212; }
-.training-box h3{ margin-bottom:10px; }
-.training-box p{ color:#999; font-size:14px; }
-.cta{ text-align:center; background:linear-gradient(120deg,#17130a,#080808,#17130a); border-top:1px solid var(--line); }
-.cta h2{ font-size:clamp(32px,5vw,55px); }
-.cta p{ max-width:650px; margin:15px auto 25px; color:#999; }
-.btn{ display:inline-block; padding:14px 25px; border:1px solid var(--gold); font-size:11px; font-weight:bold; letter-spacing:1.5px; }
-.btn.gold{ background:var(--gold); color:#000; }
-footer{ padding:40px 6%; border-top:1px solid var(--line); background:#000; }
-.footer{ max-width:1250px; margin:auto; display:flex; justify-content:space-between; gap:25px; }
-footer p{ color:#777; font-size:12px; }
-.links{ display:flex; gap:20px; flex-wrap:wrap; }
-.links a{ font-size:11px; color:#999; }
-@media(max-width:900px){ nav{display:none;} .menu-btn{display:block;} .grid,.facilities,.training-grid{grid-template-columns:1fr 1fr;} .people{grid-template-columns:1fr;} }
-@media(max-width:600px){ .top{display:none;} .grid,.facilities,.training-grid{grid-template-columns:1fr;} section{padding:70px 6%;} .opening{padding:30px 20px;} .footer{flex-direction:column;} }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Careers | Meridian Gold Refinery</title>
+  <meta name="description" content="Explore career opportunities, professional development and workplace opportunities at Meridian Gold Refinery Ghana.">
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f0d77a;
+      --black: #050505;
+      --dark: #0b0b0b;
+      --dark2: #111111;
+      --card: #151515;
+      --text: #f5f5f5;
+      --muted: #b5b5b5;
+      --border: rgba(212,175,55,0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #000;
+      border-bottom: 1px solid var(--border);
+      padding: 9px 6%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      color: #aaa;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5,5,5,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1400px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-top: 5px;
+    }
+
+    .logo .diamond {
+      color: var(--gold);
+      margin-right: 7px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.7px;
+      color: #ddd;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 23px;
+      padding: 7px 11px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(212,175,55,0.15), transparent 35%),
+        linear-gradient(135deg, #050505, #101010);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: 50%;
+      right: -180px;
+      top: -160px;
+    }
+
+    .hero-content {
+      max-width: 1400px;
+      width: 100%;
+      margin: auto;
+      padding: 90px 6%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.02;
+      max-width: 900px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #c5c5c5;
+      font-size: 18px;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 90px 6%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* INTRO */
+    .intro {
+      background: #090909;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.6);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* OPENINGS */
+    .opening {
+      background:
+        linear-gradient(rgba(212,175,55,0.05), rgba(212,175,55,0.02)),
+        #0d0d0d;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .opening-box {
+      max-width: 900px;
+      margin: 35px auto 0;
+      padding: 45px;
+      border: 1px solid var(--border);
+      background: #121212;
+      text-align: center;
+    }
+
+    .opening-box h3 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .opening-box p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 9px 18px;
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-top: 50px;
+    }
+
+    .stat {
+      padding: 35px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: #aaa;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* WELLBEING */
+    .wellbeing {
+      background: #090909;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .facility {
+      padding: 22px;
+      background: #131313;
+      border: 1px solid rgba(212,175,55,0.16);
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    /* EARLY CAREER */
+    .early-career {
+      background: #050505;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,0.12), transparent 45%),
+        #0b0b0b;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      border-top: 1px solid var(--border);
+      padding: 55px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    footer p,
+    footer a {
+      color: #999;
+      font-size: 13px;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 45px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #1d1d1d;
+      color: #666;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav {
+        padding: 15px 5%;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #070707;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #1b1b1b;
+        font-size: 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero-content {
+        padding: 75px 5%;
+      }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .opening-box {
+        padding: 30px 20px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="top"><span>MERIDIAN GOLD REFINERY</span><span>CAREERS & PEOPLE</span></div>
-<header><div class="nav"><a href="index.html" class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></a><nav><a href="index.html">HOME</a><a href="index.html#about">ABOUT</a><a href="index.html#operations">OPERATIONS</a><a href="index.html#foundation">FOUNDATION</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="index.html#contact">CONTACT</a></nav><button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="index.html">HOME</a><a href="index.html#about">ABOUT</a><a href="index.html#operations">OPERATIONS</a><a href="index.html#foundation">FOUNDATION</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="index.html#contact">CONTACT</a></div></header>
-<section class="hero"><div class="hero-content"><div class="label">CAREERS AT MERIDIAN</div><h1>Build Your<br><span style="color:#d4af37;">Career With Purpose.</span></h1><p>We offer fulfilling career paths and competitive compensation packages for top-performing talent while creating opportunities for people to develop their skills within the mining and precious metals environment.</p></div></section>
-<section><div class="container"><div class="heading"><small>WORK WITH US</small><h2>Opportunities That Grow With You.</h2><p>Our workplace brings together operational expertise, technical skills, professional services and community knowledge.</p></div><div class="grid"><div class="card"><div class="num">01</div><h3>Professional Growth</h3><p>Employees have opportunities to develop practical experience and build careers across different areas of the operation.</p></div><div class="card"><div class="num">02</div><h3>Learning & Development</h3><p>Internships, on-the-job learning and graduate training provide pathways for emerging professionals.</p></div><div class="card"><div class="num">03</div><h3>Community Connection</h3><p>Local participation remains an important part of the workforce and the relationship with surrounding host communities.</p></div></div></div></section>
-<section class="vacancy"><div class="container"><div class="heading"><small>CURRENT OPENINGS</small><h2>Join Our Talent Community.</h2></div><div class="opening"><div class="opening-icon">◆</div><h3>No Positions Open At This Time</h3><p>There are currently no advertised positions available. Please check this page again for future employment opportunities.</p><div class="notice">Vacancies will be published when positions become available. Applicants should rely on official Meridian Gold Refinery recruitment communications when applying for a position.</div></div></div></section>
-<section><div class="container"><div class="heading"><small>OUR WORKFORCE</small><h2>People At The Heart Of The Operation.</h2></div><div class="people"><div class="people-box"><div class="number">680+</div><h3>People Employed</h3><p>The operation employs more than 680 people, with a significant proportion drawn from the surrounding host communities.</p></div><div class="people-box"><div class="number">74%</div><h3>Host Community Workforce</h3><p>Approximately 74% of employees are drawn from host communities, strengthening the connection between the operation and the people around it.</p></div></div></div></section>
-<section class="dark"><div class="container"><div class="heading"><small>LIFESTYLE & WELLBEING</small><h2>A Workplace Beyond The Job.</h2><p>The mine village provides employees with a range of recreational, health and educational facilities designed to support everyday wellbeing.</p></div><div class="facilities"><div class="facility"><strong>Golf</strong><span>9-hole golf course</span></div><div class="facility"><strong>Tennis</strong><span>Tennis court</span></div><div class="facility"><strong>Volleyball</strong><span>Volleyball court</span></div><div class="facility"><strong>Football</strong><span>Two seven-a-side football pitches</span></div><div class="facility"><strong>Swimming</strong><span>Swimming pool</span></div><div class="facility"><strong>Fitness</strong><span>Two fully equipped gyms</span></div><div class="facility"><strong>Clubhouses</strong><span>Two clubhouses with lounges and pool bars</span></div><div class="facility"><strong>Healthcare</strong><span>Well-equipped hospital serving employees and host communities</span></div><div class="facility"><strong>Education</strong><span>Kindergarten, primary school and junior high school</span></div></div></div></section>
-<section class="training"><div class="container"><div class="heading"><small>EARLY CAREER DEVELOPMENT</small><h2>Creating Pathways For Emerging Talent.</h2></div><div class="training-grid"><div class="training-box"><h3>Internships</h3><p>Internship opportunities provide students and emerging professionals with exposure to practical workplace environments.</p></div><div class="training-box"><h3>National Service</h3><p>On-the-job training opportunities are available for national service personnel within suitable areas of the operation.</p></div><div class="training-box"><h3>Graduate Trainees</h3><p>Graduate trainees can gain practical experience while developing professional capabilities.</p></div></div></div></section>
-<section class="cta"><h2>Ready For Your Next Opportunity?</h2><p>Keep checking our careers page for future vacancies and professional opportunities with Meridian Gold Refinery.</p><a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">SEND CAREER ENQUIRY</a></section>
-<footer><div class="footer"><div><div class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></div><p style="margin-top:10px;">Precious Metals • Global Connections</p></div><div class="links"><a href="index.html">HOME</a><a href="suppliers.html">SUPPLIERS</a><a href="index.html#contact">CONTACT</a></div></div><p style="max-width:1250px;margin:30px auto 0;">© 2026 Meridian Gold Refinery. All rights reserved.</p></footer>
-<script>function toggleMenu(){ const menu=document.getElementById('mobileMenu'); menu.style.display = menu.style.display === 'block' ? 'none' : 'block'; } document.querySelectorAll('.mobile-menu a').forEach(function(link){ link.addEventListener('click', function(){ document.getElementById('mobileMenu').style.display = 'none'; }); });</script>
+
+  <div class="topbar">
+    <div>MERIDIAN GOLD REFINERY | GHANA</div>
+    <div>PEOPLE • PERFORMANCE • PURPOSE</div>
+  </div>
+
+  <header>
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+        <span style="display:inline;color:#d4af37;">◆</span> MERIDIAN
+        <span>GOLD REFINERY</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="corporate.html">CORPORATE</a>
+        <a href="operations.html">OPERATIONS</a>
+        <a href="gold-sourcing.html">GOLD SOURCING</a>
+        <a href="international-trade.html">INTERNATIONAL TRADE</a>
+        <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+        <a href="careers.html" class="active">CAREERS</a>
+        <a href="suppliers.html">SUPPLIERS</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">CAREERS AT MERIDIAN</div>
+        <h1>Build Your Career With Purpose.</h1>
+        <p>
+          Join a people-focused organisation where professional development,
+          operational excellence and community connection come together.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="container">
+
+        <div class="section-label">Work With Us</div>
+
+        <h2>People Are Central To Our Success.</h2>
+
+        <p class="lead">
+          Meridian Gold Refinery recognises that long-term operational success
+          depends on capable, committed and responsible people. We support
+          fulfilling career paths, professional development and competitive
+          compensation packages for top-performing talent.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Professional Growth</h3>
+            <p>
+              Opportunities to develop skills, gain experience and build
+              meaningful professional careers across different areas of
+              operations.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>Learning & Development</h3>
+            <p>
+              A workplace environment that supports practical learning,
+              on-the-job development and continuous improvement.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Community Connection</h3>
+            <p>
+              Employees contribute to an organisation closely connected to
+              Tarkwa and its surrounding host communities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CURRENT OPENINGS -->
+    <section class="opening">
+      <div class="container">
+
+        <div class="section-label">Opportunities</div>
+
+        <h2>Current Openings</h2>
+
+        <div class="opening-box">
+          <h3>No Positions Open At This Time</h3>
+
+          <p>
+            There are currently no advertised vacancies. We encourage
+            interested professionals to check back for future opportunities
+            as positions become available.
+          </p>
+
+          <div class="status">
+            Currently Closed
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WORKFORCE -->
+    <section>
+      <div class="container">
+
+        <div class="section-label">Our Workforce</div>
+
+        <h2>People. Communities. Opportunity.</h2>
+
+        <p class="lead">
+          Our workforce is connected to the communities surrounding our
+          operations, creating opportunities for local participation while
+          supporting a professional working environment.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>680+</strong>
+            <span>Employees</span>
+          </div>
+
+          <div class="stat">
+            <strong>74%</strong>
+            <span>Host Community Workforce</span>
+          </div>
+
+          <div class="stat">
+            <strong>2007</strong>
+            <span>Operating Since</span>
+          </div>
+
+          <div class="stat">
+            <strong>GHANA</strong>
+            <span>Country of Operation</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WELLBEING -->
+    <section class="wellbeing">
+      <div class="container">
+
+        <div class="section-label">Lifestyle & Wellbeing</div>
+
+        <h2>A Workplace That Supports Wellbeing.</h2>
+
+        <p class="lead">
+          Employee wellbeing extends beyond the workplace. Our operations
+          include facilities and programmes designed to encourage healthy,
+          active lifestyles and community connection.
+        </p>
+
+        <div class="facility-grid">
+
+          <div class="facility">9-Hole Golf Course</div>
+          <div class="facility">Tennis Court</div>
+          <div class="facility">Volleyball Facilities</div>
+          <div class="facility">Seven-a-Side Football Pitches</div>
+          <div class="facility">Swimming Pool</div>
+          <div class="facility">Fully Equipped Gyms</div>
+          <div class="facility">Clubhouses & Lounges</div>
+          <div class="facility">Employee Healthcare</div>
+          <div class="facility">Kindergarten</div>
+          <div class="facility">Primary School</div>
+          <div class="facility">Junior High School</div>
+          <div class="facility">Scheduled Employee Transport</div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EARLY CAREER -->
+    <section class="early-career">
+      <div class="container">
+
+        <div class="section-label">Early Career Development</div>
+
+        <h2>Learn. Develop. Contribute.</h2>
+
+        <p class="lead">
+          Meridian Gold Refinery supports opportunities for practical
+          professional development through internships, national service
+          placements and graduate trainee opportunities.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Internships</h3>
+            <p>
+              Opportunities for students and emerging professionals to gain
+              practical workplace exposure.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>National Service</h3>
+            <p>
+              On-the-job learning opportunities for national service
+              personnel within relevant operational areas.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Graduate Trainees</h3>
+            <p>
+              Practical development opportunities designed to help graduates
+              build workplace knowledge and professional experience.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+
+        <div class="section-label">Career Enquiries</div>
+
+        <h2>Stay Connected With Meridian.</h2>
+
+        <p>
+          For career-related enquiries, future opportunities or general
+          employment information, contact our team directly.
+        </p>
+
+        <a class="btn" href="mailto:meridia.goldrefinering@outlook.com">
+          SEND CAREER ENQUIRY
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>MERIDIAN GOLD REFINERY</h3>
+        <p>
+          Connecting Ghana's mineral resources with international markets
+          while creating sustainable commercial and community value.
+        </p>
+      </div>
+
+      <div>
+        <h3>EXPLORE</h3>
+
+        <div class="footer-links">
+          <a href="corporate.html">Corporate</a>
+          <a href="operations.html">Operations</a>
+          <a href="gold-sourcing.html">Gold Sourcing</a>
+          <a href="international-trade.html">International Trade</a>
+          <a href="responsible-sourcing.html">Responsible Sourcing</a>
+          <a href="careers.html">Careers</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>CONTACT</h3>
+
+        <p>
+          Tarkwa, Western Region, Ghana
+        </p>
+
+        <br>
+
+        <p>
+          <a href="mailto:meridia.goldrefinering@outlook.com">
+            meridia.goldrefinering@outlook.com
+          </a>
+        </p>
+
+        <p>
+          <a href="tel:+2335502307533">
+            +233 (0) 550 230 7533
+          </a>
+        </p>
+
+        <p>
+          <a href="https://wa.me/233554600108" target="_blank">
+            WhatsApp: +233 (0) 554 600 108
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Meridian Gold Refinery. All rights reserved.
+    </div>
+
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navLinks");
+      menu.classList.toggle("show");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("show");
+      });
+    });
+  </script>
+
 </body>
 </html>
