@@ -1,750 +1,1219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gold Operations | Meridian Gold Refinery</title>
-
-<meta name="description" content="Explore Meridian Gold Refinery's gold operations and precious metals activities in Tarkwa, Ghana.">
-
-<style>
-
-:root{
---gold:#d4af37;
---gold-light:#f0d77a;
---black:#050505;
---dark:#0b0b0b;
---dark2:#111;
---white:#fff;
---muted:#a7a7a7;
---border:rgba(212,175,55,.22);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--black);
-color:var(--white);
-line-height:1.6;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* HEADER */
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(5,5,5,.97);
-border-bottom:1px solid var(--border);
-}
-
-.header-inner{
-min-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo-main{
-font-size:20px;
-font-weight:800;
-letter-spacing:2px;
-}
-
-.logo-main span{
-color:var(--gold);
-}
-
-.logo-sub{
-font-size:9px;
-letter-spacing:3px;
-color:#999;
-margin-top:6px;
-}
-
-nav{
-display:flex;
-gap:20px;
-align-items:center;
-}
-
-nav a{
-font-size:10px;
-letter-spacing:1px;
-color:#ccc;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-/* MOBILE */
-
-.menu-btn{
-display:none;
-width:44px;
-height:44px;
-background:#080808;
-border:1px solid var(--border);
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:5px;
-}
-
-.menu-btn span{
-width:21px;
-height:2px;
-background:var(--gold);
-}
-
-.mobile-menu{
-position:fixed;
-inset:0;
-z-index:999;
-background:#050505;
-padding:110px 30px 40px;
-transform:translateX(100%);
-transition:.35s;
-overflow-y:auto;
-}
-
-.mobile-menu.active{
-transform:translateX(0);
-}
-
-.mobile-menu nav{
-display:flex;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-}
-
-.mobile-menu a{
-padding:18px 5px;
-border-bottom:1px solid #222;
-font-size:14px;
-letter-spacing:2px;
-}
-
-/* HERO */
-
-.hero{
-min-height:72vh;
-display:flex;
-align-items:center;
-background:
-radial-gradient(circle at 80% 30%,rgba(212,175,55,.14),transparent 30%),
-linear-gradient(135deg,#050505,#121212);
-}
-
-.hero-content{
-max-width:850px;
-padding:100px 0;
-}
-
-.eyebrow{
-color:var(--gold);
-font-size:11px;
-letter-spacing:4px;
-margin-bottom:20px;
-}
-
-h1{
-font-size:clamp(42px,7vw,76px);
-line-height:1.03;
-letter-spacing:-2px;
-margin-bottom:25px;
-}
-
-h1 span{
-color:var(--gold);
-}
-
-.hero p{
-color:#aaa;
-font-size:17px;
-max-width:680px;
-}
-
-section{
-padding:100px 0;
-}
-
-.dark{
-background:var(--dark);
-}
-
-.section-title{
-max-width:750px;
-margin-bottom:50px;
-}
-
-.section-title h2{
-font-size:clamp(30px,5vw,48px);
-line-height:1.1;
-margin-bottom:18px;
-}
-
-.section-title p{
-color:#999;
-}
-
-/* CARDS */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.card{
-background:var(--dark2);
-border:1px solid var(--border);
-padding:35px;
-}
-
-.card-number{
-color:var(--gold);
-font-size:12px;
-letter-spacing:3px;
-margin-bottom:20px;
-}
-
-.card h3{
-font-size:21px;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:14px;
-color:#999;
-}
-
-/* PROCESS */
-
-.process{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-border-top:1px solid var(--border);
-border-bottom:1px solid var(--border);
-}
-
-.step{
-padding:30px 20px;
-border-right:1px solid var(--border);
-}
-
-.step:last-child{
-border-right:0;
-}
-
-.step strong{
-display:block;
-color:var(--gold);
-font-size:25px;
-margin-bottom:10px;
-}
-
-.step h3{
-font-size:15px;
-margin-bottom:8px;
-}
-
-.step p{
-font-size:12px;
-color:#888;
-}
-
-/* CTA */
-
-.cta{
-text-align:center;
-background:#0c0c0c;
-border-top:1px solid var(--border);
-}
-
-.cta h2{
-font-size:clamp(30px,5vw,50px);
-margin-bottom:18px;
-}
-
-.cta p{
-max-width:650px;
-margin:0 auto 30px;
-color:#999;
-}
-
-.btn{
-display:inline-block;
-padding:14px 24px;
-border:1px solid var(--gold);
-font-size:11px;
-letter-spacing:2px;
-margin:5px;
-}
-
-.primary{
-background:var(--gold);
-color:#000;
-}
-
-/* FOOTER */
-
-footer{
-padding:60px 0 25px;
-background:#000;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:40px;
-padding-bottom:40px;
-border-bottom:1px solid #222;
-}
-
-.footer-grid p{
-color:#777;
-font-size:13px;
-margin-top:20px;
-max-width:400px;
-}
-
-.footer-column h4{
-font-size:10px;
-letter-spacing:2px;
-color:var(--gold);
-margin-bottom:18px;
-}
-
-.footer-column a{
-display:block;
-color:#777;
-font-size:13px;
-margin-bottom:9px;
-}
-
-.copyright{
-text-align:center;
-color:#555;
-font-size:10px;
-padding-top:22px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:950px){
-
-nav{
-display:none;
-}
-
-.menu-btn{
-display:flex;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.process{
-grid-template-columns:1fr 1fr;
-}
-
-.step{
-border-bottom:1px solid var(--border);
-}
-
-.footer-grid{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero-content{
-padding:80px 0;
-}
-
-.hero h1{
-font-size:43px;
-}
-
-section{
-padding:75px 0;
-}
-
-.process{
-grid-template-columns:1fr;
-}
-
-.step{
-border-right:0;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Operations | Meridian Gold Refinery</title>
+
+  <meta name="description" content="Explore Meridian Gold Refinery operations in Tarkwa, Western Region, Ghana, including production relationships, workforce, operational environment and development opportunities.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23070707'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='60' fill='%23d4af37'%3EM%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      --gold:#d4af37;
+      --gold-light:#f3da7c;
+      --black:#050505;
+      --dark:#0b0b0b;
+      --dark2:#111;
+      --white:#fff;
+      --muted:#999;
+      --text:#d7d7d7;
+      --border:rgba(212,175,55,.22);
+    }
+
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body {
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--black);
+      color:var(--white);
+      line-height:1.7;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .topbar {
+      background:#000;
+      border-bottom:1px solid var(--border);
+      padding:9px 6%;
+      display:flex;
+      justify-content:space-between;
+      color:#999;
+      font-size:11px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(5,5,5,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav {
+      max-width:1400px;
+      min-height:78px;
+      padding:0 5%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:11px;
+      line-height:1.1;
+    }
+
+    .logo-symbol {
+      color:var(--gold);
+      font-size:27px;
+    }
+
+    .logo-main {
+      font-size:16px;
+      font-weight:800;
+      letter-spacing:3px;
+    }
+
+    .logo-sub {
+      color:var(--gold);
+      font-size:9px;
+      letter-spacing:4px;
+      margin-top:4px;
+    }
+
+    nav {
+      display:flex;
+      gap:17px;
+      align-items:center;
+    }
+
+    nav a {
+      color:#ccc;
+      font-size:10px;
+      letter-spacing:1px;
+      transition:.3s;
+    }
+
+    nav a:hover {
+      color:var(--gold);
+    }
+
+    .menu-btn {
+      display:none;
+      background:transparent;
+      color:var(--gold);
+      border:1px solid var(--border);
+      font-size:22px;
+      padding:7px 11px;
+      cursor:pointer;
+    }
+
+    .mobile-menu {
+      display:none;
+      background:#090909;
+      border-top:1px solid var(--border);
+      padding:15px 6%;
+    }
+
+    .mobile-menu a {
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid #222;
+      color:#ddd;
+      font-size:12px;
+      letter-spacing:1px;
+    }
+
+    .hero {
+      min-height:65vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 40%,rgba(212,175,55,.15),transparent 30%),
+        linear-gradient(135deg,#050505,#111);
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      right:-170px;
+      top:50%;
+      width:500px;
+      height:500px;
+      transform:translateY(-50%);
+      border:1px solid rgba(212,175,55,.13);
+      border-radius:50%;
+      box-shadow:
+        0 0 0 70px rgba(212,175,55,.025),
+        0 0 0 140px rgba(212,175,55,.018);
+    }
+
+    .hero-content {
+      width:88%;
+      max-width:1200px;
+      margin:auto;
+      padding:100px 0;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow,
+    .label {
+      color:var(--gold);
+      font-size:10px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      font-weight:bold;
+      margin-bottom:16px;
+    }
+
+    .hero h1 {
+      max-width:900px;
+      font-size:clamp(43px,7vw,80px);
+      line-height:1;
+      letter-spacing:-3px;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .hero h1 span {
+      color:var(--gold);
+    }
+
+    .hero p {
+      max-width:700px;
+      color:#aaa;
+      font-size:17px;
+    }
+
+    section {
+      padding:90px 6%;
+    }
+
+    .container {
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .title {
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .intro {
+      max-width:760px;
+      color:#999;
+    }
+
+    .dark {
+      background:#080808;
+    }
+
+    .overview {
+      background:var(--dark);
+    }
+
+    .overview-grid {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .overview-text p {
+      color:#aaa;
+      margin-bottom:18px;
+    }
+
+    .location-box {
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      padding:35px;
+    }
+
+    .location-box h3 {
+      color:var(--gold);
+      margin-bottom:16px;
+      font-size:20px;
+    }
+
+    .location-box p {
+      color:#999;
+      font-size:14px;
+    }
+
+    .location-line {
+      border-top:1px solid #292929;
+      margin-top:25px;
+      padding-top:20px;
+      color:#ccc;
+      font-size:13px;
+    }
+
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      border:1px solid var(--border);
+      margin-top:45px;
+    }
+
+    .stat {
+      padding:32px 20px;
+      border-right:1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right:0;
+    }
+
+    .stat strong {
+      display:block;
+      color:var(--gold);
+      font-size:31px;
+      margin-bottom:6px;
+    }
+
+    .stat span {
+      color:#999;
+      font-size:10px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    .priority-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:45px;
+    }
+
+    .priority-card {
+      background:#111;
+      border:1px solid #292929;
+      padding:28px 22px;
+      min-height:190px;
+    }
+
+    .priority-card .number {
+      display:inline-block;
+      color:var(--gold);
+      font-size:11px;
+      letter-spacing:2px;
+      margin-bottom:22px;
+    }
+
+    .priority-card h3 {
+      font-size:18px;
+      margin-bottom:12px;
+    }
+
+    .priority-card p {
+      color:#8d8d8d;
+      font-size:14px;
+    }
+
+    .flow {
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      margin-top:45px;
+    }
+
+    .flow-card {
+      background:#111;
+      border:1px solid #262626;
+      padding:28px 20px;
+      position:relative;
+    }
+
+    .flow-card::before {
+      content:"";
+      display:block;
+      width:28px;
+      height:2px;
+      background:var(--gold);
+      margin-bottom:22px;
+    }
+
+    .flow-card h3 {
+      font-size:16px;
+      margin-bottom:10px;
+    }
+
+    .flow-card p {
+      color:#888;
+      font-size:13px;
+    }
+
+    .people-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:45px;
+    }
+
+    .people-card {
+      background:#111;
+      border:1px solid #242424;
+      padding:32px 27px;
+      transition:.3s;
+    }
+
+    .people-card:hover {
+      transform:translateY(-5px);
+      border-color:var(--gold);
+    }
+
+    .people-card .number {
+      color:var(--gold);
+      font-size:11px;
+      letter-spacing:2px;
+      margin-bottom:20px;
+    }
+
+    .people-card h3 {
+      font-size:19px;
+      margin-bottom:12px;
+    }
+
+    .people-card p {
+      color:#999;
+      font-size:14px;
+    }
+
+    .facilities {
+      background:var(--dark);
+    }
+
+    .facility-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:40px;
+    }
+
+    .facility {
+      min-height:135px;
+      display:flex;
+      align-items:flex-end;
+      padding:20px;
+      border:1px solid #272727;
+      background:linear-gradient(135deg,#171717,#090909);
+    }
+
+    .facility span {
+      color:#ddd;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .cta {
+      text-align:center;
+      background:
+        linear-gradient(120deg,#161207,#080808);
+      border-top:1px solid var(--border);
+    }
+
+    .cta h2 {
+      font-size:clamp(32px,5vw,58px);
+      margin-bottom:18px;
+    }
+
+    .cta p {
+      max-width:700px;
+      margin:0 auto 30px;
+      color:#999;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:14px 25px;
+      border:1px solid var(--gold);
+      font-size:11px;
+      letter-spacing:1.7px;
+      text-transform:uppercase;
+      margin:5px;
+      transition:.3s;
+    }
+
+    .btn-primary {
+      background:var(--gold);
+      color:#000;
+      font-weight:bold;
+    }
+
+    .btn-outline:hover {
+      background:var(--gold);
+      color:#000;
+    }
+
+    footer {
+      background:#000;
+      padding:55px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:45px;
+      padding-bottom:40px;
+    }
+
+    footer h3 {
+      font-size:15px;
+      margin-bottom:16px;
+    }
+
+    footer p,
+    footer a {
+      display:block;
+      color:#777;
+      font-size:13px;
+      margin-bottom:7px;
+    }
+
+    footer a:hover {
+      color:var(--gold);
+    }
+
+    .footer-bottom {
+      max-width:1200px;
+      margin:auto;
+      border-top:1px solid #1c1c1c;
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      color:#666;
+      font-size:11px;
+    }
+
+    @media(max-width:1100px) {
+      nav {
+        display:none;
+      }
+
+      .menu-btn {
+        display:block;
+      }
+
+      .flow {
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .priority-grid,
+      .facility-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:760px) {
+      .topbar {
+        display:none;
+      }
+
+      .overview-grid,
+      .people-grid {
+        grid-template-columns:1fr;
+      }
+
+      .stats {
+        grid-template-columns:1fr 1fr;
+      }
+
+      .stat {
+        border-bottom:1px solid var(--border);
+      }
+
+      .flow,
+      .priority-grid {
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns:1fr;
+      }
+
+      .footer-bottom {
+        flex-direction:column;
+        gap:10px;
+      }
+
+      section {
+        padding:70px 6%;
+      }
+    }
+
+    @media(max-width:480px) {
+      .stats,
+      .facility-grid {
+        grid-template-columns:1fr;
+      }
+
+      .stat {
+        border-right:0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <div class="topbar">
+    <span>MERIDIAN GOLD REFINERY | GHANA</span>
+    <span>PRECIOUS METALS • GLOBAL CONNECTIONS</span>
+  </div>
 
-<div class="container header-inner">
+  <header>
 
-<a href="index.html">
-<div class="logo-main">◆ MERIDIAN <span>GOLD</span></div>
-<div class="logo-sub">REFINERY</div>
-</a>
+    <div class="nav">
 
-<nav>
-<a href="index.html">HOME</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="operations.html">OPERATIONS</a>
-<a href="gold-sourcing.html">GOLD SOURCING</a>
-<a href="international-trade.html">INTERNATIONAL TRADE</a>
-<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-<a href="contact.html">CONTACT</a>
-</nav>
+      <a href="index.html" class="logo">
+        <div class="logo-symbol">◆</div>
 
-<button class="menu-btn" id="menuBtn">
-<span></span>
-<span></span>
-<span></span>
-</button>
+        <div>
+          <div class="logo-main">MERIDIAN</div>
+          <div class="logo-sub">GOLD REFINERY</div>
+        </div>
+      </a>
 
-</div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="corporate.html">CORPORATE</a>
+        <a href="operations.html">OPERATIONS</a>
+        <a href="gold-sourcing.html">GOLD SOURCING</a>
+        <a href="international-trade.html">INTERNATIONAL TRADE</a>
+        <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+        <a href="careers.html">CAREERS</a>
+        <a href="suppliers.html">SUPPLIERS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
 
-</header>
+      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
 
-<div class="mobile-menu" id="mobileMenu">
+    </div>
 
-<nav>
-<a href="index.html">HOME</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="operations.html">OPERATIONS</a>
-<a href="gold-sourcing.html">GOLD SOURCING</a>
-<a href="international-trade.html">INTERNATIONAL TRADE</a>
-<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-<a href="contact.html">CONTACT</a>
-</nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">HOME</a>
+      <a href="corporate.html">CORPORATE</a>
+      <a href="operations.html">OPERATIONS</a>
+      <a href="gold-sourcing.html">GOLD SOURCING</a>
+      <a href="international-trade.html">INTERNATIONAL TRADE</a>
+      <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+      <a href="careers.html">CAREERS</a>
+      <a href="suppliers.html">SUPPLIERS</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
 
-</div>
+  </header>
 
-<section class="hero">
 
-<div class="container">
+  <!-- HERO -->
 
-<div class="hero-content">
+  <section class="hero">
 
-<div class="eyebrow">
-GOLD • OPERATIONS • GHANA
-</div>
+    <div class="hero-content">
 
-<h1>
-Structured Operations.<br>
-<span>Long-Term Value.</span>
-</h1>
+      <div class="eyebrow">
+        Tarkwa • Western Region • Ghana
+      </div>
 
-<p>
-Meridian Gold Refinery operates within Ghana's precious metals sector, supporting activities across the value chain and building commercial relationships that connect mineral resources with international markets.
-</p>
+      <h1>
+        Structured Operations.<br>
+        <span>Long-Term Value.</span>
+      </h1>
 
-</div>
+      <p>
+        A structured operational environment connecting
+        people, production relationships, supply, processing
+        and international markets.
+      </p>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
-<section>
 
-<div class="container">
+  <!-- OVERVIEW -->
 
-<div class="section-title">
+  <section class="overview">
 
-<div class="eyebrow">OUR OPERATIONS</div>
+    <div class="container overview-grid">
 
-<h2>
-Connecting resources, people and markets.
-</h2>
+      <div class="overview-text">
 
-<p>
-Our operating approach is built around disciplined business processes, reliable partnerships and responsible participation across the precious metals value chain.
-</p>
+        <div class="label">01 / Our Operations</div>
 
-</div>
+        <h2 class="title">
+          Operating From The Heart Of Tarkwa.
+        </h2>
 
-<div class="cards">
+        <p>
+          Meridian Gold Refinery's operation is situated in
+          Tarkwa township in south-western Ghana, approximately
+          317 kilometres from Accra.
+        </p>
 
-<div class="card">
+        <p>
+          The operation forms part of a broader precious
+          metals environment connecting production relationships,
+          suppliers, processing capabilities and international
+          commercial opportunities.
+        </p>
 
-<div class="card-number">01</div>
+        <p>
+          Our approach places strong emphasis on people,
+          operational discipline, community relationships and
+          long-term value creation.
+        </p>
 
-<h3>Precious Metals</h3>
+      </div>
 
-<p>
-Participation across the precious metals value chain, with gold at the centre of our commercial activities.
-</p>
 
-</div>
+      <div class="location-box">
 
-<div class="card">
+        <h3>Operational Location</h3>
 
-<div class="card-number">02</div>
+        <p>
+          Tarkwa Township<br>
+          Western Region<br>
+          Ghana
+        </p>
 
-<h3>Production Relationships</h3>
+        <div class="location-line">
+          Approximately 317 km from Accra
+        </div>
 
-<p>
-Working relationships with gold producers and other industry participants support our broader commercial network.
-</p>
+      </div>
 
-</div>
+    </div>
 
-<div class="card">
 
-<div class="card-number">03</div>
+    <div class="container">
 
-<h3>Commercial Connectivity</h3>
+      <div class="stats">
 
-<p>
-Our objective is to connect Ghanaian mineral resources with international markets through professional business relationships.
-</p>
+        <div class="stat">
+          <strong>680+</strong>
+          <span>People Employed</span>
+        </div>
 
-</div>
+        <div class="stat">
+          <strong>74%</strong>
+          <span>Host Community Workforce</span>
+        </div>
 
-</div>
+        <div class="stat">
+          <strong>317 KM</strong>
+          <span>Approx. From Accra</span>
+        </div>
 
-</div>
+        <div class="stat">
+          <strong>GHANA</strong>
+          <span>Operating Country</span>
+        </div>
 
-</section>
+      </div>
 
-<section class="dark">
+    </div>
 
-<div class="container">
+  </section>
 
-<div class="section-title">
 
-<div class="eyebrow">OPERATIONAL ENVIRONMENT</div>
+  <!-- OPERATIONAL PRIORITIES -->
 
-<h2>
-Tarkwa. Western Region. Ghana.
-</h2>
+  <section class="dark">
 
-<p>
-Our operation is situated in Tarkwa township in south-western Ghana, approximately 317 kilometres from Accra.
-</p>
+    <div class="container">
 
-</div>
+      <div class="label">02 / Operational Priorities</div>
 
-<div class="process">
+      <h2 class="title">
+        Built Around Discipline, People And Growth.
+      </h2>
 
-<div class="step">
-<strong>01</strong>
-<h3>Resources</h3>
-<p>Mineral resources form the foundation of the value chain.</p>
-</div>
+      <p class="intro">
+        Meridian's operating model is designed to support commercial activity,
+        workforce development and community integration through a disciplined,
+        long-term approach.
+      </p>
 
-<div class="step">
-<strong>02</strong>
-<h3>Production</h3>
-<p>Gold production supports commercial activity and local economic participation.</p>
-</div>
+      <div class="priority-grid">
 
-<div class="step">
-<strong>03</strong>
-<h3>Supply</h3>
-<p>Reliable suppliers contribute goods, services and specialist expertise.</p>
-</div>
+        <div class="priority-card">
+          <div class="number">01</div>
+          <h3>Workforce Inclusion</h3>
+          <p>
+            Local participation is central to operations, helping build skills,
+            strengthen livelihoods and support host communities.
+          </p>
+        </div>
 
-<div class="step">
-<strong>04</strong>
-<h3>Processing</h3>
-<p>Relationships across refining and processing activities support value creation.</p>
-</div>
+        <div class="priority-card">
+          <div class="number">02</div>
+          <h3>Operational Discipline</h3>
+          <p>
+            Structured systems and strong coordination help maintain efficiency,
+            reliability and performance across the value chain.
+          </p>
+        </div>
 
-<div class="step">
-<strong>05</strong>
-<h3>Markets</h3>
-<p>Commercial relationships connect precious metals with international markets.</p>
-</div>
+        <div class="priority-card">
+          <div class="number">03</div>
+          <h3>Processing Support</h3>
+          <p>
+            Refining and processing relationships are aligned to support the
+            responsible movement of precious metals.
+          </p>
+        </div>
 
-</div>
+        <div class="priority-card">
+          <div class="number">04</div>
+          <h3>Long-Term Value</h3>
+          <p>
+            Strategic relationships, sustainable practices and community focus
+            support resilient growth over time.
+          </p>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </div>
 
-<section>
+  </section>
 
-<div class="container">
 
-<div class="section-title">
+  <!-- VALUE CHAIN -->
 
-<div class="eyebrow">PEOPLE & WELLBEING</div>
+  <section class="dark">
 
-<h2>
-People are central to our operations.
-</h2>
+    <div class="container">
 
-<p>
-The operation employs more than 680 people, with 74% from host communities. Employees reside in Tarkwa, including the mine village and surrounding host communities.
-</p>
+      <div class="label">03 / Operational Flow</div>
 
-</div>
+      <h2 class="title">
+        Connecting The Value Chain.
+      </h2>
 
-<div class="cards">
+      <p class="intro">
+        Our operating environment connects multiple stages
+        of the precious metals value chain and supports
+        commercial relationships from resource development
+        through to international markets.
+      </p>
 
-<div class="card">
-<h3>Workforce</h3>
-<p>
-More than 680 people are employed across the operation, supporting a broad range of operational activities.
-</p>
-</div>
 
-<div class="card">
-<h3>Community Participation</h3>
-<p>
-74% of the workforce comes from host communities, strengthening local participation in the operation.
-</p>
-</div>
+      <div class="flow">
 
-<div class="card">
-<h3>Development</h3>
-<p>
-Internships, national service placements and graduate trainee opportunities support early-career development.
-</p>
-</div>
+        <div class="flow-card">
+          <h3>Resources</h3>
+          <p>
+            Mineral resources and geological opportunities
+            form the foundation of the value chain.
+          </p>
+        </div>
 
-</div>
+        <div class="flow-card">
+          <h3>Production</h3>
+          <p>
+            Production relationships support the supply of
+            precious metals.
+          </p>
+        </div>
 
-</div>
+        <div class="flow-card">
+          <h3>Supply</h3>
+          <p>
+            Reliable suppliers and specialist businesses
+            support operational requirements.
+          </p>
+        </div>
 
-</section>
+        <div class="flow-card">
+          <h3>Processing</h3>
+          <p>
+            Refining and processing relationships support
+            the movement of precious metals.
+          </p>
+        </div>
 
-<section class="cta">
+        <div class="flow-card">
+          <h3>Markets</h3>
+          <p>
+            Commercial relationships connect Ghanaian
+            resources with international opportunities.
+          </p>
+        </div>
 
-<div class="container">
+      </div>
 
-<h2>
-Explore Our Gold Value Chain.
-</h2>
+    </div>
 
-<p>
-Learn how sourcing, responsible business and international trade connect within the Meridian Gold Refinery model.
-</p>
+  </section>
 
-<a href="gold-sourcing.html" class="btn primary">
-GOLD SOURCING
-</a>
 
-<a href="international-trade.html" class="btn">
-INTERNATIONAL TRADE
-</a>
+  <!-- PEOPLE -->
 
-</div>
+  <section class="overview">
 
-</section>
+    <div class="container">
 
-<footer>
+      <div class="label">04 / People & Wellbeing</div>
 
-<div class="container">
+      <h2 class="title">
+        People At The Centre Of Operations.
+      </h2>
 
-<div class="footer-grid">
+      <p class="intro">
+        Meridian's operational environment supports employees,
+        host communities and opportunities for professional
+        development.
+      </p>
 
-<div>
-<div class="logo-main">◆ MERIDIAN <span>GOLD</span></div>
-<div class="logo-sub">REFINERY</div>
 
-<p>
-Meridian Gold Refinery is a Ghanaian precious metals company based in Tarkwa, Western Region, Ghana.
-</p>
-</div>
+      <div class="people-grid">
 
-<div class="footer-column">
+        <div class="people-card">
+          <div class="number">01</div>
 
-<h4>COMPANY</h4>
+          <h3>Host Communities</h3>
 
-<a href="corporate.html">Corporate</a>
-<a href="responsible-sourcing.html">Responsible Sourcing</a>
-<a href="careers.html">Careers</a>
-<a href="suppliers.html">Suppliers</a>
+          <p>
+            Approximately 74% of the workforce comes from
+            host communities, strengthening local participation
+            in the operation.
+          </p>
+        </div>
 
-</div>
 
-<div class="footer-column">
+        <div class="people-card">
+          <div class="number">02</div>
 
-<h4>CONTACT</h4>
+          <h3>Employee Wellbeing</h3>
 
-<a href="mailto:meridia.goldrefinering@outlook.com">Email</a>
-<a href="tel:+2335502307533">+233 (0) 550 230 7533</a>
-<a href="https://wa.me/233554600108">WhatsApp</a>
+          <p>
+            Wellbeing initiatives encourage healthy and active
+            lifestyles through sporting, fitness and recreational
+            activities.
+          </p>
+        </div>
 
-</div>
 
-</div>
+        <div class="people-card">
+          <div class="number">03</div>
 
-<div class="copyright">
-© 2026 Meridian Gold Refinery. All Rights Reserved.
-</div>
+          <h3>Healthcare</h3>
 
-</div>
+          <p>
+            A well-equipped hospital serves employees and
+            members of host communities.
+          </p>
+        </div>
 
-</footer>
 
-<script>
+        <div class="people-card">
+          <div class="number">04</div>
 
-const menuBtn=document.getElementById("menuBtn");
-const mobileMenu=document.getElementById("mobileMenu");
+          <h3>Education</h3>
 
-menuBtn.addEventListener("click",()=>{
-mobileMenu.classList.toggle("active");
-});
+          <p>
+            On-site educational facilities include kindergarten,
+            primary school and junior high school.
+          </p>
+        </div>
 
-document.querySelectorAll(".mobile-menu a").forEach(link=>{
-link.addEventListener("click",()=>{
-mobileMenu.classList.remove("active");
-});
-});
 
-document.addEventListener("keydown",(e)=>{
-if(e.key==="Escape"){
-mobileMenu.classList.remove("active");
-}
-});
+        <div class="people-card">
+          <div class="number">05</div>
 
-</script>
+          <h3>Professional Development</h3>
+
+          <p>
+            Internship opportunities, national service
+            placements and graduate training support early
+            career development.
+          </p>
+        </div>
+
+
+        <div class="people-card">
+          <div class="number">06</div>
+
+          <h3>Community Connection</h3>
+
+          <p>
+            Employees reside within Tarkwa and surrounding
+            host communities, supported by scheduled transport
+            services.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FACILITIES -->
+
+  <section class="facilities">
+
+    <div class="container">
+
+      <div class="label">05 / Lifestyle & Wellbeing</div>
+
+      <h2 class="title">
+        A Complete Operational Environment.
+      </h2>
+
+      <p class="intro">
+        Recreational, fitness, healthcare and educational
+        facilities contribute to employee wellbeing and the
+        wider operational environment.
+      </p>
+
+
+      <div class="facility-grid">
+
+        <div class="facility">
+          <span>9-Hole Golf Course</span>
+        </div>
+
+        <div class="facility">
+          <span>Tennis Court</span>
+        </div>
+
+        <div class="facility">
+          <span>Volleyball</span>
+        </div>
+
+        <div class="facility">
+          <span>Football Pitches</span>
+        </div>
+
+        <div class="facility">
+          <span>Swimming Pool</span>
+        </div>
+
+        <div class="facility">
+          <span>Fully Equipped Gyms</span>
+        </div>
+
+        <div class="facility">
+          <span>Clubhouses</span>
+        </div>
+
+        <div class="facility">
+          <span>Healthcare Facilities</span>
+        </div>
+
+        <div class="facility">
+          <span>Kindergarten</span>
+        </div>
+
+        <div class="facility">
+          <span>Primary School</span>
+        </div>
+
+        <div class="facility">
+          <span>Junior High School</span>
+        </div>
+
+        <div class="facility">
+          <span>Employee Transport</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAREER DEVELOPMENT -->
+
+  <section class="dark">
+
+    <div class="container">
+
+      <div class="label">06 / Development</div>
+
+      <h2 class="title">
+        Building The Next Generation.
+      </h2>
+
+      <p class="intro">
+        Early-career development is supported through
+        internships, national service opportunities and
+        graduate trainee programmes.
+      </p>
+
+      <br>
+
+      <a href="careers.html" class="btn btn-primary">
+        Explore Careers
+      </a>
+
+      <a href="suppliers.html" class="btn btn-outline">
+        Supplier Opportunities
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="label">07 / Business Connections</div>
+
+      <h2>
+        Connect With Meridian.
+      </h2>
+
+      <p>
+        Explore our gold sourcing, international trade and
+        responsible sourcing activities.
+      </p>
+
+      <a href="gold-sourcing.html" class="btn btn-primary">
+        Gold Sourcing
+      </a>
+
+      <a href="international-trade.html" class="btn btn-outline">
+        International Trade
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="logo">
+
+          <div class="logo-symbol">◆</div>
+
+          <div>
+            <div class="logo-main">MERIDIAN</div>
+            <div class="logo-sub">GOLD REFINERY</div>
+          </div>
+
+        </div>
+
+        <br>
+
+        <p>Precious metals. Global connections.</p>
+
+        <p>Tarkwa, Western Region, Ghana.</p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <a href="index.html">Home</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="gold-sourcing.html">Gold Sourcing</a>
+        <a href="international-trade.html">International Trade</a>
+        <a href="responsible-sourcing.html">Responsible Sourcing</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>Connect</h3>
+
+        <a href="careers.html">Careers</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+
+        <p>meridia.goldrefinering@outlook.com</p>
+        <p>+233 (0) 550 230 7533</p>
+        <p>WhatsApp: +233 (0) 554 600 108</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meridian Gold Refinery. All rights reserved.
+      </span>
+
+      <span>
+        Tarkwa • Western Region • Ghana
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+
+      const menu = document.getElementById("mobileMenu");
+
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+
+    }
+
+    document.querySelectorAll(".mobile-menu a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document.getElementById("mobileMenu").style.display = "none";
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
