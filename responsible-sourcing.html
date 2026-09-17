@@ -3,675 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Responsible Sourcing | Meridian Gold Refinery</title>
-
 <meta name="description" content="Meridian Gold Refinery responsible sourcing, supply-chain responsibility, sustainability and ethical business principles.">
-
 <style>
-:root{
---gold:#d4af37;
---black:#050505;
---dark:#0b0b0b;
---white:#fff;
---muted:#aaa;
---line:rgba(212,175,55,.22);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#050505;
-color:#fff;
-line-height:1.7;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.top{
-padding:10px 6%;
-border-bottom:1px solid var(--line);
-display:flex;
-justify-content:space-between;
-font-size:10px;
-letter-spacing:2px;
-color:#888;
-}
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(5,5,5,.96);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--line);
-}
-
-.nav{
-max-width:1250px;
-margin:auto;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:21px;
-font-weight:bold;
-letter-spacing:2px;
-}
-
-.logo span{
-display:block;
-font-size:9px;
-color:var(--gold);
-letter-spacing:3px;
-}
-
-nav{
-display:flex;
-gap:20px;
-}
-
-nav a{
-font-size:10px;
-letter-spacing:1.1px;
-color:#ccc;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.hero{
-min-height:67vh;
-display:flex;
-align-items:center;
-background:
-radial-gradient(circle at 80% 40%,rgba(212,175,55,.18),transparent 30%),
-linear-gradient(120deg,#030303,#15120a,#050505);
-}
-
-.hero-content{
-max-width:1250px;
-width:100%;
-margin:auto;
-padding:85px 6%;
-}
-
-.label{
-color:var(--gold);
-font-size:11px;
-font-weight:bold;
-letter-spacing:4px;
-}
-
-h1{
-font-size:clamp(42px,7vw,76px);
-line-height:1;
-margin:20px 0;
-}
-
-.hero p{
-max-width:780px;
-color:#aaa;
-font-size:17px;
-}
-
-section{
-padding:90px 6%;
-}
-
-.container{
-max-width:1250px;
-margin:auto;
-}
-
-.heading{
-margin-bottom:40px;
-}
-
-.heading small{
-color:var(--gold);
-font-size:10px;
-font-weight:bold;
-letter-spacing:3px;
-}
-
-.heading h2{
-font-size:clamp(30px,4vw,48px);
-line-height:1.1;
-margin-top:8px;
-}
-
-.heading p{
-max-width:800px;
-color:#999;
-margin-top:15px;
-}
-
-.intro{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:35px;
-}
-
-.text p{
-color:#aaa;
-margin-bottom:18px;
-}
-
-.quote{
-padding:40px;
-background:linear-gradient(145deg,#151515,#080808);
-border:1px solid var(--line);
-}
-
-.quote strong{
-display:block;
-color:var(--gold);
-font-size:25px;
-margin-bottom:12px;
-}
-
-.quote p{
-color:#999;
-font-size:14px;
-}
-
-.dark{
-background:#0b0b0b;
-border-top:1px solid var(--line);
-border-bottom:1px solid var(--line);
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.card{
-padding:32px;
-background:#111;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.card span{
-display:block;
-color:var(--gold);
-font-size:11px;
-letter-spacing:2px;
-margin-bottom:15px;
-}
-
-.card h3{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.card p{
-color:#999;
-font-size:14px;
-}
-
-.principles{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-}
-
-.principle{
-padding:22px;
-background:#111;
-border-left:2px solid var(--gold);
-color:#ccc;
-font-size:14px;
-}
-
-.chain{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:10px;
-margin-top:30px;
-}
-
-.chain div{
-padding:25px 12px;
-background:#101010;
-border:1px solid rgba(255,255,255,.08);
-text-align:center;
-}
-
-.chain strong{
-display:block;
-color:var(--gold);
-font-size:11px;
-margin-bottom:7px;
-}
-
-.chain span{
-color:#999;
-font-size:12px;
-}
-
-.cta{
-text-align:center;
-padding:95px 6%;
-background:linear-gradient(120deg,#17130a,#080808,#17130a);
-border-top:1px solid var(--line);
-}
-
-.cta h2{
-font-size:clamp(32px,5vw,55px);
-}
-
-.cta p{
-max-width:700px;
-margin:15px auto 25px;
-color:#999;
-}
-
-.btn{
-display:inline-block;
-padding:14px 25px;
-border:1px solid var(--gold);
-font-size:11px;
-font-weight:bold;
-letter-spacing:1.5px;
-}
-
-.btn.gold{
-background:var(--gold);
-color:#000;
-}
-
-footer{
-padding:42px 6%;
-background:#000;
-border-top:1px solid var(--line);
-}
-
-.footer{
-max-width:1250px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-gap:25px;
-}
-
-footer p{
-color:#777;
-font-size:12px;
-}
-
-.links{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.links a{
-font-size:11px;
-color:#999;
-}
-
-@media(max-width:950px){
-nav{
-display:none;
-}
-
-.intro{
-grid-template-columns:1fr;
-}
-
-.cards{
-grid-template-columns:1fr 1fr;
-}
-
-.chain{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-@media(max-width:600px){
-.top{
-display:none;
-}
-
-.cards,
-.principles,
-.chain{
-grid-template-columns:1fr;
-}
-
-section{
-padding:70px 6%;
-}
-
-.footer{
-flex-direction:column;
-}
-}
+:root{ --gold:#d4af37; --black:#050505; --dark:#0b0b0b; --white:#fff; --muted:#aaa; --line:rgba(212,175,55,.22); }
+*{ margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body{ font-family:Arial,Helvetica,sans-serif; background:#050505; color:#fff; line-height:1.7; }
+a{ color:inherit; text-decoration:none; }
+.top{ padding:10px 6%; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; font-size:10px; letter-spacing:2px; color:#888; }
+header{ position:sticky; top:0; z-index:1000; background:rgba(5,5,5,.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.nav{ max-width:1250px; margin:auto; padding:18px 6%; display:flex; justify-content:space-between; align-items:center; }
+.logo{ font-size:21px; font-weight:bold; letter-spacing:2px; }
+.logo span{ display:block; font-size:9px; color:var(--gold); letter-spacing:3px; }
+nav{ display:flex; gap:20px; }
+nav a{ font-size:10px; letter-spacing:1.1px; color:#ccc; }
+nav a:hover{ color:var(--gold); }
+.menu-btn{ display:none; background:transparent; border:1px solid var(--line); color:var(--gold); font-size:22px; padding:7px 11px; cursor:pointer; }
+.mobile-menu{ display:none; background:#090909; border-top:1px solid var(--line); padding:15px 6%; }
+.mobile-menu a{ display:block; padding:12px 0; border-bottom:1px solid #222; font-size:12px; letter-spacing:1px; color:#ddd; }
+.hero{ min-height:67vh; display:flex; align-items:center; background:radial-gradient(circle at 80% 40%,rgba(212,175,55,.18),transparent 30%), linear-gradient(120deg,#030303,#15120a,#050505); }
+.hero-content{ max-width:1250px; width:100%; margin:auto; padding:85px 6%; }
+.label{ color:var(--gold); font-size:11px; font-weight:bold; letter-spacing:4px; }
+h1{ font-size:clamp(42px,7vw,76px); line-height:1; margin:20px 0; }
+.hero p{ max-width:780px; color:#aaa; font-size:17px; }
+section{ padding:90px 6%; }
+.container{ max-width:1250px; margin:auto; }
+.heading{ margin-bottom:40px; }
+.heading small{ color:var(--gold); font-size:10px; font-weight:bold; letter-spacing:3px; }
+.heading h2{ font-size:clamp(30px,4vw,48px); line-height:1.1; margin-top:8px; }
+.heading p{ max-width:800px; color:#999; margin-top:15px; }
+.intro{ display:grid; grid-template-columns:1.1fr .9fr; gap:35px; }
+.text p{ color:#aaa; margin-bottom:18px; }
+.quote{ padding:40px; background:linear-gradient(145deg,#151515,#080808); border:1px solid var(--line); }
+.quote strong{ display:block; color:var(--gold); font-size:25px; margin-bottom:12px; }
+.quote p{ color:#999; font-size:14px; }
+.dark{ background:#0b0b0b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card{ padding:32px; background:#111; border:1px solid rgba(255,255,255,.08); }
+.card span{ display:block; color:var(--gold); font-size:11px; letter-spacing:2px; margin-bottom:15px; }
+.card h3{ font-size:20px; margin-bottom:10px; }
+.card p{ color:#999; font-size:14px; }
+.principles{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.principle{ padding:22px; background:#111; border-left:2px solid var(--gold); color:#ccc; font-size:14px; }
+.chain{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:30px; }
+.chain div{ padding:25px 12px; background:#101010; border:1px solid rgba(255,255,255,.08); text-align:center; }
+.chain strong{ display:block; color:var(--gold); font-size:11px; margin-bottom:7px; }
+.chain span{ color:#999; font-size:12px; }
+.cta{ text-align:center; padding:95px 6%; background:linear-gradient(120deg,#17130a,#080808,#17130a); border-top:1px solid var(--line); }
+.cta h2{ font-size:clamp(32px,5vw,55px); }
+.cta p{ max-width:700px; margin:15px auto 25px; color:#999; }
+.btn{ display:inline-block; padding:14px 25px; border:1px solid var(--gold); font-size:11px; font-weight:bold; letter-spacing:1.5px; }
+.btn.gold{ background:var(--gold); color:#000; }
+footer{ padding:42px 6%; background:#000; border-top:1px solid var(--line); }
+.footer{ max-width:1250px; margin:auto; display:flex; justify-content:space-between; gap:25px; }
+footer p{ color:#777; font-size:12px; }
+.links{ display:flex; gap:20px; flex-wrap:wrap; }
+.links a{ font-size:11px; color:#999; }
+@media(max-width:950px){ nav{display:none;} .menu-btn{display:block;} .intro{grid-template-columns:1fr;} .cards{grid-template-columns:1fr 1fr;} .chain{grid-template-columns:repeat(3,1fr);} }
+@media(max-width:600px){ .top{display:none;} .cards,.principles,.chain{grid-template-columns:1fr;} section{padding:70px 6%;} .footer{flex-direction:column;} }
 </style>
 </head>
-
 <body>
-
-<div class="top">
-<span>MERIDIAN GOLD REFINERY</span>
-<span>RESPONSIBLE SOURCING</span>
-</div>
-
-<header>
-<div class="nav">
-
-<a href="index.html" class="logo">
-◆ MERIDIAN
-<span>GOLD REFINERY</span>
-</a>
-
-<nav>
-<a href="index.html">HOME</a>
-<a href="index.html#about">ABOUT</a>
-<a href="index.html#operations">OPERATIONS</a>
-<a href="index.html#foundation">FOUNDATION</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-<a href="contact.html">CONTACT</a>
-</nav>
-
-</div>
-</header>
-
-<section class="hero">
-<div class="hero-content">
-
-<div class="label">RESPONSIBLE SOURCING</div>
-
-<h1>Responsible Gold.<br><span style="color:#d4af37;">Responsible Business.</span></h1>
-
-<p>
-We recognize that responsible sourcing extends beyond the transaction.
-It requires attention to ethical conduct, supply-chain relationships,
-social responsibility and environmental considerations.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<div class="heading">
-<small>OUR APPROACH</small>
-<h2>Responsibility Across The Value Chain.</h2>
-</div>
-
-<div class="intro">
-
-<div class="text">
-
-<p>
-Meridian Gold Refinery works with producers, suppliers, refining facilities
-and commercial partners within the precious metals value chain.
-</p>
-
-<p>
-We seek relationships that support professional standards, dependable
-business practices and appropriate compliance with applicable requirements.
-</p>
-
-<p>
-Responsible sourcing is viewed as an ongoing business principle rather than
-a single stage of the purchasing process.
-</p>
-
-</div>
-
-<div class="quote">
-
-<strong>OUR COMMITMENT</strong>
-
-<p>
-Build commercial relationships that recognize the importance of integrity,
-accountability, social responsibility and environmental responsibility.
-</p>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="dark">
-<div class="container">
-
-<div class="heading">
-<small>CORE PRINCIPLES</small>
-<h2>Standards That Shape Our Relationships.</h2>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<span>01</span>
-<h3>Integrity</h3>
-<p>
-Business dealings should be conducted honestly and professionally.
-</p>
-</div>
-
-<div class="card">
-<span>02</span>
-<h3>Accountability</h3>
-<p>
-Clear responsibilities help strengthen trust throughout commercial
-relationships.
-</p>
-</div>
-
-<div class="card">
-<span>03</span>
-<h3>Respect</h3>
-<p>
-We recognize the importance of respectful relationships with people,
-communities and business partners.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<div class="heading">
-<small>SUPPLY-CHAIN RESPONSIBILITY</small>
-<h2>From Source To Market.</h2>
-
-<p>
-Responsible business considerations can be relevant at different points
-within the precious metals value chain.
-</p>
-</div>
-
-<div class="chain">
-
-<div>
-<strong>01</strong>
-<span>Source</span>
-</div>
-
-<div>
-<strong>02</strong>
-<span>Supplier</span>
-</div>
-
-<div>
-<strong>03</strong>
-<span>Processing</span>
-</div>
-
-<div>
-<strong>04</strong>
-<span>Trade</span>
-</div>
-
-<div>
-<strong>05</strong>
-<span>Market</span>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="dark">
-<div class="container">
-
-<div class="heading">
-<small>RESPONSIBLE BUSINESS</small>
-<h2>What We Expect From Partners.</h2>
-</div>
-
-<div class="principles">
-
-<div class="principle">
-Compliance with applicable laws and regulations
-</div>
-
-<div class="principle">
-Ethical and transparent business conduct
-</div>
-
-<div class="principle">
-Respect for social responsibility principles
-</div>
-
-<div class="principle">
-Attention to environmental responsibility
-</div>
-
-<div class="principle">
-Reliable delivery and professional service
-</div>
-
-<div class="principle">
-Commitment to long-term business relationships
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<div class="heading">
-<small>ENVIRONMENT & COMMUNITY</small>
-<h2>Creating Value Beyond Commerce.</h2>
-
-<p>
-Responsible business also recognizes the wider environment and communities
-connected to operational activities.
-</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<span>ENVIRONMENT</span>
-<h3>Environmental Responsibility</h3>
-<p>
-Environmental considerations form part of our broader approach to
-responsible business and sustainable procurement.
-</p>
-</div>
-
-<div class="card">
-<span>COMMUNITIES</span>
-<h3>Community Development</h3>
-<p>
-Through the Meridian Gold Refinery Ghana Foundation, community development
-initiatives support priority areas in host communities.
-</p>
-</div>
-
-<div class="card">
-<span>SUPPLY CHAIN</span>
-<h3>Sustainable Procurement</h3>
-<p>
-We recognize the role procurement can play in strengthening relationships
-and creating shared value across the value chain.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="cta">
-
-<h2>Responsible Partnerships Start Here.</h2>
-
-<p>
-For supplier, sourcing and commercial partnership enquiries, connect with
-Meridian Gold Refinery.
-</p>
-
-<a href="suppliers.html" class="btn gold">SUPPLIER PARTNERSHIPS</a>
-
-</section>
-
-<footer>
-
-<div class="footer">
-
-<div>
-<div class="logo">
-◆ MERIDIAN
-<span>GOLD REFINERY</span>
-</div>
-
-<p style="margin-top:10px;">
-Precious Metals • Global Connections
-</p>
-</div>
-
-<div class="links">
-<a href="index.html">HOME</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-<a href="contact.html">CONTACT</a>
-</div>
-
-</div>
-
-<p style="max-width:1250px;margin:30px auto 0;">
-© 2026 Meridian Gold Refinery. All rights reserved.
-</p>
-
-</footer>
-
+<div class="top"><span>MERIDIAN GOLD REFINERY</span><span>RESPONSIBLE SOURCING</span></div>
+<header><div class="nav"><a href="index.html" class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></a><nav><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></nav><button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></div></header>
+<section class="hero"><div class="hero-content"><div class="label">RESPONSIBLE SOURCING</div><h1>Responsible Gold.<br><span style="color:#d4af37;">Responsible Business.</span></h1><p>We recognize that responsible sourcing extends beyond the transaction. It requires attention to ethical conduct, supply-chain relationships, social responsibility and environmental considerations.</p></div></section>
+<section><div class="container"><div class="heading"><small>OUR APPROACH</small><h2>Responsibility Across The Value Chain.</h2></div><div class="intro"><div class="text"><p>Meridian Gold Refinery works with producers, suppliers, refining facilities and commercial partners within the precious metals value chain.</p><p>We seek relationships that support professional standards, dependable business practices and appropriate compliance with applicable requirements.</p><p>Responsible sourcing is viewed as an ongoing business principle rather than a single stage of the purchasing process.</p></div><div class="quote"><strong>OUR COMMITMENT</strong><p>Build commercial relationships that recognize the importance of integrity, accountability, social responsibility and environmental responsibility.</p></div></div></div></section>
+<section class="dark"><div class="container"><div class="heading"><small>CORE PRINCIPLES</small><h2>Standards That Shape Our Relationships.</h2></div><div class="cards"><div class="card"><span>01</span><h3>Integrity</h3><p>Business dealings should be conducted honestly and professionally.</p></div><div class="card"><span>02</span><h3>Accountability</h3><p>Clear responsibilities help strengthen trust throughout commercial relationships.</p></div><div class="card"><span>03</span><h3>Respect</h3><p>We recognize the importance of respectful relationships with people, communities and business partners.</p></div></div></div></section>
+<section><div class="container"><div class="heading"><small>SUPPLY-CHAIN RESPONSIBILITY</small><h2>From Source To Market.</h2><p>Responsible business considerations can be relevant at different points within the precious metals value chain.</p></div><div class="chain"><div><strong>01</strong><span>Source</span></div><div><strong>02</strong><span>Supplier</span></div><div><strong>03</strong><span>Processing</span></div><div><strong>04</strong><span>Trade</span></div><div><strong>05</strong><span>Market</span></div></div></div></section>
+<section class="dark"><div class="container"><div class="heading"><small>RESPONSIBLE BUSINESS</small><h2>What We Expect From Partners.</h2></div><div class="principles"><div class="principle">Compliance with applicable laws and regulations</div><div class="principle">Ethical and transparent business conduct</div><div class="principle">Respect for social responsibility principles</div><div class="principle">Attention to environmental responsibility</div><div class="principle">Reliable delivery and professional service</div><div class="principle">Commitment to long-term business relationships</div></div></div></section>
+<section><div class="container"><div class="heading"><small>ENVIRONMENT & COMMUNITY</small><h2>Creating Value Beyond Commerce.</h2><p>Responsible business also recognizes the wider environment and communities connected to operational activities.</p></div><div class="cards"><div class="card"><span>ENVIRONMENT</span><h3>Environmental Responsibility</h3><p>Environmental considerations form part of our broader approach to responsible business and sustainable procurement.</p></div><div class="card"><span>COMMUNITIES</span><h3>Community Development</h3><p>Through the Meridian Gold Refinery Ghana Foundation, community development initiatives support priority areas in host communities.</p></div><div class="card"><span>SUPPLY CHAIN</span><h3>Sustainable Procurement</h3><p>We recognize the role procurement can play in strengthening relationships and creating shared value across the value chain.</p></div></div></div></section>
+<section class="cta"><h2>Responsible Partnerships Start Here.</h2><p>For supplier, sourcing and commercial partnership enquiries, connect with Meridian Gold Refinery.</p><a href="suppliers.html" class="btn gold">SUPPLIER PARTNERSHIPS</a></section>
+<footer><div class="footer"><div><div class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></div><p style="margin-top:10px;">Precious Metals • Global Connections</p></div><div class="links"><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></div></div><p style="max-width:1250px;margin:30px auto 0;">© 2026 Meridian Gold Refinery. All rights reserved.</p></footer>
+<script>function toggleMenu(){ const menu=document.getElementById('mobileMenu'); menu.style.display = menu.style.display === 'block' ? 'none' : 'block'; } document.querySelectorAll('.mobile-menu a').forEach(function(link){ link.addEventListener('click', function(){ document.getElementById('mobileMenu').style.display = 'none'; }); });</script>
 </body>
 </html>

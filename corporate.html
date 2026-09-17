@@ -3,1020 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Corporate | Meridian Gold Refinery</title>
-
   <meta name="description" content="Corporate profile, governance and business principles of Meridian Gold Refinery, a Ghanaian precious metals company based in Tarkwa.">
-
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23070707'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='60' fill='%23d4af37'%3EM%3C/text%3E%3C/svg%3E">
-
   <style>
-    :root {
-      --gold:#d4af37;
-      --gold-light:#f2d878;
-      --black:#050505;
-      --dark:#0b0b0b;
-      --dark2:#111;
-      --white:#fff;
-      --text:#d5d5d5;
-      --muted:#999;
-      --border:rgba(212,175,55,.22);
-    }
-
-    * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
-
-    body {
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--black);
-      color:var(--white);
-      line-height:1.7;
-    }
-
-    a {
-      color:inherit;
-      text-decoration:none;
-    }
-
-    .topbar {
-      background:#000;
-      border-bottom:1px solid var(--border);
-      padding:9px 6%;
-      display:flex;
-      justify-content:space-between;
-      font-size:11px;
-      color:#999;
-      letter-spacing:1.5px;
-      text-transform:uppercase;
-    }
-
-    header {
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(5,5,5,.96);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--border);
-    }
-
-    .nav {
-      max-width:1400px;
-      margin:auto;
-      min-height:78px;
-      padding:0 5%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-
-    .logo {
-      display:flex;
-      align-items:center;
-      gap:11px;
-      line-height:1.1;
-    }
-
-    .logo-symbol {
-      color:var(--gold);
-      font-size:27px;
-    }
-
-    .logo-main {
-      font-size:16px;
-      font-weight:800;
-      letter-spacing:3px;
-    }
-
-    .logo-sub {
-      color:var(--gold);
-      font-size:9px;
-      letter-spacing:4px;
-      margin-top:4px;
-    }
-
-    nav {
-      display:flex;
-      align-items:center;
-      gap:17px;
-    }
-
-    nav a {
-      color:#ccc;
-      font-size:10px;
-      letter-spacing:1px;
-      transition:.3s;
-    }
-
-    nav a:hover {
-      color:var(--gold);
-    }
-
-    .menu-btn {
-      display:none;
-      background:none;
-      border:1px solid var(--border);
-      color:var(--gold);
-      font-size:22px;
-      padding:7px 11px;
-    }
-
-    .mobile-menu {
-      display:none;
-      background:#090909;
-      border-top:1px solid var(--border);
-      padding:15px 6%;
-    }
-
-    .mobile-menu a {
-      display:block;
-      padding:12px 0;
-      border-bottom:1px solid #222;
-      font-size:12px;
-      letter-spacing:1px;
-      color:#ddd;
-    }
-
-    .hero {
-      min-height:62vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at 80% 40%,rgba(212,175,55,.14),transparent 30%),
-        linear-gradient(135deg,#050505,#111);
-    }
-
-    .hero::after {
-      content:"";
-      position:absolute;
-      right:-170px;
-      top:50%;
-      width:500px;
-      height:500px;
-      transform:translateY(-50%);
-      border:1px solid rgba(212,175,55,.13);
-      border-radius:50%;
-      box-shadow:
-        0 0 0 70px rgba(212,175,55,.025),
-        0 0 0 140px rgba(212,175,55,.018);
-    }
-
-    .hero-content {
-      width:88%;
-      max-width:1200px;
-      margin:auto;
-      position:relative;
-      z-index:2;
-      padding:100px 0;
-    }
-
-    .eyebrow {
-      color:var(--gold);
-      font-size:11px;
-      letter-spacing:4px;
-      margin-bottom:20px;
-      text-transform:uppercase;
-      font-weight:bold;
-    }
-
-    .hero h1 {
-      max-width:850px;
-      font-size:clamp(43px,7vw,80px);
-      line-height:1;
-      letter-spacing:-3px;
-      text-transform:uppercase;
-      margin-bottom:25px;
-    }
-
-    .hero h1 span {
-      color:var(--gold);
-    }
-
-    .hero p {
-      max-width:700px;
-      color:#aaa;
-      font-size:17px;
-    }
-
-    section {
-      padding:90px 6%;
-    }
-
-    .container {
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .label {
-      color:var(--gold);
-      font-size:10px;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      font-weight:bold;
-      margin-bottom:14px;
-    }
-
-    .title {
-      font-size:clamp(30px,4vw,52px);
-      line-height:1.1;
-      margin-bottom:20px;
-    }
-
-    .intro {
-      color:#999;
-      max-width:760px;
-    }
-
-    .profile {
-      background:var(--dark);
-    }
-
-    .profile-grid {
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:65px;
-      align-items:center;
-    }
-
-    .profile-text p {
-      color:#aaa;
-      margin-bottom:18px;
-    }
-
-    .highlight {
-      margin-top:28px;
-      padding:24px;
-      background:#111;
-      border-left:2px solid var(--gold);
-      color:#ddd;
-    }
-
-    .facts {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      border:1px solid var(--border);
-    }
-
-    .fact {
-      padding:32px 22px;
-      border-right:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-    }
-
-    .fact:nth-child(2n) {
-      border-right:0;
-    }
-
-    .fact:nth-last-child(-n+2) {
-      border-bottom:0;
-    }
-
-    .fact strong {
-      display:block;
-      color:var(--gold);
-      font-size:32px;
-      margin-bottom:7px;
-    }
-
-    .fact span {
-      color:#999;
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:1px;
-    }
-
-    .dark-section {
-      background:#080808;
-    }
-
-    .cards {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:45px;
-    }
-
-    .card {
-      background:#111;
-      border:1px solid #242424;
-      padding:32px 27px;
-      transition:.3s;
-    }
-
-    .card:hover {
-      transform:translateY(-5px);
-      border-color:var(--gold);
-    }
-
-    .card-number {
-      color:var(--gold);
-      font-size:11px;
-      letter-spacing:2px;
-      margin-bottom:22px;
-    }
-
-    .card h3 {
-      font-size:19px;
-      margin-bottom:12px;
-    }
-
-    .card p {
-      color:#999;
-      font-size:14px;
-    }
-
-    .documents {
-      background:var(--dark);
-    }
-
-    .document-list {
-      margin-top:40px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .document {
-      border:1px solid #272727;
-      padding:20px;
-      background:#0d0d0d;
-      color:#ccc;
-    }
-
-    .document span {
-      color:var(--gold);
-      margin-right:10px;
-    }
-
-    .cta {
-      text-align:center;
-      background:
-        linear-gradient(120deg,#161207,#080808);
-      border-top:1px solid var(--border);
-    }
-
-    .cta h2 {
-      font-size:clamp(32px,5vw,58px);
-      margin-bottom:18px;
-    }
-
-    .cta p {
-      max-width:700px;
-      margin:0 auto 30px;
-      color:#999;
-    }
-
-    .btn {
-      display:inline-block;
-      padding:14px 25px;
-      border:1px solid var(--gold);
-      font-size:11px;
-      letter-spacing:1.7px;
-      text-transform:uppercase;
-      margin:5px;
-      transition:.3s;
-    }
-
-    .btn-primary {
-      background:var(--gold);
-      color:#000;
-      font-weight:bold;
-    }
-
-    .btn-outline:hover {
-      background:var(--gold);
-      color:#000;
-    }
-
-    footer {
-      background:#000;
-      padding:55px 6% 25px;
-    }
-
-    .footer-grid {
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.5fr 1fr 1fr;
-      gap:45px;
-      padding-bottom:40px;
-    }
-
-    footer h3 {
-      font-size:15px;
-      margin-bottom:16px;
-    }
-
-    footer p,
-    footer a {
-      display:block;
-      color:#777;
-      font-size:13px;
-      margin-bottom:7px;
-    }
-
-    footer a:hover {
-      color:var(--gold);
-    }
-
-    .footer-bottom {
-      max-width:1200px;
-      margin:auto;
-      border-top:1px solid #1c1c1c;
-      padding-top:20px;
-      display:flex;
-      justify-content:space-between;
-      color:#666;
-      font-size:11px;
-    }
-
-    @media(max-width:1100px) {
-      nav {
-        display:none;
-      }
-
-      .menu-btn {
-        display:block;
-      }
-    }
-
-    @media(max-width:760px) {
-      .topbar {
-        display:none;
-      }
-
-      .profile-grid,
-      .cards,
-      .document-list,
-      .footer-grid {
-        grid-template-columns:1fr;
-      }
-
-      .profile-grid {
-        gap:40px;
-      }
-
-      .facts {
-        grid-template-columns:1fr;
-      }
-
-      .fact,
-      .fact:nth-child(2n) {
-        border-right:0;
-        border-bottom:1px solid var(--border);
-      }
-
-      .fact:last-child {
-        border-bottom:0;
-      }
-
-      .footer-bottom {
-        flex-direction:column;
-        gap:10px;
-      }
-
-      section {
-        padding:70px 6%;
-      }
-    }
+    :root { --gold:#d4af37; --gold-light:#f2d878; --black:#050505; --dark:#0b0b0b; --dark2:#111; --white:#fff; --text:#d5d5d5; --muted:#999; --border:rgba(212,175,55,.22); }
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+    body { font-family:Arial,Helvetica,sans-serif; background:var(--black); color:var(--white); line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .topbar { background:#000; border-bottom:1px solid var(--border); padding:9px 6%; display:flex; justify-content:space-between; font-size:11px; color:#999; letter-spacing:1.5px; text-transform:uppercase; }
+    header { position:sticky; top:0; z-index:1000; background:rgba(5,5,5,.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    .nav { max-width:1400px; margin:auto; min-height:78px; padding:0 5%; display:flex; align-items:center; justify-content:space-between; }
+    .logo { display:flex; align-items:center; gap:11px; line-height:1.1; }
+    .logo-symbol { color:var(--gold); font-size:27px; }
+    .logo-main { font-size:16px; font-weight:800; letter-spacing:3px; }
+    .logo-sub { color:var(--gold); font-size:9px; letter-spacing:4px; margin-top:4px; }
+    nav { display:flex; align-items:center; gap:17px; }
+    nav a { color:#ccc; font-size:10px; letter-spacing:1px; transition:.3s; }
+    nav a:hover { color:var(--gold); }
+    .menu-btn { display:none; background:none; border:1px solid var(--border); color:var(--gold); font-size:22px; padding:7px 11px; cursor:pointer; }
+    .mobile-menu { display:none; background:#090909; border-top:1px solid var(--border); padding:15px 6%; }
+    .mobile-menu a { display:block; padding:12px 0; border-bottom:1px solid #222; font-size:12px; letter-spacing:1px; color:#ddd; }
+    .hero { min-height:62vh; display:flex; align-items:center; position:relative; overflow:hidden; background:radial-gradient(circle at 80% 40%,rgba(212,175,55,.14),transparent 30%), linear-gradient(135deg,#050505,#111); }
+    .hero::after { content:""; position:absolute; right:-170px; top:50%; width:500px; height:500px; transform:translateY(-50%); border:1px solid rgba(212,175,55,.13); border-radius:50%; box-shadow:0 0 0 70px rgba(212,175,55,.025), 0 0 0 140px rgba(212,175,55,.018); }
+    .hero-content { width:88%; max-width:1200px; margin:auto; position:relative; z-index:2; padding:100px 0; }
+    .eyebrow { color:var(--gold); font-size:11px; letter-spacing:4px; margin-bottom:20px; text-transform:uppercase; font-weight:bold; }
+    .hero h1 { max-width:850px; font-size:clamp(43px,7vw,80px); line-height:1; letter-spacing:-3px; text-transform:uppercase; margin-bottom:25px; }
+    .hero h1 span { color:var(--gold); }
+    .hero p { max-width:700px; color:#aaa; font-size:17px; }
+    section { padding:90px 6%; }
+    .container { max-width:1200px; margin:auto; }
+    .label { color:var(--gold); font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; margin-bottom:14px; }
+    .title { font-size:clamp(30px,4vw,52px); line-height:1.1; margin-bottom:20px; }
+    .intro { color:#999; max-width:760px; }
+    .profile { background:var(--dark); }
+    .profile-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:65px; align-items:center; }
+    .profile-text p { color:#aaa; margin-bottom:18px; }
+    .highlight { margin-top:28px; padding:24px; background:#111; border-left:2px solid var(--gold); color:#ddd; }
+    .facts { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); }
+    .fact { padding:32px 22px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .fact:nth-child(2n) { border-right:0; }
+    .fact:nth-last-child(-n+2) { border-bottom:0; }
+    .fact strong { display:block; color:var(--gold); font-size:32px; margin-bottom:7px; }
+    .fact span { color:#999; font-size:11px; text-transform:uppercase; letter-spacing:1px; }
+    .dark-section { background:#080808; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:45px; }
+    .card { background:#111; border:1px solid #242424; padding:32px 27px; transition:.3s; }
+    .card:hover { transform:translateY(-5px); border-color:var(--gold); }
+    .card-number { color:var(--gold); font-size:11px; letter-spacing:2px; margin-bottom:22px; }
+    .card h3 { font-size:19px; margin-bottom:12px; }
+    .card p { color:#999; font-size:14px; }
+    .documents { background:var(--dark); }
+    .document-list { margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .document { border:1px solid #272727; padding:20px; background:#0d0d0d; color:#ccc; }
+    .document span { color:var(--gold); margin-right:10px; }
+    .cta { text-align:center; background:linear-gradient(120deg,#161207,#080808); border-top:1px solid var(--border); }
+    .cta h2 { font-size:clamp(32px,5vw,58px); margin-bottom:18px; }
+    .cta p { max-width:700px; margin:0 auto 30px; color:#999; }
+    .btn { display:inline-block; padding:14px 25px; border:1px solid var(--gold); font-size:11px; letter-spacing:1.7px; text-transform:uppercase; margin:5px; transition:.3s; }
+    .btn-primary { background:var(--gold); color:#000; font-weight:bold; }
+    .btn-outline:hover { background:var(--gold); color:#000; }
+    footer { background:#000; padding:55px 6% 25px; }
+    .footer-grid { max-width:1200px; margin:auto; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:45px; padding-bottom:40px; }
+    footer h3 { font-size:15px; margin-bottom:16px; }
+    footer p, footer a { display:block; color:#777; font-size:13px; margin-bottom:7px; }
+    footer a:hover { color:var(--gold); }
+    .footer-bottom { max-width:1200px; margin:auto; border-top:1px solid #1c1c1c; padding-top:20px; display:flex; justify-content:space-between; color:#666; font-size:11px; }
+    @media(max-width:1100px) { nav { display:none; } .menu-btn { display:block; } }
+    @media(max-width:760px) { .topbar{display:none;} .profile-grid,.cards,.document-list,.footer-grid { grid-template-columns:1fr; } .profile-grid{gap:40px;} .facts { grid-template-columns:1fr; } .fact,.fact:nth-child(2n){border-right:0;border-bottom:1px solid var(--border);} .fact:last-child{border-bottom:0;} .footer-bottom { flex-direction:column; gap:10px; } section{padding:70px 6%;} }
   </style>
 </head>
-
 <body>
-
-  <div class="topbar">
-    <span>MERIDIAN GOLD REFINERY | GHANA</span>
-    <span>PRECIOUS METALS • GLOBAL CONNECTIONS</span>
-  </div>
-
+  <div class="topbar"><span>MERIDIAN GOLD REFINERY | GHANA</span><span>PRECIOUS METALS • GLOBAL CONNECTIONS</span></div>
   <header>
     <div class="nav">
-
-      <a href="index.html" class="logo">
-        <div class="logo-symbol">◆</div>
-        <div>
-          <div class="logo-main">MERIDIAN</div>
-          <div class="logo-sub">GOLD REFINERY</div>
-        </div>
-      </a>
-
-      <nav>
-        <a href="index.html">HOME</a>
-        <a href="corporate.html">CORPORATE</a>
-        <a href="operations.html">OPERATIONS</a>
-        <a href="gold-sourcing.html">GOLD SOURCING</a>
-        <a href="international-trade.html">INTERNATIONAL TRADE</a>
-        <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-        <a href="careers.html">CAREERS</a>
-        <a href="suppliers.html">SUPPLIERS</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
-
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
+      <a href="index.html" class="logo"><div class="logo-symbol">◆</div><div><div class="logo-main">MERIDIAN</div><div class="logo-sub">GOLD REFINERY</div></div></a>
+      <nav><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></nav>
+      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
     </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">HOME</a>
-      <a href="corporate.html">CORPORATE</a>
-      <a href="operations.html">OPERATIONS</a>
-      <a href="gold-sourcing.html">GOLD SOURCING</a>
-      <a href="international-trade.html">INTERNATIONAL TRADE</a>
-      <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-      <a href="careers.html">CAREERS</a>
-      <a href="suppliers.html">SUPPLIERS</a>
-      <a href="contact.html">CONTACT</a>
-    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></div>
   </header>
 
-
-  <!-- HERO -->
-
   <section class="hero">
-
     <div class="hero-content">
-
-      <div class="eyebrow">
-        Corporate Profile
-      </div>
-
-      <h1>
-        Professional.<br>
-        <span>Purpose Driven.</span>
-      </h1>
-
-      <p>
-        Meridian Gold Refinery is a Ghanaian precious metals
-        company based in Tarkwa, Western Region, Ghana,
-        operating across the precious metals value chain.
-      </p>
-
+      <div class="eyebrow">Corporate Profile</div>
+      <h1>Professional.<br><span>Purpose Driven.</span></h1>
+      <p>Meridian Gold Refinery is a Ghanaian precious metals company based in Tarkwa, Western Region, Ghana, operating across the precious metals value chain.</p>
     </div>
-
   </section>
-
-
-  <!-- PROFILE -->
 
   <section class="profile">
-
     <div class="container profile-grid">
-
       <div class="profile-text">
-
         <div class="label">01 / Company Profile</div>
-
-        <h2 class="title">
-          Connecting Ghana's Resources With Global Opportunity.
-        </h2>
-
-        <p>
-          Operating since 2007, Meridian Gold Refinery
-          participates across the precious metals value
-          chain, including gold production relationships,
-          sourcing, refining relationships and international
-          trade.
-        </p>
-
-        <p>
-          The company works with gold producers, suppliers,
-          refining facilities and international trading
-          partners to support commercial connections between
-          Ghanaian mineral resources and international markets.
-        </p>
-
-        <div class="highlight">
-          Our objective is to create sustainable commercial
-          value through strong relationships, responsible
-          business practices and long-term participation
-          in the precious metals sector.
-        </div>
-
+        <h2 class="title">Connecting Ghana's Resources With Global Opportunity.</h2>
+        <p>Operating since 2007, Meridian Gold Refinery participates across the precious metals value chain, including gold production relationships, sourcing, refining relationships and international trade.</p>
+        <p>The company works with gold producers, suppliers, refining facilities and international trading partners to support commercial connections between Ghanaian mineral resources and international markets.</p>
+        <div class="highlight">Our objective is to create sustainable commercial value through strong relationships, responsible business practices and long-term participation in the precious metals sector.</div>
       </div>
-
-
       <div class="facts">
-
-        <div class="fact">
-          <strong>2007</strong>
-          <span>Operating Since</span>
-        </div>
-
-        <div class="fact">
-          <strong>90%</strong>
-          <span>Major Mining Interest</span>
-        </div>
-
-        <div class="fact">
-          <strong>10%</strong>
-          <span>Government Free-Carried Interest</span>
-        </div>
-
-        <div class="fact">
-          <strong>GHANA</strong>
-          <span>Primary Operating Country</span>
-        </div>
-
+        <div class="fact"><strong>2007</strong><span>Operating Since</span></div>
+        <div class="fact"><strong>90%</strong><span>Major Mining Interest</span></div>
+        <div class="fact"><strong>10%</strong><span>Government Free-Carried Interest</span></div>
+        <div class="fact"><strong>GHANA</strong><span>Primary Operating Country</span></div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- GOVERNANCE -->
 
   <section class="dark-section">
-
     <div class="container">
-
       <div class="label">02 / Governance</div>
-
-      <h2 class="title">
-        Structured For Accountability.
-      </h2>
-
-      <p class="intro">
-        Effective governance supports responsible business,
-        transparent decision-making and long-term value
-        creation across the organisation and its community
-        development initiatives.
-      </p>
-
-
+      <h2 class="title">Structured For Accountability.</h2>
+      <p class="intro">Effective governance supports responsible business, transparent decision-making and long-term value creation across the organisation and its community development initiatives.</p>
       <div class="cards">
-
-        <div class="card">
-          <div class="card-number">01</div>
-
-          <h3>Business Governance</h3>
-
-          <p>
-            Meridian's commercial activities are structured
-            around accountability, operational discipline,
-            responsible business conduct and long-term
-            relationships.
-          </p>
-        </div>
-
-
-        <div class="card">
-          <div class="card-number">02</div>
-
-          <h3>Foundation Governance</h3>
-
-          <p>
-            The Meridian Gold Refinery Ghana Foundation
-            operates with a Board of Trustees that reviews
-            projects, programmes and budgets on a quarterly
-            basis.
-          </p>
-        </div>
-
-
-        <div class="card">
-          <div class="card-number">03</div>
-
-          <h3>Financial Oversight</h3>
-
-          <p>
-            The Foundation's financial accounts are subject
-            to annual independent audit review, supporting
-            financial accountability.
-          </p>
-        </div>
-
+        <div class="card"><div class="card-number">01</div><h3>Business Governance</h3><p>Meridian's commercial activities are structured around accountability, operational discipline, responsible business conduct and long-term relationships.</p></div>
+        <div class="card"><div class="card-number">02</div><h3>Foundation Governance</h3><p>The Meridian Gold Refinery Ghana Foundation operates with a Board of Trustees that reviews projects, programmes and budgets on a quarterly basis.</p></div>
+        <div class="card"><div class="card-number">03</div><h3>Financial Oversight</h3><p>The Foundation's financial accounts are subject to annual independent audit review, supporting financial accountability.</p></div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- FOUNDATION -->
 
   <section class="profile">
-
     <div class="container">
-
-      <div class="label">
-        03 / Community Development
-      </div>
-
-      <h2 class="title">
-        Meridian Gold Refinery Ghana Foundation
-      </h2>
-
-      <p class="intro">
-        Established in 2012 for the development of Tarkwa
-        and Tamso host communities, the Foundation focuses
-        on practical community development priorities.
-      </p>
-
-
+      <div class="label">03 / Community Development</div>
+      <h2 class="title">Meridian Gold Refinery Ghana Foundation</h2>
+      <p class="intro">Established in 2012 for the development of Tarkwa and Tamso host communities, the Foundation focuses on practical community development priorities.</p>
       <div class="cards">
-
-        <div class="card">
-          <div class="card-number">01</div>
-          <h3>Education</h3>
-          <p>
-            Supporting educational development and
-            opportunities within host communities.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">02</div>
-          <h3>Health</h3>
-          <p>
-            Supporting initiatives that contribute to
-            community health and wellbeing.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">03</div>
-          <h3>Water & Sanitation</h3>
-          <p>
-            Supporting essential water and sanitation
-            development priorities.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">04</div>
-          <h3>Agriculture</h3>
-          <p>
-            Supporting agricultural initiatives and
-            community livelihood opportunities.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">05</div>
-          <h3>Infrastructure</h3>
-          <p>
-            Supporting infrastructure projects that
-            contribute to community development.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">06</div>
-          <h3>Long-Term Impact</h3>
-          <p>
-            Between 2012 and 2025, more than US$104.3 million
-            was invested in development projects and programmes.
-          </p>
-        </div>
-
+        <div class="card"><div class="card-number">01</div><h3>Education</h3><p>Supporting educational development and opportunities within host communities.</p></div>
+        <div class="card"><div class="card-number">02</div><h3>Health</h3><p>Supporting initiatives that contribute to community health and wellbeing.</p></div>
+        <div class="card"><div class="card-number">03</div><h3>Water & Sanitation</h3><p>Supporting essential water and sanitation development priorities.</p></div>
+        <div class="card"><div class="card-number">04</div><h3>Agriculture</h3><p>Supporting agricultural initiatives and community livelihood opportunities.</p></div>
+        <div class="card"><div class="card-number">05</div><h3>Infrastructure</h3><p>Supporting infrastructure projects that contribute to community development.</p></div>
+        <div class="card"><div class="card-number">06</div><h3>Long-Term Impact</h3><p>Between 2012 and 2025, more than US$104.3 million was invested in development projects and programmes.</p></div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- DOCUMENTATION -->
 
   <section class="documents">
-
     <div class="container">
-
-      <div class="label">
-        04 / Corporate Documentation
-      </div>
-
-      <h2 class="title">
-        Documentation & Business Information
-      </h2>
-
-      <p class="intro">
-        Corporate documentation can be added to this section
-        as official files become available for publication.
-      </p>
-
+      <div class="label">04 / Corporate Documentation</div>
+      <h2 class="title">Documentation & Business Information</h2>
+      <p class="intro">Corporate documentation can be added to this section as official files become available for publication.</p>
       <div class="document-list">
-
-        <div class="document">
-          <span>◆</span>
-          Corporate Profile
-        </div>
-
-        <div class="document">
-          <span>◆</span>
-          Operational Information
-        </div>
-
-        <div class="document">
-          <span>◆</span>
-          Precious Metals Information
-        </div>
-
-        <div class="document">
-          <span>◆</span>
-          Applicable Regulatory Documentation
-        </div>
-
-        <div class="document">
-          <span>◆</span>
-          Export & Trade Documentation
-        </div>
-
-        <div class="document">
-          <span>◆</span>
-          Business Partnership Documentation
-        </div>
-
+        <div class="document"><span>◆</span>Corporate Profile</div>
+        <div class="document"><span>◆</span>Operational Information</div>
+        <div class="document"><span>◆</span>Precious Metals Information</div>
+        <div class="document"><span>◆</span>Applicable Regulatory Documentation</div>
+        <div class="document"><span>◆</span>Export & Trade Documentation</div>
+        <div class="document"><span>◆</span>Business Partnership Documentation</div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- PRINCIPLES -->
 
   <section class="dark-section">
-
     <div class="container">
-
       <div class="label">05 / Principles</div>
-
-      <h2 class="title">
-        How We Approach Business.
-      </h2>
-
+      <h2 class="title">How We Approach Business.</h2>
       <div class="cards">
-
-        <div class="card">
-          <div class="card-number">01</div>
-          <h3>Integrity</h3>
-          <p>
-            Building commercial relationships around
-            honesty, responsible conduct and trust.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">02</div>
-          <h3>Accountability</h3>
-          <p>
-            Maintaining clear responsibility for business
-            decisions, relationships and commitments.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-number">03</div>
-          <h3>Long-Term Value</h3>
-          <p>
-            Developing relationships and initiatives
-            designed to create sustainable value.
-          </p>
-        </div>
-
+        <div class="card"><div class="card-number">01</div><h3>Integrity</h3><p>Building commercial relationships around honesty, responsible conduct and trust.</p></div>
+        <div class="card"><div class="card-number">02</div><h3>Accountability</h3><p>Maintaining clear responsibility for business decisions, relationships and commitments.</p></div>
+        <div class="card"><div class="card-number">03</div><h3>Long-Term Value</h3><p>Developing relationships and initiatives designed to create sustainable value.</p></div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- CTA -->
 
   <section class="cta">
-
     <div class="container">
-
       <div class="label">06 / Connect With Meridian</div>
-
-      <h2>
-        Let's Build The Next Connection.
-      </h2>
-
-      <p>
-        For commercial partnerships, supplier enquiries
-        and precious metals business discussions, contact
-        Meridian Gold Refinery directly.
-      </p>
-
-      <a href="contact.html" class="btn btn-primary">
-        Contact Meridian
-      </a>
-
-      <a href="international-trade.html" class="btn btn-outline">
-        International Trade
-      </a>
-
+      <h2>Let's Build The Next Connection.</h2>
+      <p>For commercial partnerships, supplier enquiries and precious metals business discussions, contact Meridian Gold Refinery directly.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Meridian</a>
+      <a href="international-trade.html" class="btn btn-outline">International Trade</a>
     </div>
-
   </section>
 
-
-  <!-- FOOTER -->
-
   <footer>
-
     <div class="footer-grid">
-
       <div>
-
-        <div class="logo">
-
-          <div class="logo-symbol">◆</div>
-
-          <div>
-            <div class="logo-main">MERIDIAN</div>
-            <div class="logo-sub">GOLD REFINERY</div>
-          </div>
-
-        </div>
-
-        <br>
-
-        <p>Precious metals. Global connections.</p>
-
-        <p>Tarkwa, Western Region, Ghana.</p>
-
+        <div class="logo"><div class="logo-symbol">◆</div><div><div class="logo-main">MERIDIAN</div><div class="logo-sub">GOLD REFINERY</div></div></div>
+        <br><p>Precious metals. Global connections.</p><p>Tarkwa, Western Region, Ghana.</p>
       </div>
-
-
       <div>
-
         <h3>Explore</h3>
-
         <a href="index.html">Home</a>
         <a href="operations.html">Operations</a>
         <a href="gold-sourcing.html">Gold Sourcing</a>
         <a href="international-trade.html">International Trade</a>
         <a href="responsible-sourcing.html">Responsible Sourcing</a>
-
       </div>
-
-
       <div>
-
         <h3>Connect</h3>
-
         <a href="careers.html">Careers</a>
         <a href="suppliers.html">Suppliers</a>
         <a href="contact.html">Contact</a>
-
         <p>meridia.goldrefinering@outlook.com</p>
         <p>+233 (0) 550 230 7533</p>
         <p>WhatsApp: +233 (0) 554 600 108</p>
-
       </div>
-
     </div>
-
-
-    <div class="footer-bottom">
-
-      <span>
-        © 2026 Meridian Gold Refinery. All rights reserved.
-      </span>
-
-      <span>
-        Tarkwa • Western Region • Ghana
-      </span>
-
-    </div>
-
+    <div class="footer-bottom"><span>© 2026 Meridian Gold Refinery. All rights reserved.</span><span>Tarkwa • Western Region • Ghana</span></div>
   </footer>
 
-
   <script>
-
     function toggleMenu() {
-
-      const menu = document.getElementById("mobileMenu");
-
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "block";
-      }
-
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     }
-
-    document.querySelectorAll(".mobile-menu a").forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        document.getElementById("mobileMenu").style.display = "none";
-
-      });
-
+    document.querySelectorAll('.mobile-menu a').forEach(function(link){
+      link.addEventListener('click', function(){ document.getElementById('mobileMenu').style.display = 'none'; });
     });
-
   </script>
-
 </body>
 </html>

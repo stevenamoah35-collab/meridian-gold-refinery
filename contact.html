@@ -3,627 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Contact | Meridian Gold Refinery</title>
-
 <meta name="description" content="Contact Meridian Gold Refinery in Tarkwa, Western Region, Ghana for business, supplier and partnership enquiries.">
-
 <style>
-:root{
---gold:#d4af37;
---black:#050505;
---dark:#0b0b0b;
---white:#fff;
---muted:#aaa;
---line:rgba(212,175,55,.22);
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#050505;
-color:#fff;
-line-height:1.7;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.top{
-padding:10px 6%;
-border-bottom:1px solid var(--line);
-display:flex;
-justify-content:space-between;
-font-size:10px;
-letter-spacing:2px;
-color:#888;
-}
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(5,5,5,.96);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--line);
-}
-
-.nav{
-max-width:1250px;
-margin:auto;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:21px;
-font-weight:bold;
-letter-spacing:2px;
-}
-
-.logo span{
-display:block;
-font-size:9px;
-color:var(--gold);
-letter-spacing:3px;
-}
-
-nav{
-display:flex;
-gap:20px;
-}
-
-nav a{
-font-size:10px;
-letter-spacing:1.1px;
-color:#ccc;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.hero{
-min-height:60vh;
-display:flex;
-align-items:center;
-background:
-radial-gradient(circle at 80% 35%,rgba(212,175,55,.18),transparent 30%),
-linear-gradient(120deg,#030303,#15120a,#050505);
-}
-
-.hero-content{
-max-width:1250px;
-width:100%;
-margin:auto;
-padding:80px 6%;
-}
-
-.label{
-color:var(--gold);
-font-size:11px;
-font-weight:bold;
-letter-spacing:4px;
-}
-
-h1{
-font-size:clamp(43px,7vw,76px);
-line-height:1;
-margin:20px 0;
-}
-
-.hero p{
-max-width:760px;
-color:#aaa;
-font-size:17px;
-}
-
-section{
-padding:90px 6%;
-}
-
-.container{
-max-width:1250px;
-margin:auto;
-}
-
-.heading{
-margin-bottom:40px;
-}
-
-.heading small{
-color:var(--gold);
-font-size:10px;
-font-weight:bold;
-letter-spacing:3px;
-}
-
-.heading h2{
-font-size:clamp(31px,4vw,48px);
-line-height:1.1;
-margin-top:8px;
-}
-
-.heading p{
-color:#999;
-max-width:800px;
-margin-top:15px;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-}
-
-.contact-card{
-padding:35px;
-background:linear-gradient(145deg,#151515,#080808);
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
-}
-
-.contact-card:hover{
-border-color:var(--gold);
-transform:translateY(-4px);
-}
-
-.contact-card small{
-display:block;
-color:var(--gold);
-font-size:10px;
-letter-spacing:2px;
-margin-bottom:12px;
-}
-
-.contact-card h3{
-font-size:22px;
-margin-bottom:8px;
-}
-
-.contact-card p{
-color:#aaa;
-font-size:14px;
-word-break:break-word;
-}
-
-.contact-card a{
-color:#ddd;
-}
-
-.contact-card a:hover{
-color:var(--gold);
-}
-
-.dark{
-background:#0b0b0b;
-border-top:1px solid var(--line);
-border-bottom:1px solid var(--line);
-}
-
-.enquiries{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.enquiry{
-padding:32px;
-background:#111;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.enquiry span{
-display:block;
-color:var(--gold);
-font-size:11px;
-letter-spacing:2px;
-margin-bottom:12px;
-}
-
-.enquiry h3{
-margin-bottom:10px;
-}
-
-.enquiry p{
-color:#999;
-font-size:13px;
-}
-
-.action{
-margin-top:35px;
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-block;
-padding:14px 25px;
-border:1px solid var(--gold);
-font-size:11px;
-font-weight:bold;
-letter-spacing:1.5px;
-}
-
-.btn.gold{
-background:var(--gold);
-color:#000;
-}
-
-.location{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.location-box{
-padding:38px;
-background:#111;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.location-box h3{
-font-size:25px;
-margin-bottom:12px;
-}
-
-.location-box p{
-color:#999;
-}
-
-.notice{
-margin-top:20px;
-padding:18px;
-border-left:2px solid var(--gold);
-background:#0d0d0d;
-font-size:13px;
-color:#999;
-}
-
-.cta{
-text-align:center;
-padding:95px 6%;
-background:linear-gradient(120deg,#17130a,#080808,#17130a);
-border-top:1px solid var(--line);
-}
-
-.cta h2{
-font-size:clamp(32px,5vw,55px);
-}
-
-.cta p{
-max-width:700px;
-margin:15px auto 25px;
-color:#999;
-}
-
-footer{
-padding:42px 6%;
-background:#000;
-border-top:1px solid var(--line);
-}
-
-.footer{
-max-width:1250px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-gap:25px;
-}
-
-footer p{
-color:#777;
-font-size:12px;
-}
-
-.links{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.links a{
-font-size:11px;
-color:#999;
-}
-
-@media(max-width:900px){
-nav{
-display:none;
-}
-
-.enquiries{
-grid-template-columns:1fr 1fr;
-}
-
-.location{
-grid-template-columns:1fr;
-}
-}
-
-@media(max-width:600px){
-.top{
-display:none;
-}
-
-.contact-grid,
-.enquiries{
-grid-template-columns:1fr;
-}
-
-section{
-padding:70px 6%;
-}
-
-.footer{
-flex-direction:column;
-}
-}
+:root{ --gold:#d4af37; --black:#050505; --dark:#0b0b0b; --white:#fff; --muted:#aaa; --line:rgba(212,175,55,.22); }
+*{ margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body{ font-family:Arial,Helvetica,sans-serif; background:#050505; color:#fff; line-height:1.7; }
+a{ color:inherit; text-decoration:none; }
+.top{ padding:10px 6%; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; font-size:10px; letter-spacing:2px; color:#888; }
+header{ position:sticky; top:0; z-index:1000; background:rgba(5,5,5,.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.nav{ max-width:1250px; margin:auto; padding:18px 6%; display:flex; justify-content:space-between; align-items:center; }
+.logo{ font-size:21px; font-weight:bold; letter-spacing:2px; }
+.logo span{ display:block; font-size:9px; color:var(--gold); letter-spacing:3px; }
+nav{ display:flex; gap:20px; }
+nav a{ font-size:10px; letter-spacing:1.1px; color:#ccc; }
+nav a:hover{ color:var(--gold); }
+.menu-btn{ display:none; background:transparent; border:1px solid var(--line); color:var(--gold); font-size:22px; padding:7px 11px; cursor:pointer; }
+.mobile-menu{ display:none; background:#090909; border-top:1px solid var(--line); padding:15px 6%; }
+.mobile-menu a{ display:block; padding:12px 0; border-bottom:1px solid #222; font-size:12px; letter-spacing:1px; color:#ddd; }
+.hero{ min-height:60vh; display:flex; align-items:center; background:radial-gradient(circle at 80% 35%,rgba(212,175,55,.18),transparent 30%), linear-gradient(120deg,#030303,#15120a,#050505); }
+.hero-content{ max-width:1250px; width:100%; margin:auto; padding:80px 6%; }
+.label{ color:var(--gold); font-size:11px; font-weight:bold; letter-spacing:4px; }
+h1{ font-size:clamp(43px,7vw,76px); line-height:1; margin:20px 0; }
+.hero p{ max-width:760px; color:#aaa; font-size:17px; }
+section{ padding:90px 6%; }
+.container{ max-width:1250px; margin:auto; }
+.heading{ margin-bottom:40px; }
+.heading small{ color:var(--gold); font-size:10px; font-weight:bold; letter-spacing:3px; }
+.heading h2{ font-size:clamp(31px,4vw,48px); line-height:1.1; margin-top:8px; }
+.heading p{ color:#999; max-width:800px; margin-top:15px; }
+.contact-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.contact-card{ padding:35px; background:linear-gradient(145deg,#151515,#080808); border:1px solid rgba(255,255,255,.08); transition:.3s; }
+.contact-card:hover{ border-color:var(--gold); transform:translateY(-4px); }
+.contact-card small{ display:block; color:var(--gold); font-size:10px; letter-spacing:2px; margin-bottom:12px; }
+.contact-card h3{ font-size:22px; margin-bottom:8px; }
+.contact-card p{ color:#aaa; font-size:14px; word-break:break-word; }
+.contact-card a{ color:#ddd; }
+.contact-card a:hover{ color:var(--gold); }
+.dark{ background:#0b0b0b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.enquiries{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.enquiry{ padding:32px; background:#111; border:1px solid rgba(255,255,255,.08); }
+.enquiry span{ display:block; color:var(--gold); font-size:11px; letter-spacing:2px; margin-bottom:12px; }
+.enquiry h3{ margin-bottom:10px; }
+.enquiry p{ color:#999; font-size:13px; }
+.action{ margin-top:35px; display:flex; gap:12px; flex-wrap:wrap; }
+.btn{ display:inline-block; padding:14px 25px; border:1px solid var(--gold); font-size:11px; font-weight:bold; letter-spacing:1.5px; }
+.btn.gold{ background:var(--gold); color:#000; }
+.location{ display:grid; grid-template-columns:1fr 1fr; gap:25px; }
+.location-box{ padding:38px; background:#111; border:1px solid rgba(255,255,255,.08); }
+.location-box h3{ font-size:25px; margin-bottom:12px; }
+.location-box p{ color:#999; }
+.notice{ margin-top:20px; padding:18px; border-left:2px solid var(--gold); background:#0d0d0d; font-size:13px; color:#999; }
+.cta{ text-align:center; padding:95px 6%; background:linear-gradient(120deg,#17130a,#080808,#17130a); border-top:1px solid var(--line); }
+.cta h2{ font-size:clamp(32px,5vw,55px); }
+.cta p{ max-width:700px; margin:15px auto 25px; color:#999; }
+footer{ padding:42px 6%; background:#000; border-top:1px solid var(--line); }
+.footer{ max-width:1250px; margin:auto; display:flex; justify-content:space-between; gap:25px; }
+footer p{ color:#777; font-size:12px; }
+.links{ display:flex; gap:20px; flex-wrap:wrap; }
+.links a{ font-size:11px; color:#999; }
+@media(max-width:900px){ nav{display:none;} .menu-btn{display:block;} .enquiries{grid-template-columns:1fr 1fr;} .location{grid-template-columns:1fr;} }
+@media(max-width:600px){ .top{display:none;} .contact-grid,.enquiries{grid-template-columns:1fr;} section{padding:70px 6%;} .footer{flex-direction:column;} }
 </style>
 </head>
-
 <body>
-
-<div class="top">
-<span>MERIDIAN GOLD REFINERY</span>
-<span>CONTACT & ENQUIRIES</span>
-</div>
-
-<header>
-<div class="nav">
-
-<a href="index.html" class="logo">
-◆ MERIDIAN
-<span>GOLD REFINERY</span>
-</a>
-
-<nav>
-<a href="index.html">HOME</a>
-<a href="index.html#about">ABOUT</a>
-<a href="index.html#operations">OPERATIONS</a>
-<a href="index.html#foundation">FOUNDATION</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-<a href="contact.html">CONTACT</a>
-</nav>
-
-</div>
-</header>
-
-<section class="hero">
-<div class="hero-content">
-
-<div class="label">CONNECT WITH MERIDIAN</div>
-
-<h1>Let's Talk<br><span style="color:#d4af37;">Business.</span></h1>
-
-<p>
-Whether you are a supplier, commercial partner, professional service
-provider or prospective business contact, our team welcomes appropriate
-enquiries.
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<div class="heading">
-<small>CONTACT DETAILS</small>
-<h2>Reach Our Team.</h2>
-
-<p>
-Use the contact channels below for general business and commercial
-enquiries.
-</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<small>EMAIL</small>
-<h3>Email</h3>
-<p>
-<a href="mailto:meridia.goldrefinering@outlook.com">
-meridia.goldrefinering@outlook.com
-</a>
-</p>
-</div>
-
-<div class="contact-card">
-<small>PHONE</small>
-<h3>Telephone</h3>
-<p>
-<a href="tel:+2335502307533">
-+233 (0) 550 230 7533
-</a>
-</p>
-</div>
-
-<div class="contact-card">
-<small>WHATSAPP</small>
-<h3>WhatsApp</h3>
-<p>
-<a href="https://wa.me/233554600108">
-+233 (0) 554 600 108
-</a>
-</p>
-</div>
-
-<div class="contact-card">
-<small>LOCATION</small>
-<h3>Tarkwa</h3>
-<p>
-Tarkwa, Western Region, Ghana
-</p>
-</div>
-
-</div>
-
-<div class="action">
-
-<a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">
-SEND EMAIL
-</a>
-
-<a href="https://wa.me/233554600108" class="btn">
-OPEN WHATSAPP
-</a>
-
-</div>
-
-</div>
-</section>
-
-<section class="dark">
-<div class="container">
-
-<div class="heading">
-<small>BUSINESS ENQUIRIES</small>
-<h2>Tell Us How We Can Connect.</h2>
-</div>
-
-<div class="enquiries">
-
-<div class="enquiry">
-<span>01</span>
-<h3>Commercial Partnerships</h3>
-<p>
-For companies interested in exploring professional business relationships
-with Meridian Gold Refinery.
-</p>
-</div>
-
-<div class="enquiry">
-<span>02</span>
-<h3>Supplier Enquiries</h3>
-<p>
-For businesses offering goods, services or specialist expertise relevant
-to our operations.
-</p>
-</div>
-
-<div class="enquiry">
-<span>03</span>
-<h3>Precious Metals</h3>
-<p>
-For appropriate enquiries concerning sourcing, refining relationships and
-precious metals trade.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<div class="heading">
-<small>OUR LOCATION</small>
-<h2>Tarkwa, Western Region, Ghana.</h2>
-</div>
-
-<div class="location">
-
-<div class="location-box">
-
-<h3>Meridian Gold Refinery</h3>
-
-<p>
-Situated in the Tarkwa township in south-western Ghana, Meridian Gold
-Refinery operates within one of the country's important mining regions.
-</p>
-
-<div class="notice">
-For precise meeting arrangements or business visits, please contact the
-company directly before travelling.
-</div>
-
-</div>
-
-<div class="location-box">
-
-<h3>Business Hours & Enquiries</h3>
-
-<p>
-For enquiries, please use the official email, telephone or WhatsApp
-channels provided on this page.
-</p>
-
-<div class="notice">
-Written enquiries are recommended for detailed business discussions so
-that relevant information can be reviewed appropriately.
-</div>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="cta">
-
-<h2>Your Resource. Our Connection.</h2>
-
-<p>
-Start a professional conversation with Meridian Gold Refinery.
-</p>
-
-<a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">
-START AN ENQUIRY
-</a>
-
-</section>
-
-<footer>
-
-<div class="footer">
-
-<div>
-<div class="logo">
-◆ MERIDIAN
-<span>GOLD REFINERY</span>
-</div>
-
-<p style="margin-top:10px;">
-Precious Metals • Global Connections
-</p>
-
-<p>Tarkwa, Western Region, Ghana</p>
-</div>
-
-<div class="links">
-<a href="index.html">HOME</a>
-<a href="corporate.html">CORPORATE</a>
-<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
-<a href="careers.html">CAREERS</a>
-<a href="suppliers.html">SUPPLIERS</a>
-</div>
-
-</div>
-
-<p style="max-width:1250px;margin:30px auto 0;">
-© 2026 Meridian Gold Refinery. All rights reserved.
-</p>
-
-</footer>
-
+<div class="top"><span>MERIDIAN GOLD REFINERY</span><span>CONTACT & ENQUIRIES</span></div>
+<header><div class="nav"><a href="index.html" class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></a><nav><a href="index.html">HOME</a><a href="index.html#about">ABOUT</a><a href="index.html#operations">OPERATIONS</a><a href="index.html#foundation">FOUNDATION</a><a href="corporate.html">CORPORATE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></nav><button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="index.html">HOME</a><a href="index.html#about">ABOUT</a><a href="index.html#operations">OPERATIONS</a><a href="index.html#foundation">FOUNDATION</a><a href="corporate.html">CORPORATE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></div></header>
+<section class="hero"><div class="hero-content"><div class="label">CONNECT WITH MERIDIAN</div><h1>Let's Talk<br><span style="color:#d4af37;">Business.</span></h1><p>Whether you are a supplier, commercial partner, professional service provider or prospective business contact, our team welcomes appropriate enquiries.</p></div></section>
+<section><div class="container"><div class="heading"><small>CONTACT DETAILS</small><h2>Reach Our Team.</h2><p>Use the contact channels below for general business and commercial enquiries.</p></div><div class="contact-grid"><div class="contact-card"><small>EMAIL</small><h3>Email</h3><p><a href="mailto:meridia.goldrefinering@outlook.com">meridia.goldrefinering@outlook.com</a></p></div><div class="contact-card"><small>PHONE</small><h3>Telephone</h3><p><a href="tel:+2335502307533">+233 (0) 550 230 7533</a></p></div><div class="contact-card"><small>WHATSAPP</small><h3>WhatsApp</h3><p><a href="https://wa.me/233554600108">+233 (0) 554 600 108</a></p></div><div class="contact-card"><small>LOCATION</small><h3>Tarkwa</h3><p>Tarkwa, Western Region, Ghana</p></div></div><div class="action"><a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">SEND EMAIL</a><a href="https://wa.me/233554600108" class="btn">OPEN WHATSAPP</a></div></div></section>
+<section class="dark"><div class="container"><div class="heading"><small>BUSINESS ENQUIRIES</small><h2>Tell Us How We Can Connect.</h2></div><div class="enquiries"><div class="enquiry"><span>01</span><h3>Commercial Partnerships</h3><p>For companies interested in exploring professional business relationships with Meridian Gold Refinery.</p></div><div class="enquiry"><span>02</span><h3>Supplier Enquiries</h3><p>For businesses offering goods, services or specialist expertise relevant to our operations.</p></div><div class="enquiry"><span>03</span><h3>Precious Metals</h3><p>For appropriate enquiries concerning sourcing, refining relationships and precious metals trade.</p></div></div></div></section>
+<section><div class="container"><div class="heading"><small>OUR LOCATION</small><h2>Tarkwa, Western Region, Ghana.</h2></div><div class="location"><div class="location-box"><h3>Meridian Gold Refinery</h3><p>Situated in the Tarkwa township in south-western Ghana, Meridian Gold Refinery operates within one of the country's important mining regions.</p><div class="notice">For precise meeting arrangements or business visits, please contact the company directly before travelling.</div></div><div class="location-box"><h3>Business Hours & Enquiries</h3><p>For enquiries, please use the official email, telephone or WhatsApp channels provided on this page.</p><div class="notice">Written enquiries are recommended for detailed business discussions so that relevant information can be reviewed appropriately.</div></div></div></div></section>
+<section class="cta"><h2>Your Resource. Our Connection.</h2><p>Start a professional conversation with Meridian Gold Refinery.</p><a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">START AN ENQUIRY</a></section>
+<footer><div class="footer"><div><div class="logo">◆ MERIDIAN<span>GOLD REFINERY</span></div><p style="margin-top:10px;">Precious Metals • Global Connections</p><p>Tarkwa, Western Region, Ghana</p></div><div class="links"><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a></div></div><p style="max-width:1250px;margin:30px auto 0;">© 2026 Meridian Gold Refinery. All rights reserved.</p></footer>
+<script>function toggleMenu(){ const menu=document.getElementById('mobileMenu'); menu.style.display = menu.style.display === 'block' ? 'none' : 'block'; } document.querySelectorAll('.mobile-menu a').forEach(function(link){ link.addEventListener('click', function(){ document.getElementById('mobileMenu').style.display = 'none'; }); });</script>
 </body>
 </html>
