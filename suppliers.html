@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suppliers | Meridian Gold Refinery</title>
+
+<meta name="description" content="Partner with Meridian Gold Refinery. Supplier opportunities, responsible procurement, sustainability and business partnerships.">
+
+<style>
+:root{
+--gold:#d4af37;
+--black:#050505;
+--dark:#0b0b0b;
+--white:#fff;
+--muted:#aaa;
+--line:rgba(212,175,55,.22);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#050505;
+color:#fff;
+line-height:1.7;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.top{
+padding:10px 6%;
+border-bottom:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+font-size:10px;
+letter-spacing:2px;
+color:#888;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(5,5,5,.96);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+max-width:1250px;
+margin:auto;
+padding:18px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:21px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.logo span{
+display:block;
+font-size:9px;
+color:var(--gold);
+letter-spacing:3px;
+}
+
+nav{
+display:flex;
+gap:22px;
+}
+
+nav a{
+font-size:11px;
+letter-spacing:1.2px;
+color:#ccc;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:65vh;
+display:flex;
+align-items:center;
+background:
+radial-gradient(circle at 80% 35%,rgba(212,175,55,.18),transparent 30%),
+linear-gradient(120deg,#030303,#15120a,#050505);
+}
+
+.hero-content{
+max-width:1250px;
+width:100%;
+margin:auto;
+padding:85px 6%;
+}
+
+.label{
+font-size:11px;
+letter-spacing:4px;
+font-weight:bold;
+color:var(--gold);
+}
+
+h1{
+font-size:clamp(43px,7vw,76px);
+line-height:1;
+margin:20px 0;
+}
+
+.hero p{
+max-width:760px;
+color:#aaa;
+font-size:17px;
+}
+
+section{
+padding:90px 6%;
+}
+
+.container{
+max-width:1250px;
+margin:auto;
+}
+
+.heading{
+margin-bottom:42px;
+}
+
+.heading small{
+font-size:10px;
+font-weight:bold;
+letter-spacing:3px;
+color:var(--gold);
+}
+
+.heading h2{
+font-size:clamp(31px,4vw,48px);
+line-height:1.1;
+margin-top:8px;
+}
+
+.heading p{
+max-width:800px;
+color:#999;
+margin-top:15px;
+}
+
+.intro{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:45px;
+}
+
+.intro-text p{
+color:#aaa;
+margin-bottom:18px;
+}
+
+.highlight{
+padding:35px;
+border:1px solid var(--line);
+background:linear-gradient(145deg,#151515,#080808);
+}
+
+.highlight strong{
+display:block;
+color:var(--gold);
+font-size:27px;
+margin-bottom:12px;
+}
+
+.highlight p{
+color:#999;
+font-size:14px;
+}
+
+.dark{
+background:#0b0b0b;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+padding:32px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+border-color:var(--gold);
+transform:translateY(-5px);
+}
+
+.card span{
+display:block;
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#999;
+font-size:14px;
+}
+
+.values{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.value{
+padding:20px;
+border-left:2px solid var(--gold);
+background:#111;
+font-weight:bold;
+font-size:14px;
+}
+
+.supply-chain{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+margin-top:30px;
+}
+
+.step{
+padding:25px 15px;
+background:#101010;
+border:1px solid rgba(255,255,255,.08);
+text-align:center;
+}
+
+.step strong{
+display:block;
+color:var(--gold);
+font-size:12px;
+margin-bottom:8px;
+}
+
+.step span{
+font-size:12px;
+color:#aaa;
+}
+
+.procurement{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.procure-box{
+padding:38px;
+background:linear-gradient(145deg,#141414,#080808);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.procure-box h3{
+font-size:24px;
+margin-bottom:14px;
+}
+
+.procure-box p{
+color:#999;
+font-size:14px;
+}
+
+.compliance{
+background:
+radial-gradient(circle at 10% 20%,rgba(212,175,55,.08),transparent 25%),
+#090909;
+}
+
+.checks{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.check{
+padding:18px 20px;
+background:#111;
+border:1px solid rgba(255,255,255,.07);
+color:#ccc;
+font-size:13px;
+}
+
+.check:before{
+content:"◆";
+color:var(--gold);
+margin-right:10px;
+}
+
+.cta{
+text-align:center;
+padding:95px 6%;
+background:linear-gradient(120deg,#17130a,#080808,#17130a);
+border-top:1px solid var(--line);
+}
+
+.cta h2{
+font-size:clamp(32px,5vw,55px);
+}
+
+.cta p{
+max-width:700px;
+margin:15px auto 25px;
+color:#999;
+}
+
+.btn{
+display:inline-block;
+padding:14px 25px;
+border:1px solid var(--gold);
+font-size:11px;
+font-weight:bold;
+letter-spacing:1.5px;
+}
+
+.btn.gold{
+background:var(--gold);
+color:#000;
+}
+
+footer{
+padding:42px 6%;
+background:#000;
+border-top:1px solid var(--line);
+}
+
+.footer{
+max-width:1250px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+gap:25px;
+}
+
+footer p{
+color:#777;
+font-size:12px;
+}
+
+.links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.links a{
+font-size:11px;
+color:#999;
+}
+
+@media(max-width:950px){
+nav{
+display:none;
+}
+
+.intro,
+.procurement{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:1fr 1fr;
+}
+
+.supply-chain{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media(max-width:600px){
+.top{
+display:none;
+}
+
+.cards,
+.values,
+.checks,
+.supply-chain{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 6%;
+}
+
+.footer{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<span>MERIDIAN GOLD REFINERY</span>
+<span>SUPPLIER RELATIONS</span>
+</div>
+
+<header>
+<div class="nav">
+
+<a href="index.html" class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#operations">OPERATIONS</a>
+<a href="index.html#foundation">FOUNDATION</a>
+<a href="careers.html">CAREERS</a>
+<a href="suppliers.html">SUPPLIERS</a>
+<a href="index.html#contact">CONTACT</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="label">SUPPLIER PARTNERSHIPS</div>
+
+<h1>Strong Supply.<br><span style="color:#d4af37;">Stronger Partnerships.</span></h1>
+
+<p>
+Our supplier network plays an important role in supporting exploration,
+development, construction and production activities. We work with domestic
+and international businesses that share our commitment to responsible
+commercial practices.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>PARTNERING WITH MERIDIAN</small>
+<h2>Building A Dependable Supply Network.</h2>
+</div>
+
+<div class="intro">
+
+<div class="intro-text">
+
+<p>
+The strength of our operations depends in part on reliable access to
+responsibly sourced goods, services and specialist expertise.
+</p>
+
+<p>
+Meridian Gold Refinery draws on both domestic and international suppliers
+to support different stages of its business activities, from exploration
+and development through to construction and production.
+</p>
+
+<p>
+We seek business relationships that encourage reliability, professional
+conduct, mutual value and long-term cooperation.
+</p>
+
+</div>
+
+<div class="highlight">
+<strong>SUPPLIER NETWORK</strong>
+
+<p>
+A dependable supply chain helps maintain operational continuity while
+creating opportunities for specialist businesses to contribute their
+expertise, products and services.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="heading">
+<small>WHERE SUPPLIERS CONTRIBUTE</small>
+<h2>Supporting The Full Operation.</h2>
+<p>
+Supplier relationships can support multiple stages of the operational
+lifecycle.
+</p>
+</div>
+
+<div class="supply-chain">
+
+<div class="step">
+<strong>01</strong>
+<span>Exploration</span>
+</div>
+
+<div class="step">
+<strong>02</strong>
+<span>Development</span>
+</div>
+
+<div class="step">
+<strong>03</strong>
+<span>Construction</span>
+</div>
+
+<div class="step">
+<strong>04</strong>
+<span>Production</span>
+</div>
+
+<div class="step">
+<strong>05</strong>
+<span>Specialist Services</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>LIVING OUR VALUES</small>
+<h2>Business Conduct Matters.</h2>
+
+<p>
+We expect our commercial relationships to reflect high standards of
+fairness, ethics, social responsibility and environmental responsibility.
+</p>
+</div>
+
+<div class="values">
+
+<div class="value">Safety</div>
+<div class="value">Integrity</div>
+<div class="value">Respect</div>
+<div class="value">Accountability</div>
+<div class="value">Delivery</div>
+<div class="value">Innovation</div>
+
+</div>
+
+<div style="margin-top:35px;max-width:850px;color:#999;font-size:14px;">
+Suppliers are expected to follow Meridian Gold Refinery's Code of Conduct
+and comply with every relevant law and regulation applicable to their work.
+</div>
+
+</div>
+</section>
+
+<section class="compliance">
+<div class="container">
+
+<div class="heading">
+<small>RESPONSIBLE PROCUREMENT</small>
+<h2>Integrity Across The Supply Chain.</h2>
+
+<p>
+Sustainable procurement is an important part of developing resilient
+supplier relationships and creating shared value across the wider value
+chain.
+</p>
+</div>
+
+<div class="checks">
+
+<div class="check">
+Ethical business practices
+</div>
+
+<div class="check">
+Compliance with applicable laws and regulations
+</div>
+
+<div class="check">
+Social responsibility
+</div>
+
+<div class="check">
+Environmental responsibility
+</div>
+
+<div class="check">
+Reliable delivery and service
+</div>
+
+<div class="check">
+Professional supplier relationships
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>BUILDING SUSTAINABILITY INTO PROCUREMENT</small>
+<h2>Creating Shared Value.</h2>
+</div>
+
+<div class="procurement">
+
+<div class="procure-box">
+<h3>Long-Term Resilience</h3>
+<p>
+Embedding sustainability within procurement can strengthen supplier
+relationships and contribute to a more resilient operational supply chain.
+</p>
+</div>
+
+<div class="procure-box">
+<h3>Shared Opportunities</h3>
+<p>
+Strong procurement relationships can create value for suppliers, the
+company and stakeholders across the value chain.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<h2>Interested In Becoming A Supplier?</h2>
+
+<p>
+If your business provides goods, services or specialist expertise relevant
+to Meridian Gold Refinery, contact our team to discuss potential
+opportunities.
+</p>
+
+<a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">
+SUPPLIER ENQUIRY
+</a>
+
+<a href="https://wa.me/233554600108" class="btn" style="margin-left:8px;">
+WHATSAPP
+</a>
+
+</section>
+
+<footer>
+<div class="footer">
+
+<div>
+<div class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</div>
+
+<p style="margin-top:10px;">
+Precious Metals • Global Connections
+</p>
+
+<p>Tarkwa, Western Region, Ghana</p>
+</div>
+
+<div class="links">
+<a href="index.html">HOME</a>
+<a href="careers.html">CAREERS</a>
+<a href="index.html#contact">CONTACT</a>
+</div>
+
+</div>
+
+<p style="max-width:1250px;margin:30px auto 0;">
+© 2026 Meridian Gold Refinery. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

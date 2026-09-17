@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Careers | Meridian Gold Refinery</title>
+
+<meta name="description" content="Careers at Meridian Gold Refinery. Explore employment, internships, national service and graduate trainee opportunities.">
+
+<style>
+:root{
+--gold:#d4af37;
+--gold2:#f3d879;
+--black:#050505;
+--dark:#0c0c0c;
+--dark2:#111;
+--white:#fff;
+--muted:#aaa;
+--line:rgba(212,175,55,.22);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--black);
+color:#fff;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.top{
+border-bottom:1px solid var(--line);
+padding:10px 6%;
+font-size:11px;
+letter-spacing:2px;
+color:#999;
+display:flex;
+justify-content:space-between;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(5,5,5,.96);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+max-width:1250px;
+margin:auto;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:21px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.logo span{
+display:block;
+font-size:9px;
+color:var(--gold);
+letter-spacing:3px;
+}
+
+nav{
+display:flex;
+gap:24px;
+}
+
+nav a{
+font-size:11px;
+letter-spacing:1.3px;
+color:#ccc;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:65vh;
+display:flex;
+align-items:center;
+background:
+radial-gradient(circle at 80% 40%,rgba(212,175,55,.18),transparent 30%),
+linear-gradient(120deg,#030303,#14110a,#050505);
+}
+
+.hero-content{
+max-width:1250px;
+width:100%;
+margin:auto;
+padding:80px 6%;
+}
+
+.label{
+color:var(--gold);
+font-size:11px;
+font-weight:bold;
+letter-spacing:4px;
+}
+
+h1{
+font-size:clamp(44px,7vw,76px);
+line-height:1;
+margin:20px 0;
+}
+
+.hero p{
+max-width:720px;
+color:#bbb;
+font-size:17px;
+}
+
+section{
+padding:90px 6%;
+}
+
+.container{
+max-width:1250px;
+margin:auto;
+}
+
+.heading{
+margin-bottom:40px;
+}
+
+.heading small{
+color:var(--gold);
+letter-spacing:3px;
+font-size:10px;
+font-weight:bold;
+}
+
+.heading h2{
+font-size:clamp(31px,4vw,48px);
+line-height:1.1;
+margin-top:8px;
+}
+
+.heading p{
+color:#999;
+max-width:760px;
+margin-top:14px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+background:linear-gradient(145deg,#151515,#090909);
+border:1px solid rgba(255,255,255,.08);
+padding:32px;
+transition:.3s;
+}
+
+.card:hover{
+border-color:var(--gold);
+transform:translateY(-5px);
+}
+
+.card .num{
+color:var(--gold);
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+color:#999;
+}
+
+.vacancy{
+background:#0c0c0c;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.opening{
+padding:45px;
+border:1px solid var(--line);
+background:linear-gradient(135deg,#141414,#080808);
+text-align:center;
+}
+
+.opening-icon{
+font-size:40px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.opening h3{
+font-size:26px;
+margin-bottom:12px;
+}
+
+.opening p{
+color:#999;
+max-width:650px;
+margin:auto;
+}
+
+.notice{
+margin-top:25px;
+padding:18px;
+border-left:3px solid var(--gold);
+background:#121212;
+color:#ccc;
+font-size:13px;
+}
+
+.people{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.people-box{
+background:#101010;
+padding:35px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.people-box h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.people-box p{
+color:#999;
+}
+
+.number{
+font-size:46px;
+color:var(--gold);
+font-weight:bold;
+}
+
+.facilities{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.facility{
+padding:25px;
+background:#101010;
+border:1px solid rgba(255,255,255,.07);
+}
+
+.facility strong{
+display:block;
+color:var(--gold);
+margin-bottom:7px;
+}
+
+.facility span{
+color:#aaa;
+font-size:13px;
+}
+
+.training{
+background:#0b0b0b;
+}
+
+.training-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:18px;
+}
+
+.training-box{
+padding:32px;
+border-top:2px solid var(--gold);
+background:#121212;
+}
+
+.training-box h3{
+margin-bottom:10px;
+}
+
+.training-box p{
+color:#999;
+font-size:14px;
+}
+
+.cta{
+text-align:center;
+background:linear-gradient(120deg,#17130a,#080808,#17130a);
+border-top:1px solid var(--line);
+}
+
+.cta h2{
+font-size:clamp(32px,5vw,55px);
+}
+
+.cta p{
+max-width:650px;
+margin:15px auto 25px;
+color:#999;
+}
+
+.btn{
+display:inline-block;
+padding:14px 25px;
+border:1px solid var(--gold);
+font-size:11px;
+font-weight:bold;
+letter-spacing:1.5px;
+}
+
+.btn.gold{
+background:var(--gold);
+color:#000;
+}
+
+footer{
+padding:40px 6%;
+border-top:1px solid var(--line);
+background:#000;
+}
+
+.footer{
+max-width:1250px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+gap:25px;
+}
+
+footer p{
+color:#777;
+font-size:12px;
+}
+
+.links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.links a{
+font-size:11px;
+color:#999;
+}
+
+@media(max-width:900px){
+nav{
+display:none;
+}
+
+.grid,
+.facilities,
+.training-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.people{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:600px){
+.top{
+display:none;
+}
+
+.grid,
+.facilities,
+.training-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 6%;
+}
+
+.opening{
+padding:30px 20px;
+}
+
+.footer{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<span>MERIDIAN GOLD REFINERY</span>
+<span>CAREERS & PEOPLE</span>
+</div>
+
+<header>
+<div class="nav">
+
+<a href="index.html" class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#operations">OPERATIONS</a>
+<a href="index.html#foundation">FOUNDATION</a>
+<a href="careers.html">CAREERS</a>
+<a href="suppliers.html">SUPPLIERS</a>
+<a href="index.html#contact">CONTACT</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="label">CAREERS AT MERIDIAN</div>
+
+<h1>Build Your<br><span style="color:#d4af37;">Career With Purpose.</span></h1>
+
+<p>
+We offer fulfilling career paths and competitive compensation packages
+for top-performing talent while creating opportunities for people to
+develop their skills within the mining and precious metals environment.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>WORK WITH US</small>
+<h2>Opportunities That Grow With You.</h2>
+<p>
+Our workplace brings together operational expertise, technical skills,
+professional services and community knowledge.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="num">01</div>
+<h3>Professional Growth</h3>
+<p>
+Employees have opportunities to develop practical experience and build
+careers across different areas of the operation.
+</p>
+</div>
+
+<div class="card">
+<div class="num">02</div>
+<h3>Learning & Development</h3>
+<p>
+Internships, on-the-job learning and graduate training provide pathways
+for emerging professionals.
+</p>
+</div>
+
+<div class="card">
+<div class="num">03</div>
+<h3>Community Connection</h3>
+<p>
+Local participation remains an important part of the workforce and the
+relationship with surrounding host communities.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="vacancy">
+<div class="container">
+
+<div class="heading">
+<small>CURRENT OPENINGS</small>
+<h2>Join Our Talent Community.</h2>
+</div>
+
+<div class="opening">
+
+<div class="opening-icon">◆</div>
+
+<h3>No Positions Open At This Time</h3>
+
+<p>
+There are currently no advertised positions available.
+Please check this page again for future employment opportunities.
+</p>
+
+<div class="notice">
+Vacancies will be published when positions become available.
+Applicants should rely on official Meridian Gold Refinery recruitment
+communications when applying for a position.
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>OUR WORKFORCE</small>
+<h2>People At The Heart Of The Operation.</h2>
+</div>
+
+<div class="people">
+
+<div class="people-box">
+<div class="number">680+</div>
+<h3>People Employed</h3>
+<p>
+The operation employs more than 680 people, with a significant proportion
+drawn from the surrounding host communities.
+</p>
+</div>
+
+<div class="people-box">
+<div class="number">74%</div>
+<h3>Host Community Workforce</h3>
+<p>
+Approximately 74% of employees are drawn from host communities, strengthening
+the connection between the operation and the people around it.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="heading">
+<small>LIFESTYLE & WELLBEING</small>
+<h2>A Workplace Beyond The Job.</h2>
+<p>
+The mine village provides employees with a range of recreational, health
+and educational facilities designed to support everyday wellbeing.
+</p>
+</div>
+
+<div class="facilities">
+
+<div class="facility">
+<strong>Golf</strong>
+<span>9-hole golf course</span>
+</div>
+
+<div class="facility">
+<strong>Tennis</strong>
+<span>Tennis court</span>
+</div>
+
+<div class="facility">
+<strong>Volleyball</strong>
+<span>Volleyball court</span>
+</div>
+
+<div class="facility">
+<strong>Football</strong>
+<span>Two seven-a-side football pitches</span>
+</div>
+
+<div class="facility">
+<strong>Swimming</strong>
+<span>Swimming pool</span>
+</div>
+
+<div class="facility">
+<strong>Fitness</strong>
+<span>Two fully equipped gyms</span>
+</div>
+
+<div class="facility">
+<strong>Clubhouses</strong>
+<span>Two clubhouses with lounges and pool bars</span>
+</div>
+
+<div class="facility">
+<strong>Healthcare</strong>
+<span>Well-equipped hospital serving employees and host communities</span>
+</div>
+
+<div class="facility">
+<strong>Education</strong>
+<span>Kindergarten, primary school and junior high school</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="training">
+<div class="container">
+
+<div class="heading">
+<small>EARLY CAREER DEVELOPMENT</small>
+<h2>Creating Pathways For Emerging Talent.</h2>
+</div>
+
+<div class="training-grid">
+
+<div class="training-box">
+<h3>Internships</h3>
+<p>
+Internship opportunities provide students and emerging professionals with
+exposure to practical workplace environments.
+</p>
+</div>
+
+<div class="training-box">
+<h3>National Service</h3>
+<p>
+On-the-job training opportunities are available for national service
+personnel within suitable areas of the operation.
+</p>
+</div>
+
+<div class="training-box">
+<h3>Graduate Trainees</h3>
+<p>
+Graduate trainees can gain practical experience while developing
+professional capabilities.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready For Your Next Opportunity?</h2>
+
+<p>
+Keep checking our careers page for future vacancies and professional
+opportunities with Meridian Gold Refinery.
+</p>
+
+<a href="mailto:meridia.goldrefinering@outlook.com" class="btn gold">
+SEND CAREER ENQUIRY
+</a>
+</section>
+
+<footer>
+<div class="footer">
+
+<div>
+<div class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</div>
+
+<p style="margin-top:10px;">
+Precious Metals • Global Connections
+</p>
+</div>
+
+<div class="links">
+<a href="index.html">HOME</a>
+<a href="suppliers.html">SUPPLIERS</a>
+<a href="index.html#contact">CONTACT</a>
+</div>
+
+</div>
+
+<p style="max-width:1250px;margin:30px auto 0;">
+© 2026 Meridian Gold Refinery. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

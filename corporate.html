@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Corporate | Meridian Gold Refinery</title>
+
+<meta name="description" content="Corporate profile, documentation, governance and business information for Meridian Gold Refinery Ghana.">
+
+<style>
+:root{
+--gold:#d4af37;
+--gold2:#f2d878;
+--black:#050505;
+--dark:#0b0b0b;
+--dark2:#111;
+--white:#fff;
+--muted:#aaa;
+--line:rgba(212,175,55,.22);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--black);
+color:#fff;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.top{
+padding:10px 6%;
+border-bottom:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+font-size:10px;
+letter-spacing:2px;
+color:#888;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,5,5,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+max-width:1250px;
+margin:auto;
+padding:18px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:21px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.logo span{
+display:block;
+font-size:9px;
+color:var(--gold);
+letter-spacing:3px;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+font-size:10px;
+letter-spacing:1.1px;
+color:#ccc;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:65vh;
+display:flex;
+align-items:center;
+background:
+radial-gradient(circle at 80% 35%,rgba(212,175,55,.18),transparent 30%),
+linear-gradient(120deg,#030303,#15120a,#050505);
+}
+
+.hero-content{
+max-width:1250px;
+width:100%;
+margin:auto;
+padding:85px 6%;
+}
+
+.label{
+color:var(--gold);
+font-size:11px;
+font-weight:bold;
+letter-spacing:4px;
+}
+
+h1{
+font-size:clamp(43px,7vw,76px);
+line-height:1;
+margin:20px 0;
+}
+
+.hero p{
+max-width:780px;
+color:#aaa;
+font-size:17px;
+}
+
+section{
+padding:90px 6%;
+}
+
+.container{
+max-width:1250px;
+margin:auto;
+}
+
+.heading{
+margin-bottom:40px;
+}
+
+.heading small{
+color:var(--gold);
+font-size:10px;
+font-weight:bold;
+letter-spacing:3px;
+}
+
+.heading h2{
+font-size:clamp(31px,4vw,48px);
+line-height:1.1;
+margin-top:9px;
+}
+
+.heading p{
+max-width:800px;
+color:#999;
+margin-top:15px;
+}
+
+.profile{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:35px;
+}
+
+.text p{
+color:#aaa;
+margin-bottom:18px;
+}
+
+.panel{
+padding:35px;
+background:linear-gradient(145deg,#151515,#080808);
+border:1px solid var(--line);
+}
+
+.panel h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.panel p{
+color:#999;
+font-size:14px;
+}
+
+.facts{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.fact{
+padding:30px 20px;
+background:#101010;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.fact strong{
+display:block;
+font-size:28px;
+color:var(--gold);
+}
+
+.fact span{
+color:#999;
+font-size:11px;
+letter-spacing:1px;
+}
+
+.dark{
+background:#0b0b0b;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.governance{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.box{
+padding:35px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.box h3{
+margin-bottom:12px;
+font-size:22px;
+}
+
+.box p{
+color:#999;
+font-size:14px;
+}
+
+.documents{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.document{
+padding:20px;
+background:#101010;
+border-left:2px solid var(--gold);
+color:#ccc;
+font-size:13px;
+}
+
+.principles{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.principle{
+padding:28px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.principle strong{
+display:block;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.principle p{
+color:#999;
+font-size:13px;
+}
+
+.cta{
+text-align:center;
+padding:95px 6%;
+background:linear-gradient(120deg,#17130a,#080808,#17130a);
+border-top:1px solid var(--line);
+}
+
+.cta h2{
+font-size:clamp(32px,5vw,55px);
+}
+
+.cta p{
+max-width:700px;
+margin:15px auto 25px;
+color:#999;
+}
+
+.btn{
+display:inline-block;
+padding:14px 25px;
+border:1px solid var(--gold);
+font-size:11px;
+font-weight:bold;
+letter-spacing:1.5px;
+}
+
+.btn.gold{
+background:var(--gold);
+color:#000;
+}
+
+footer{
+padding:42px 6%;
+background:#000;
+border-top:1px solid var(--line);
+}
+
+.footer{
+max-width:1250px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+gap:25px;
+}
+
+footer p{
+color:#777;
+font-size:12px;
+}
+
+.links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.links a{
+font-size:11px;
+color:#999;
+}
+
+@media(max-width:950px){
+nav{
+display:none;
+}
+
+.profile,
+.governance{
+grid-template-columns:1fr;
+}
+
+.facts{
+grid-template-columns:repeat(2,1fr);
+}
+
+.principles{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.top{
+display:none;
+}
+
+.facts,
+.documents,
+.principles{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 6%;
+}
+
+.footer{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<span>MERIDIAN GOLD REFINERY</span>
+<span>CORPORATE PROFILE</span>
+</div>
+
+<header>
+<div class="nav">
+
+<a href="index.html" class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#operations">OPERATIONS</a>
+<a href="index.html#foundation">FOUNDATION</a>
+<a href="corporate.html">CORPORATE</a>
+<a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+<a href="careers.html">CAREERS</a>
+<a href="suppliers.html">SUPPLIERS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="label">CORPORATE PROFILE</div>
+
+<h1>Professional.<br><span style="color:#d4af37;">Purpose Driven.</span></h1>
+
+<p>
+Meridian Gold Refinery operates within Ghana's precious metals value chain,
+connecting production, sourcing, refining relationships and international
+trade through structured commercial activities.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>WHO WE ARE</small>
+<h2>A Ghanaian Precious Metals Enterprise.</h2>
+</div>
+
+<div class="profile">
+
+<div class="text">
+
+<p>
+Meridian Gold Refinery is based in Tarkwa, Western Region, Ghana, and has
+operated since 2007.
+</p>
+
+<p>
+The company participates across the precious metals value chain, working
+with gold producers, suppliers, refining facilities and international
+trading partners.
+</p>
+
+<p>
+Our objective is to connect Ghana's mineral resources with international
+markets while creating sustainable commercial value through professional
+relationships.
+</p>
+
+</div>
+
+<div class="panel">
+<h3>Our Business Focus</h3>
+
+<p>
+Gold production, sourcing, refining relationships and international
+precious metals trade form key areas of our commercial activities.
+</p>
+
+</div>
+
+</div>
+
+<div class="facts">
+
+<div class="fact">
+<strong>2007</strong>
+<span>OPERATING SINCE</span>
+</div>
+
+<div class="fact">
+<strong>90%</strong>
+<span>MAJOR MINING INTEREST</span>
+</div>
+
+<div class="fact">
+<strong>10%</strong>
+<span>GOVERNMENT INTEREST</span>
+</div>
+
+<div class="fact">
+<strong>GHANA</strong>
+<span>HOME MARKET</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="heading">
+<small>GOVERNANCE</small>
+<h2>Structure & Accountability.</h2>
+
+<p>
+Responsible business requires clear processes, appropriate documentation
+and accountability across commercial activities.
+</p>
+</div>
+
+<div class="governance">
+
+<div class="box">
+<h3>Business Governance</h3>
+
+<p>
+Meridian Gold Refinery maintains a professional approach to commercial
+relationships, operational activities and documentation.
+</p>
+</div>
+
+<div class="box">
+<h3>Community Governance</h3>
+
+<p>
+The Meridian Gold Refinery Ghana Foundation operates with a Board of
+Trustees that reviews projects, programmes, budgets and spending on a
+quarterly basis.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="heading">
+<small>CORPORATE DOCUMENTATION</small>
+<h2>Documentation That Supports Business.</h2>
+
+<p>
+Different areas of our activities may require specific documentation,
+depending on the nature of the transaction, operation or partnership.
+</p>
+</div>
+
+<div class="documents">
+
+<div class="document">Corporate Documentation</div>
+<div class="document">Operational Documentation</div>
+<div class="document">Precious Metals Documentation</div>
+<div class="document">Applicable Regulatory Documentation</div>
+<div class="document">Export & Trade Documentation</div>
+<div class="document">Business Partnership Documentation</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+
+<div class="heading">
+<small>OUR BUSINESS PRINCIPLES</small>
+<h2>How We Approach Business.</h2>
+</div>
+
+<div class="principles">
+
+<div class="principle">
+<strong>Integrity</strong>
+<p>
+Professional relationships should be built around honesty, transparency
+and ethical conduct.
+</p>
+</div>
+
+<div class="principle">
+<strong>Accountability</strong>
+<p>
+Clear responsibilities and appropriate documentation support dependable
+business relationships.
+</p>
+</div>
+
+<div class="principle">
+<strong>Long-Term Value</strong>
+<p>
+We seek partnerships capable of creating sustainable commercial value.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<h2>Connect With Meridian.</h2>
+
+<p>
+For corporate, commercial and partnership enquiries, contact our team
+directly.
+</p>
+
+<a href="contact.html" class="btn gold">CONTACT OUR TEAM</a>
+
+</section>
+
+<footer>
+
+<div class="footer">
+
+<div>
+<div class="logo">
+◆ MERIDIAN
+<span>GOLD REFINERY</span>
+</div>
+
+<p style="margin-top:10px;">
+Precious Metals • Global Connections
+</p>
+</div>
+
+<div class="links">
+<a href="index.html">HOME</a>
+<a href="careers.html">CAREERS</a>
+<a href="suppliers.html">SUPPLIERS</a>
+<a href="contact.html">CONTACT</a>
+</div>
+
+</div>
+
+<p style="max-width:1250px;margin:30px auto 0;">
+© 2026 Meridian Gold Refinery. All rights reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

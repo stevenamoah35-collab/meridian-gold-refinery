@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meridian Gold Refinery | Precious Metals. Global Connections.</title>
+
+<meta name="description" content="Meridian Gold Refinery is a Ghanaian precious metals company based in Tarkwa, Western Region, connecting Ghana's mineral resources with international markets.">
+
+<style>
+
+:root{
+    --gold:#d4af37;
+    --gold-light:#f0d77a;
+    --black:#050505;
+    --dark:#0b0b0b;
+    --dark2:#111111;
+    --dark3:#171717;
+    --white:#ffffff;
+    --text:#eeeeee;
+    --muted:#a6a6a6;
+    --border:rgba(212,175,55,.22);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--black);
+    color:var(--text);
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:10px 0;
+    font-size:11px;
+    letter-spacing:1.5px;
+    color:#aaa;
+}
+
+.topbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-symbol{
+    color:var(--gold);
+    font-size:28px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+}
+
+.logo-main{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo-sub{
+    font-size:9px;
+    color:var(--gold);
+    letter-spacing:3px;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    font-size:11px;
+    letter-spacing:1px;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold-light);
+}
+
+.menu-btn{
+    display:none;
+    border:1px solid var(--border);
+    background:transparent;
+    color:white;
+    padding:9px 12px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(5,5,5,.98);
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.mobile-menu.active{
+    display:flex;
+}
+
+.mobile-close{
+    position:absolute;
+    top:25px;
+    right:25px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.mobile-menu a{
+    font-size:18px;
+    letter-spacing:2px;
+    padding:14px;
+    color:#eee;
+}
+
+.mobile-menu a:hover{
+    color:var(--gold);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:720px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(212,175,55,.12),transparent 30%),
+        linear-gradient(135deg,#050505 0%,#101010 50%,#050505 100%);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-180px;
+    bottom:-220px;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:50%;
+    box-shadow:
+        0 0 0 80px rgba(212,175,55,.025),
+        0 0 0 160px rgba(212,175,55,.02);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:4px;
+    font-weight:bold;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(44px,7vw,88px);
+    line-height:1.02;
+    text-transform:uppercase;
+    letter-spacing:-2px;
+    margin-bottom:28px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:680px;
+    color:#c6c6c6;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:36px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    border:1px solid var(--gold);
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#050505;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+}
+
+.btn-outline{
+    color:white;
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:#050505;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+.section-title{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.section-text{
+    color:var(--muted);
+    max-width:720px;
+    font-size:16px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#090909;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-copy p{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.about-card{
+    background:linear-gradient(145deg,#151515,#0b0b0b);
+    border:1px solid var(--border);
+    padding:35px;
+    position:relative;
+}
+
+.about-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:3px;
+    width:80px;
+    background:var(--gold);
+}
+
+.about-card h3{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.about-card p{
+    color:#999;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    background:#050505;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    text-align:center;
+    padding:40px 20px;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+    font-size:38px;
+    color:var(--gold);
+    margin-bottom:6px;
+}
+
+.stat span{
+    font-size:11px;
+    color:#999;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   WHY PARTNER
+========================= */
+
+.why{
+    background:#0c0c0c;
+}
+
+.why-header{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    align-items:flex-end;
+    margin-bottom:55px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    padding:35px;
+    background:#111;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.why-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+}
+
+.why-number{
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.why-card h3{
+    font-size:21px;
+    margin-bottom:14px;
+}
+
+.why-card p{
+    color:#999;
+    font-size:14px;
+}
+
+/* =========================
+   OPERATIONS
+========================= */
+
+.operations{
+    background:#050505;
+}
+
+.operations-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-top:50px;
+}
+
+.operation-card{
+    min-height:260px;
+    padding:35px;
+    background:linear-gradient(145deg,#151515,#090909);
+    border:1px solid rgba(212,175,55,.16);
+}
+
+.operation-icon{
+    font-size:30px;
+    color:var(--gold);
+    margin-bottom:22px;
+}
+
+.operation-card h3{
+    font-size:22px;
+    margin-bottom:14px;
+}
+
+.operation-card p{
+    color:#999;
+    font-size:14px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#090909;
+}
+
+.gallery-header{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:flex-end;
+    margin-bottom:45px;
+}
+
+.gallery-note{
+    max-width:480px;
+    color:#777;
+    font-size:13px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:260px 260px;
+    gap:14px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(212,175,55,.18);
+    background:
+        radial-gradient(circle at 50% 40%,rgba(212,175,55,.16),transparent 35%),
+        linear-gradient(145deg,#1a1a1a,#080808);
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:auto 0 0 0;
+    padding:24px;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.gallery-overlay h3{
+    font-size:17px;
+}
+
+.gallery-overlay span{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* =========================
+   FOUNDATION
+========================= */
+
+.foundation{
+    background:
+        linear-gradient(rgba(8,8,8,.94),rgba(8,8,8,.98)),
+        radial-gradient(circle at 80% 20%,rgba(212,175,55,.12),transparent 35%);
+}
+
+.foundation-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.foundation-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:30px;
+}
+
+.foundation-list div{
+    padding:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#101010;
+    color:#bbb;
+}
+
+.foundation-list strong{
+    color:var(--gold);
+    display:block;
+    margin-bottom:4px;
+}
+
+/* =========================
+   GLOBAL CONNECTION
+========================= */
+
+.global{
+    text-align:center;
+    background:#050505;
+    border-top:1px solid rgba(212,175,55,.15);
+    border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+.global .section-text{
+    margin:0 auto 35px;
+}
+
+.global-mark{
+    color:var(--gold);
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+        radial-gradient(circle at 50% 0%,rgba(212,175,55,.16),transparent 40%),
+        #090909;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:clamp(32px,5vw,58px);
+    margin-bottom:18px;
+}
+
+.cta p{
+    color:#999;
+    max-width:650px;
+    margin:0 auto 30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#030303;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:50px;
+    margin-bottom:50px;
+}
+
+.footer-brand p{
+    color:#777;
+    font-size:13px;
+    max-width:350px;
+    margin-top:18px;
+}
+
+.footer-column h4{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.footer-column a,
+.footer-column p{
+    display:block;
+    color:#888;
+    font-size:13px;
+    margin-bottom:9px;
+}
+
+.footer-column a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.07);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#555;
+    font-size:11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .about-grid,
+    .foundation-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .operations-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .topbar{
+        font-size:9px;
+    }
+
+    .topbar-inner{
+        gap:10px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:46px;
+        letter-spacing:-1px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .why-header,
+    .gallery-header{
+        display:block;
+    }
+
+    .why-grid,
+    .operations-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:220px 180px 180px;
+    }
+
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+    .foundation-list{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>MERIDIAN GOLD REFINERY | GHANA</span>
+        <span>PRECIOUS METALS • GLOBAL CONNECTIONS</span>
+    </div>
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-symbol">◆</div>
+
+            <div class="logo-text">
+                <span class="logo-main">MERIDIAN</span>
+                <span class="logo-sub">GOLD REFINERY</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">HOME</a>
+            <a href="corporate.html">CORPORATE</a>
+            <a href="operations.html">OPERATIONS</a>
+            <a href="gold-sourcing.html">GOLD SOURCING</a>
+            <a href="international-trade.html">INTERNATIONAL TRADE</a>
+            <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+            <a href="careers.html">CAREERS</a>
+            <a href="suppliers.html">SUPPLIERS</a>
+            <a href="contact.html">CONTACT</a>
+
+        </nav>
+
+
+        <button class="menu-btn" onclick="openMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+        ×
+    </button>
+
+    <a href="index.html">HOME</a>
+    <a href="corporate.html">CORPORATE</a>
+    <a href="operations.html">OPERATIONS</a>
+    <a href="gold-sourcing.html">GOLD SOURCING</a>
+    <a href="international-trade.html">INTERNATIONAL TRADE</a>
+    <a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a>
+    <a href="careers.html">CAREERS</a>
+    <a href="suppliers.html">SUPPLIERS</a>
+    <a href="contact.html">CONTACT</a>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            GHANA • PRECIOUS METALS • GLOBAL CONNECTIONS
+        </div>
+
+        <h1>
+            Precious Metals.<br>
+            <span>Global Connections.</span>
+        </h1>
+
+        <p>
+            Meridian Gold Refinery is a Ghanaian private-sector precious
+            metals company connecting mineral resources, responsible business
+            practices and international commercial opportunities.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="gold-sourcing.html" class="btn btn-gold">
+                EXPLORE GOLD SOURCING
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+                BUSINESS ENQUIRY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <div class="container about-grid">
+
+        <div class="about-copy">
+
+            <div class="section-label">
+                ABOUT MERIDIAN
+            </div>
+
+            <h2 class="section-title">
+                Built Around Ghana's Precious Metals Opportunity.
+            </h2>
+
+            <p>
+                Meridian Gold Refinery operates from Tarkwa in Ghana's
+                Western Region and has been operating since 2007.
+            </p>
+
+            <p>
+                The company participates across the precious metals value
+                chain, working with producers, suppliers, refining
+                relationships and international trading partners.
+            </p>
+
+            <p>
+                Our objective is to connect Ghanaian mineral resources with
+                international markets while creating sustainable commercial
+                value and long-term relationships.
+            </p>
+
+            <a href="corporate.html" class="btn btn-outline">
+                VIEW CORPORATE PROFILE
+            </a>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>
+                A Ghanaian Platform With Global Ambition
+            </h3>
+
+            <p>
+                From resource and supply relationships to processing,
+                commercial partnerships and international trade, Meridian
+                is focused on building structured connections throughout
+                the precious metals value chain.
+            </p>
+
+            <br>
+
+            <p>
+                Our approach is built around professionalism, accountability,
+                responsible business and long-term value creation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>2007</strong>
+            <span>Operating Since</span>
+        </div>
+
+        <div class="stat">
+            <strong>90%</strong>
+            <span>Major Mining Interest</span>
+        </div>
+
+        <div class="stat">
+            <strong>10%</strong>
+            <span>Government Free-Carried Interest</span>
+        </div>
+
+        <div class="stat">
+            <strong>GHANA</strong>
+            <span>Operating Base</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY PARTNER -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="why-header">
+
+            <div>
+
+                <div class="section-label">
+                    WHY PARTNER WITH MERIDIAN
+                </div>
+
+                <h2 class="section-title">
+                    Commercial Relationships Built For The Long Term.
+                </h2>
+
+            </div>
+
+            <p class="section-text">
+                We focus on dependable relationships, responsible business
+                practices and clear commercial connections across the
+                precious metals value chain.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    01 / GHANA
+                </div>
+
+                <h3>
+                    Ghanaian Resource Connection
+                </h3>
+
+                <p>
+                    Operating from Tarkwa, Meridian is positioned within
+                    Ghana's established mining environment and precious
+                    metals ecosystem.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    02 / PARTNERSHIPS
+                </div>
+
+                <h3>
+                    Long-Term Relationships
+                </h3>
+
+                <p>
+                    We value dependable suppliers, producers, refining
+                    relationships, trading partners and professional
+                    service providers.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    03 / RESPONSIBILITY
+                </div>
+
+                <h3>
+                    Responsible Business
+                </h3>
+
+                <p>
+                    Integrity, accountability, social responsibility and
+                    environmental responsibility are important principles
+                    across our business relationships.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    04 / VALUE
+                </div>
+
+                <h3>
+                    Commercial Value
+                </h3>
+
+                <p>
+                    Our objective is to connect mineral resources with
+                    market opportunities while building sustainable
+                    commercial value.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    05 / PEOPLE
+                </div>
+
+                <h3>
+                    Community Connection
+                </h3>
+
+                <p>
+                    Our operations and community initiatives support
+                    relationships with host communities and local
+                    stakeholders.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    06 / GLOBAL
+                </div>
+
+                <h3>
+                    International Outlook
+                </h3>
+
+                <p>
+                    Meridian is designed to connect Ghanaian resources,
+                    commercial partners and international market
+                    opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OPERATIONS -->
+
+<section class="operations">
+
+    <div class="container">
+
+        <div class="section-label">
+            OUR OPERATIONS
+        </div>
+
+        <h2 class="section-title">
+            Structured Across The Value Chain.
+        </h2>
+
+        <p class="section-text">
+            Meridian's operating environment brings together production
+            relationships, supply networks, processing connections and
+            international market opportunities.
+        </p>
+
+
+        <div class="operations-grid">
+
+            <div class="operation-card">
+
+                <div class="operation-icon">◆</div>
+
+                <h3>
+                    Resource & Production
+                </h3>
+
+                <p>
+                    Connections with gold producers and mineral-resource
+                    stakeholders form part of the company's operating
+                    environment.
+                </p>
+
+            </div>
+
+
+            <div class="operation-card">
+
+                <div class="operation-icon">◇</div>
+
+                <h3>
+                    Supply & Processing
+                </h3>
+
+                <p>
+                    Reliable supply relationships and processing
+                    connections support continuity across the precious
+                    metals value chain.
+                </p>
+
+            </div>
+
+
+            <div class="operation-card">
+
+                <div class="operation-icon">◈</div>
+
+                <h3>
+                    International Trade
+                </h3>
+
+                <p>
+                    Commercial relationships connect Ghanaian resources
+                    with international trading and market opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <a href="operations.html" class="btn btn-outline">
+            VIEW OPERATIONS
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+    <div class="container">
+
+        <div class="gallery-header">
+
+            <div>
+
+                <div class="section-label">
+                    MERIDIAN IN FOCUS
+                </div>
+
+                <h2 class="section-title">
+                    Our Environment. Our People. Our Work.
+                </h2>
+
+            </div>
+
+            <p class="gallery-note">
+                Replace these visual spaces with approved Meridian Gold
+                Refinery photographs of operations, people, community
+                initiatives and facilities.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="assets/images/hero.jpg"
+                    alt="Meridian Gold Refinery operations"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="gallery-overlay">
+
+                    <span>OPERATIONS</span>
+
+                    <h3>
+                        Precious Metals Operations
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="assets/images/mining.jpg"
+                    alt="Mining environment"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="gallery-overlay">
+
+                    <span>RESOURCE</span>
+
+                    <h3>
+                        Ghana's Mining Environment
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="assets/images/gold.jpg"
+                    alt="Gold and precious metals"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="gallery-overlay">
+
+                    <span>PRECIOUS METALS</span>
+
+                    <h3>
+                        Gold Value Chain
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="assets/images/community.jpg"
+                    alt="Community development"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="gallery-overlay">
+
+                    <span>COMMUNITY</span>
+
+                    <h3>
+                        Community Development
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="assets/images/team.jpg"
+                    alt="Meridian team"
+                    onerror="this.style.display='none'"
+                >
+
+                <div class="gallery-overlay">
+
+                    <span>PEOPLE</span>
+
+                    <h3>
+                        People & Partnerships
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOUNDATION -->
+
+<section class="foundation">
+
+    <div class="container foundation-grid">
+
+        <div>
+
+            <div class="section-label">
+                MERIDIAN GOLD REFINERY GHANA FOUNDATION
+            </div>
+
+            <h2 class="section-title">
+                Creating Value Beyond Business.
+            </h2>
+
+            <p class="section-text">
+                Established in 2012, the Meridian Gold Refinery Ghana
+                Foundation supports development initiatives in host
+                communities including Tarkwa and Tamso.
+            </p>
+
+            <br>
+
+            <a href="corporate.html" class="btn btn-outline">
+                LEARN ABOUT OUR FOUNDATION
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <div class="foundation-list">
+
+                <div>
+                    <strong>EDUCATION</strong>
+                    Community development
+                </div>
+
+                <div>
+                    <strong>HEALTH</strong>
+                    Health initiatives
+                </div>
+
+                <div>
+                    <strong>WATER</strong>
+                    Water & sanitation
+                </div>
+
+                <div>
+                    <strong>AGRICULTURE</strong>
+                    Agricultural development
+                </div>
+
+                <div>
+                    <strong>INFRASTRUCTURE</strong>
+                    Community infrastructure
+                </div>
+
+                <div>
+                    <strong>COMMUNITY</strong>
+                    Local development
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GLOBAL CONNECTION -->
+
+<section class="global">
+
+    <div class="container">
+
+        <div class="global-mark">
+            ◆
+        </div>
+
+        <div class="section-label">
+            FROM GHANA TO GLOBAL MARKETS
+        </div>
+
+        <h2 class="section-title">
+            Connecting Resources, People & Markets.
+        </h2>
+
+        <p class="section-text">
+            Meridian Gold Refinery is focused on creating professional
+            commercial connections between Ghana's precious metals
+            environment and international opportunities.
+        </p>
+
+        <br>
+
+        <a href="international-trade.html" class="btn btn-gold">
+            EXPLORE INTERNATIONAL TRADE
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="section-label">
+            BUSINESS ENQUIRIES
+        </div>
+
+        <h2>
+            Let's Build A Valuable Connection.
+        </h2>
+
+        <p>
+            Interested in working with Meridian Gold Refinery?
+            Contact our team regarding commercial partnerships,
+            supplier relationships and precious metals enquiries.
+        </p>
+
+        <a href="contact.html" class="btn btn-gold">
+            CONTACT MERIDIAN
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <div class="logo-symbol">◆</div>
+
+                    <div class="logo-text">
+                        <span class="logo-main">MERIDIAN</span>
+                        <span class="logo-sub">GOLD REFINERY</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    A Ghanaian precious metals company connecting mineral
+                    resources with responsible business and international
+                    commercial opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="corporate.html">Corporate</a>
+                <a href="operations.html">Operations</a>
+                <a href="gold-sourcing.html">Gold Sourcing</a>
+                <a href="international-trade.html">International Trade</a>
+                <a href="responsible-sourcing.html">Responsible Sourcing</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>CONTACT</h4>
+
+                <p>
+                    Tarkwa, Western Region, Ghana
+                </p>
+
+                <a href="mailto:meridia.goldrefinering@outlook.com">
+                    meridia.goldrefinering@outlook.com
+                </a>
+
+                <a href="tel:+2335502307533">
+                    +233 (0) 550 230 7533
+                </a>
+
+                <a
+                    href="https://wa.me/233554600108"
+                    target="_blank"
+                >
+                    WhatsApp: +233 (0) 554 600 108
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Meridian Gold Refinery. All rights reserved.
+            </span>
+
+            <span>
+                GHANA • PRECIOUS METALS • GLOBAL CONNECTIONS
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function openMenu(){
+
+    document
+        .getElementById("mobileMenu")
+        .classList
+        .add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeMenu(){
+
+    document
+        .getElementById("mobileMenu")
+        .classList
+        .remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+document
+    .querySelectorAll(".mobile-menu a")
+    .forEach(function(link){
+
+        link.addEventListener("click", function(){
+            closeMenu();
+        });
+
+    });
+
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+        closeMenu();
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
