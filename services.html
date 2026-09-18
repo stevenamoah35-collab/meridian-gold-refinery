@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | Vantara Gold Refinery Ltd.</title>
+
+  <meta name="description" content="Vantara Gold Refinery Ltd. provides precious metals services including assaying, refining, smelting, vaulting, transport and export.">
+  <meta name="keywords" content="Vantara Gold Refinery, gold assay, gold refining, gold smelting, gold vaulting, gold transport, gold export, Ghana">
+  <meta name="author" content="Vantara Gold Refinery Ltd.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: #111;
+      border-bottom: 1px solid #242424;
+      color: #bbb;
+      font-size: 13px;
+      padding: 9px 6%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 8, 8, 0.97);
+      border-bottom: 1px solid #2b2b2b;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #d4af37;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 10px;
+      color: #aaa;
+      letter-spacing: 3px;
+      margin-top: 2px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #ddd;
+      font-size: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      color: #d4af37;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid #444;
+      color: #d4af37;
+      font-size: 24px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 58vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 30%, rgba(212,175,55,0.16), transparent 30%),
+        linear-gradient(135deg, #080808 0%, #111 50%, #090909 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: 50%;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hero-content {
+      width: 1250px;
+      max-width: 88%;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.02;
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #c5c5c5;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: #aaa;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, #121212, #0c0c0c);
+      border: 1px solid #292929;
+      padding: 35px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #d4af37;
+    }
+
+    .service-number {
+      color: #d4af37;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: #b8b8b8;
+      margin-bottom: 18px;
+    }
+
+    .service-card ul {
+      padding-left: 20px;
+      color: #aaa;
+    }
+
+    .service-card li {
+      margin-bottom: 9px;
+    }
+
+    .highlight {
+      border-left: 3px solid #d4af37;
+      background: #101010;
+      padding: 30px;
+      margin-top: 45px;
+    }
+
+    .highlight h3 {
+      margin-bottom: 10px;
+      color: #d4af37;
+    }
+
+    .process {
+      background: #0e0e0e;
+      border-top: 1px solid #242424;
+      border-bottom: 1px solid #242424;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+
+    .process-item {
+      text-align: center;
+      padding: 25px 12px;
+      border: 1px solid #292929;
+      background: #111;
+    }
+
+    .process-item strong {
+      display: block;
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    .process-item span {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,0.12), transparent 45%),
+        #090909;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #aaa;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      font-weight: 700;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d4af37;
+      color: #080808;
+    }
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #252525;
+      padding: 55px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #999;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .footer-links a {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 12px;
+    }
+
+    @media (max-width: 1050px) {
+      .menu {
+        gap: 12px;
+      }
+
+      .menu a {
+        font-size: 11px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        border-bottom: 1px solid #292929;
+        padding: 20px 6%;
+      }
+
+      .menu.show {
+        display: block;
+      }
+
+      .menu a {
+        display: block;
+        padding: 12px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #1c1c1c;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .service-card {
+        padding: 27px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div>Vantara Gold Refinery Ltd. | Ghana</div>
+    <div>Precious Metals • Refining • International Trade</div>
+  </div>
+
+  <header>
+    <nav class="nav">
+
+      <a href="index.html" class="logo">
+        VANTARA
+        <span>GOLD REFINERY LTD.</span>
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="operations.html">Operations</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gold-sourcing.html">Gold Sourcing</a>
+        <a href="international-trade.html">International Trade</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="responsible-sourcing.html">Responsible Sourcing</a>
+        <a href="careers.html">Careers</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Our Services</div>
+
+        <h1>
+          Integrated <span>Precious Metals</span> Services.
+        </h1>
+
+        <p>
+          Vantara Gold Refinery Ltd. provides a structured range of
+          precious-metals services covering assaying, refining, smelting,
+          vaulting, transportation and export.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What We Offer</div>
+          <h2>Services Across the <span class="gold">Gold Value Chain.</span></h2>
+          <p>
+            Our service model is designed to support the movement of
+            precious metals from assessment and processing through secure
+            storage, logistics and international market access.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-number">01 — ASSAY</div>
+            <h3>Assaying</h3>
+
+            <p>
+              Assaying is a fundamental part of precious-metals processing.
+              It determines the precious-metal content and supports valuation,
+              processing decisions and quality control.
+            </p>
+
+            <ul>
+              <li>Gold content assessment</li>
+              <li>Sample analysis</li>
+              <li>Fire assay</li>
+              <li>XRF analysis</li>
+              <li>Trace-element analysis where applicable</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">02 — REFINING</div>
+            <h3>Refining</h3>
+
+            <p>
+              Gold refining involves controlled processing designed to
+              separate gold from other metals and impurities and produce
+              refined precious-metal products.
+            </p>
+
+            <ul>
+              <li>Initial purification</li>
+              <li>Chemical refining processes</li>
+              <li>Electrolytic refining where applicable</li>
+              <li>Purity verification</li>
+              <li>Melting and casting</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">03 — SMELTING</div>
+            <h3>Smelting</h3>
+
+            <p>
+              Smelting involves controlled high-temperature processing of
+              gold-bearing materials to separate valuable metals from
+              unwanted materials before further processing.
+            </p>
+
+            <ul>
+              <li>Material preparation</li>
+              <li>Controlled furnace processing</li>
+              <li>Flux management</li>
+              <li>Molten-metal handling</li>
+              <li>Casting and further processing</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">04 — VAULTING</div>
+            <h3>Vaulting</h3>
+
+            <p>
+              Secure precious-metal storage supports the integrity of the
+              supply chain by protecting bullion and maintaining controlled
+              inventory management.
+            </p>
+
+            <ul>
+              <li>Secure bullion storage</li>
+              <li>Controlled access</li>
+              <li>Inventory management</li>
+              <li>Collection and delivery coordination</li>
+              <li>Secure handling procedures</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">05 — TRANSPORT</div>
+            <h3>Transport</h3>
+
+            <p>
+              Precious metals require carefully controlled logistics.
+              Transportation arrangements can be coordinated to support the
+              secure movement of bullion between approved locations.
+            </p>
+
+            <ul>
+              <li>Secure logistics coordination</li>
+              <li>Shipment preparation</li>
+              <li>Route planning</li>
+              <li>Chain-of-custody procedures</li>
+              <li>Airport transfer coordination</li>
+            </ul>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">06 — EXPORT</div>
+            <h3>Export</h3>
+
+            <p>
+              Export services support the movement of processed precious
+              metals into international markets through appropriate
+              documentation, logistics and regulatory procedures.
+            </p>
+
+            <ul>
+              <li>Export documentation</li>
+              <li>Regulatory coordination</li>
+              <li>Logistics management</li>
+              <li>International shipment coordination</li>
+              <li>Destination arrangements</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="highlight">
+          <h3>Quality, Transparency & Responsibility</h3>
+
+          <p>
+            Vantara Gold Refinery Ltd. aims to maintain disciplined processes,
+            responsible business practices and appropriate quality controls
+            throughout the precious-metals value chain. Specific services,
+            facilities and technical capabilities are subject to applicable
+            regulatory requirements and operational availability.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="process">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Our Service Flow</div>
+
+          <h2>
+            From <span class="gold">Material</span> to Market.
+          </h2>
+
+          <p>
+            Our service structure connects key stages of the precious-metals
+            value chain.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-item">
+            <strong>01</strong>
+            <span>Assay</span>
+          </div>
+
+          <div class="process-item">
+            <strong>02</strong>
+            <span>Smelting</span>
+          </div>
+
+          <div class="process-item">
+            <strong>03</strong>
+            <span>Refining</span>
+          </div>
+
+          <div class="process-item">
+            <strong>04</strong>
+            <span>Vaulting</span>
+          </div>
+
+          <div class="process-item">
+            <strong>05</strong>
+            <span>Transport</span>
+          </div>
+
+          <div class="process-item">
+            <strong>06</strong>
+            <span>Export</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cta">
+      <div class="container">
+
+        <div class="eyebrow">Business Enquiries</div>
+
+        <h2>Let's Build a Reliable Precious Metals Partnership.</h2>
+
+        <p>
+          Contact Vantara Gold Refinery Ltd. for business, supplier,
+          precious-metals and international trade enquiries.
+        </p>
+
+        <a href="contact.html" class="btn">CONTACT US</a>
+
+        <a href="https://wa.me/233554600108" class="btn">
+          WHATSAPP
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Vantara Gold Refinery Ltd.</h3>
+
+        <p>
+          Precious metals processing, sourcing and international trade
+          services from Ghana.
+        </p>
+
+        <br>
+
+        <p>
+          Tarkwa, Western Region, Ghana
+        </p>
+      </div>
+
+
+      <div class="footer-links">
+        <h3>Navigation</h3>
+
+        <a href="index.html">Home</a>
+        <a href="operations.html">Operations</a>
+        <a href="services.html">Services</a>
+        <a href="gold-sourcing.html">Gold Sourcing</a>
+        <a href="international-trade.html">International Trade</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="responsible-sourcing.html">Responsible Sourcing</a>
+        <a href="careers.html">Careers</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+
+      <div>
+        <h3>Contact</h3>
+
+        <p>
+          <a href="mailto:meridia.goldrefinering@outlook.com">
+            meridia.goldrefinering@outlook.com
+          </a>
+        </p>
+
+        <p>
+          +233 (0) 550 230 7533
+        </p>
+
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/233554600108">
+            +233 (0) 554 600 108
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Vantara Gold Refinery Ltd. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
