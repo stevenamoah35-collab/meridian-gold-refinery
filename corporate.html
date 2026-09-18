@@ -1,218 +1,841 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corporate | Meridian Gold Refinery</title>
-  <meta name="description" content="Corporate profile, governance and business principles of Meridian Gold Refinery, a Ghanaian precious metals company based in Tarkwa.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23070707'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='60' fill='%23d4af37'%3EM%3C/text%3E%3C/svg%3E">
+
+  <title>Corporate | Vantara Gold Refinery Ltd.</title>
+
+  <meta name="description" content="Learn about Vantara Gold Refinery Ltd., an independent, privately owned and registered Ghanaian precious metals company.">
+  <meta name="keywords" content="Vantara Gold Refinery, Ghana gold refinery, Ghana precious metals company, gold sourcing Ghana, gold refining Ghana">
+  <meta name="author" content="Vantara Gold Refinery Ltd.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <style>
-    :root { --gold:#d4af37; --gold-light:#f2d878; --black:#050505; --dark:#0b0b0b; --dark2:#111; --white:#fff; --text:#d5d5d5; --muted:#999; --border:rgba(212,175,55,.22); }
-    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
-    body { font-family:Arial,Helvetica,sans-serif; background:var(--black); color:var(--white); line-height:1.7; }
-    a { color:inherit; text-decoration:none; }
-    .topbar { background:#000; border-bottom:1px solid var(--border); padding:9px 6%; display:flex; justify-content:space-between; font-size:11px; color:#999; letter-spacing:1.5px; text-transform:uppercase; }
-    header { position:sticky; top:0; z-index:1000; background:rgba(5,5,5,.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
-    .nav { max-width:1400px; margin:auto; min-height:78px; padding:0 5%; display:flex; align-items:center; justify-content:space-between; }
-    .logo { display:flex; align-items:center; gap:11px; line-height:1.1; }
-    .logo-symbol { color:var(--gold); font-size:27px; }
-    .logo-main { font-size:16px; font-weight:800; letter-spacing:3px; }
-    .logo-sub { color:var(--gold); font-size:9px; letter-spacing:4px; margin-top:4px; }
-    nav { display:flex; align-items:center; gap:17px; }
-    nav a { color:#ccc; font-size:10px; letter-spacing:1px; transition:.3s; }
-    nav a:hover { color:var(--gold); }
-    .menu-btn { display:none; background:none; border:1px solid var(--border); color:var(--gold); font-size:22px; padding:7px 11px; cursor:pointer; }
-    .mobile-menu { display:none; background:#090909; border-top:1px solid var(--border); padding:15px 6%; }
-    .mobile-menu a { display:block; padding:12px 0; border-bottom:1px solid #222; font-size:12px; letter-spacing:1px; color:#ddd; }
-    .hero { min-height:62vh; display:flex; align-items:center; position:relative; overflow:hidden; background:radial-gradient(circle at 80% 40%,rgba(212,175,55,.14),transparent 30%), linear-gradient(135deg,#050505,#111); }
-    .hero::after { content:""; position:absolute; right:-170px; top:50%; width:500px; height:500px; transform:translateY(-50%); border:1px solid rgba(212,175,55,.13); border-radius:50%; box-shadow:0 0 0 70px rgba(212,175,55,.025), 0 0 0 140px rgba(212,175,55,.018); }
-    .hero-content { width:88%; max-width:1200px; margin:auto; position:relative; z-index:2; padding:100px 0; }
-    .eyebrow { color:var(--gold); font-size:11px; letter-spacing:4px; margin-bottom:20px; text-transform:uppercase; font-weight:bold; }
-    .hero h1 { max-width:850px; font-size:clamp(43px,7vw,80px); line-height:1; letter-spacing:-3px; text-transform:uppercase; margin-bottom:25px; }
-    .hero h1 span { color:var(--gold); }
-    .hero p { max-width:700px; color:#aaa; font-size:17px; }
-    section { padding:90px 6%; }
-    .container { max-width:1200px; margin:auto; }
-    .label { color:var(--gold); font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; margin-bottom:14px; }
-    .title { font-size:clamp(30px,4vw,52px); line-height:1.1; margin-bottom:20px; }
-    .intro { color:#999; max-width:760px; }
-    .profile { background:var(--dark); }
-    .profile-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:65px; align-items:center; }
-    .profile-text p { color:#aaa; margin-bottom:18px; }
-    .highlight { margin-top:28px; padding:24px; background:#111; border-left:2px solid var(--gold); color:#ddd; }
-    .facts { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); }
-    .fact { padding:32px 22px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
-    .fact:nth-child(2n) { border-right:0; }
-    .fact:nth-last-child(-n+2) { border-bottom:0; }
-    .fact strong { display:block; color:var(--gold); font-size:32px; margin-bottom:7px; }
-    .fact span { color:#999; font-size:11px; text-transform:uppercase; letter-spacing:1px; }
-    .dark-section { background:#080808; }
-    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:45px; }
-    .card { background:#111; border:1px solid #242424; padding:32px 27px; transition:.3s; }
-    .card:hover { transform:translateY(-5px); border-color:var(--gold); }
-    .card-number { color:var(--gold); font-size:11px; letter-spacing:2px; margin-bottom:22px; }
-    .card h3 { font-size:19px; margin-bottom:12px; }
-    .card p { color:#999; font-size:14px; }
-    .documents { background:var(--dark); }
-    .document-list { margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-    .document { border:1px solid #272727; padding:20px; background:#0d0d0d; color:#ccc; }
-    .document span { color:var(--gold); margin-right:10px; }
-    .cta { text-align:center; background:linear-gradient(120deg,#161207,#080808); border-top:1px solid var(--border); }
-    .cta h2 { font-size:clamp(32px,5vw,58px); margin-bottom:18px; }
-    .cta p { max-width:700px; margin:0 auto 30px; color:#999; }
-    .btn { display:inline-block; padding:14px 25px; border:1px solid var(--gold); font-size:11px; letter-spacing:1.7px; text-transform:uppercase; margin:5px; transition:.3s; }
-    .btn-primary { background:var(--gold); color:#000; font-weight:bold; }
-    .btn-outline:hover { background:var(--gold); color:#000; }
-    footer { background:#000; padding:55px 6% 25px; }
-    .footer-grid { max-width:1200px; margin:auto; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:45px; padding-bottom:40px; }
-    footer h3 { font-size:15px; margin-bottom:16px; }
-    footer p, footer a { display:block; color:#777; font-size:13px; margin-bottom:7px; }
-    footer a:hover { color:var(--gold); }
-    .footer-bottom { max-width:1200px; margin:auto; border-top:1px solid #1c1c1c; padding-top:20px; display:flex; justify-content:space-between; color:#666; font-size:11px; }
-    @media(max-width:1100px) { nav { display:none; } .menu-btn { display:block; } }
-    @media(max-width:760px) { .topbar{display:none;} .profile-grid,.cards,.document-list,.footer-grid { grid-template-columns:1fr; } .profile-grid{gap:40px;} .facts { grid-template-columns:1fr; } .fact,.fact:nth-child(2n){border-right:0;border-bottom:1px solid var(--border);} .fact:last-child{border-bottom:0;} .footer-bottom { flex-direction:column; gap:10px; } section{padding:70px 6%;} }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: #050505;
+      border-bottom: 1px solid #222;
+      padding: 10px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .header {
+      background: #0a0a0a;
+      border-bottom: 1px solid #222;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      line-height: 1.1;
+    }
+
+    .logo-main {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #d4af37;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #ddd;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d4af37;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid #444;
+      color: #d4af37;
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(rgba(0,0,0,.73), rgba(0,0,0,.92)),
+        radial-gradient(circle at 75% 35%, rgba(212,175,55,.14), transparent 40%);
+      border-bottom: 1px solid #222;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #c6c6c6;
+      font-size: 18px;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .section {
+      padding: 90px 8%;
+    }
+
+    .section-dark {
+      background: #0d0d0d;
+    }
+
+    .section-title {
+      max-width: 800px;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 18px;
+    }
+
+    .section-title p {
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #aaa;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .identity-box {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 40px;
+      position: relative;
+    }
+
+    .identity-box::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #d4af37;
+    }
+
+    .identity-box h3 {
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .identity-list {
+      list-style: none;
+    }
+
+    .identity-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #292929;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .identity-list li::before {
+      content: "◆";
+      color: #d4af37;
+      margin-right: 12px;
+      font-size: 8px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 32px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      border-color: #d4af37;
+      transform: translateY(-4px);
+    }
+
+    .card-number {
+      color: #d4af37;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .card p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .vision-card {
+      background: #111;
+      border: 1px solid #292929;
+      padding: 38px;
+    }
+
+    .vision-card h3 {
+      color: #d4af37;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .vision-card p {
+      color: #999;
+      font-size: 15px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .value {
+      border-top: 2px solid #d4af37;
+      background: #111;
+      padding: 28px 22px;
+    }
+
+    .value h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .value p {
+      color: #999;
+      font-size: 13px;
+    }
+
+    .statement {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .statement h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 20px;
+    }
+
+    .statement p {
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 100px 8%;
+      background: linear-gradient(135deg, #0d0d0d, #15120a);
+      border-top: 1px solid #292929;
+      border-bottom: 1px solid #292929;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 55px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #aaa;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #d4af37;
+      color: #080808;
+      font-weight: bold;
+      border-radius: 2px;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #f0d56a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #050505;
+      padding: 60px 8% 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #222;
+    }
+
+    footer h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #999;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .copyright {
+      padding-top: 25px;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 1000px) {
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .values {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .topbar {
+        display: none;
+      }
+
+      .header {
+        padding: 16px 5%;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0a0a0a;
+        border-top: 1px solid #222;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px 0;
+      }
+
+      .about-grid,
+      .vision-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 7%;
+      }
+
+      .section {
+        padding: 70px 7%;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="topbar"><span>MERIDIAN GOLD REFINERY | GHANA</span><span>PRECIOUS METALS • GLOBAL CONNECTIONS</span></div>
-  <header>
-    <div class="nav">
-      <a href="index.html" class="logo"><div class="logo-symbol">◆</div><div><div class="logo-main">MERIDIAN</div><div class="logo-sub">GOLD REFINERY</div></div></a>
-      <nav><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></nav>
-      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu"><a href="index.html">HOME</a><a href="corporate.html">CORPORATE</a><a href="operations.html">OPERATIONS</a><a href="gold-sourcing.html">GOLD SOURCING</a><a href="international-trade.html">INTERNATIONAL TRADE</a><a href="responsible-sourcing.html">RESPONSIBLE SOURCING</a><a href="careers.html">CAREERS</a><a href="suppliers.html">SUPPLIERS</a><a href="contact.html">CONTACT</a></div>
+
+  <div class="topbar">
+    <span>Vantara Gold Refinery Ltd. | Ghana</span>
+    <span>Precious Metals • Refining • International Trade</span>
+  </div>
+
+  <header class="header">
+
+    <a href="index.html" class="logo">
+      <div class="logo-main">VANTARA</div>
+      <div class="logo-sub">GOLD REFINERY LTD.</div>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="operations.html">Operations</a>
+      <a href="services.html">Services</a>
+      <a href="gold-sourcing.html">Gold Sourcing</a>
+      <a href="international-trade.html">International Trade</a>
+      <a href="corporate.html" class="active">Corporate</a>
+      <a href="responsible-sourcing.html">Responsible Sourcing</a>
+      <a href="careers.html">Careers</a>
+      <a href="suppliers.html">Suppliers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">Corporate Profile</div>
-      <h1>Professional.<br><span>Purpose Driven.</span></h1>
-      <p>Meridian Gold Refinery is a Ghanaian precious metals company based in Tarkwa, Western Region, Ghana, operating across the precious metals value chain.</p>
-    </div>
-  </section>
 
-  <section class="profile">
-    <div class="container profile-grid">
-      <div class="profile-text">
-        <div class="label">01 / Company Profile</div>
-        <h2 class="title">Connecting Ghana's Resources With Global Opportunity.</h2>
-        <p>Operating since 2007, Meridian Gold Refinery participates across the precious metals value chain, including gold production relationships, sourcing, refining relationships and international trade.</p>
-        <p>The company works with gold producers, suppliers, refining facilities and international trading partners to support commercial connections between Ghanaian mineral resources and international markets.</p>
-        <div class="highlight">Our objective is to create sustainable commercial value through strong relationships, responsible business practices and long-term participation in the precious metals sector.</div>
-      </div>
-      <div class="facts">
-        <div class="fact"><strong>2007</strong><span>Operating Since</span></div>
-        <div class="fact"><strong>90%</strong><span>Major Mining Interest</span></div>
-        <div class="fact"><strong>10%</strong><span>Government Free-Carried Interest</span></div>
-        <div class="fact"><strong>GHANA</strong><span>Primary Operating Country</span></div>
-      </div>
-    </div>
-  </section>
+  <main>
 
-  <section class="dark-section">
-    <div class="container">
-      <div class="label">02 / Governance</div>
-      <h2 class="title">Structured For Accountability.</h2>
-      <p class="intro">Effective governance supports responsible business, transparent decision-making and long-term value creation across the organisation and its community development initiatives.</p>
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">Corporate</div>
+
+        <h1>
+          Independent.
+          <span class="gold">Purpose Driven.</span>
+        </h1>
+
+        <p>
+          Vantara Gold Refinery Ltd. is a privately owned and registered
+          Ghanaian precious metals company focused on gold sourcing, processing,
+          refining and international trade.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <div class="eyebrow">About Vantara</div>
+
+          <h2 style="font-size:42px; margin-bottom:22px;">
+            Built Around <span class="gold">Precious Metals</span>
+          </h2>
+
+          <p>
+            Vantara Gold Refinery Ltd. operates as an independent company
+            within Ghana's precious metals sector, with a focus on creating
+            structured value across sourcing, processing, refining and
+            international commercial activity.
+          </p>
+
+          <p>
+            Our corporate approach is centred on professionalism, responsible
+            business practices, careful transactions and long-term development
+            within the precious metals industry.
+          </p>
+
+          <p>
+            As a privately owned company, Vantara maintains its own corporate
+            identity and operates independently in pursuit of its business
+            objectives.
+          </p>
+
+        </div>
+
+
+        <div class="identity-box">
+
+          <h3>Company <span class="gold">Identity</span></h3>
+
+          <ul class="identity-list">
+            <li>Privately owned company</li>
+            <li>Registered Ghanaian company</li>
+            <li>Independent corporate identity</li>
+            <li>Precious metals focused</li>
+            <li>Ghana-based operations</li>
+            <li>International commercial focus</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section section-dark">
+
+      <div class="section-title">
+
+        <div class="eyebrow">What We Do</div>
+
+        <h2>
+          Our <span class="gold">Business Focus</span>
+        </h2>
+
+        <p>
+          Vantara's activities are centred on key areas of the precious metals
+          value chain and related commercial services.
+        </p>
+
+      </div>
+
+
       <div class="cards">
-        <div class="card"><div class="card-number">01</div><h3>Business Governance</h3><p>Meridian's commercial activities are structured around accountability, operational discipline, responsible business conduct and long-term relationships.</p></div>
-        <div class="card"><div class="card-number">02</div><h3>Foundation Governance</h3><p>The Meridian Gold Refinery Ghana Foundation operates with a Board of Trustees that reviews projects, programmes and budgets on a quarterly basis.</p></div>
-        <div class="card"><div class="card-number">03</div><h3>Financial Oversight</h3><p>The Foundation's financial accounts are subject to annual independent audit review, supporting financial accountability.</p></div>
-      </div>
-    </div>
-  </section>
 
-  <section class="profile">
-    <div class="container">
-      <div class="label">03 / Community Development</div>
-      <h2 class="title">Meridian Gold Refinery Ghana Foundation</h2>
-      <p class="intro">Established in 2012 for the development of Tarkwa and Tamso host communities, the Foundation focuses on practical community development priorities.</p>
-      <div class="cards">
-        <div class="card"><div class="card-number">01</div><h3>Education</h3><p>Supporting educational development and opportunities within host communities.</p></div>
-        <div class="card"><div class="card-number">02</div><h3>Health</h3><p>Supporting initiatives that contribute to community health and wellbeing.</p></div>
-        <div class="card"><div class="card-number">03</div><h3>Water & Sanitation</h3><p>Supporting essential water and sanitation development priorities.</p></div>
-        <div class="card"><div class="card-number">04</div><h3>Agriculture</h3><p>Supporting agricultural initiatives and community livelihood opportunities.</p></div>
-        <div class="card"><div class="card-number">05</div><h3>Infrastructure</h3><p>Supporting infrastructure projects that contribute to community development.</p></div>
-        <div class="card"><div class="card-number">06</div><h3>Long-Term Impact</h3><p>Between 2012 and 2025, more than US$104.3 million was invested in development projects and programmes.</p></div>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+          <div class="card-number">01 / SOURCING</div>
+          <h3>Gold Sourcing</h3>
+          <p>
+            Structured sourcing activities focused on responsible commercial
+            channels and appropriate source verification.
+          </p>
+        </div>
 
-  <section class="documents">
-    <div class="container">
-      <div class="label">04 / Corporate Documentation</div>
-      <h2 class="title">Documentation & Business Information</h2>
-      <p class="intro">Corporate documentation can be added to this section as official files become available for publication.</p>
-      <div class="document-list">
-        <div class="document"><span>◆</span>Corporate Profile</div>
-        <div class="document"><span>◆</span>Operational Information</div>
-        <div class="document"><span>◆</span>Precious Metals Information</div>
-        <div class="document"><span>◆</span>Applicable Regulatory Documentation</div>
-        <div class="document"><span>◆</span>Export & Trade Documentation</div>
-        <div class="document"><span>◆</span>Business Partnership Documentation</div>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+          <div class="card-number">02 / PROCESSING</div>
+          <h3>Processing & Refining</h3>
+          <p>
+            Precious metals processing and refining activities supported by
+            controlled operational procedures.
+          </p>
+        </div>
 
-  <section class="dark-section">
-    <div class="container">
-      <div class="label">05 / Principles</div>
-      <h2 class="title">How We Approach Business.</h2>
-      <div class="cards">
-        <div class="card"><div class="card-number">01</div><h3>Integrity</h3><p>Building commercial relationships around honesty, responsible conduct and trust.</p></div>
-        <div class="card"><div class="card-number">02</div><h3>Accountability</h3><p>Maintaining clear responsibility for business decisions, relationships and commitments.</p></div>
-        <div class="card"><div class="card-number">03</div><h3>Long-Term Value</h3><p>Developing relationships and initiatives designed to create sustainable value.</p></div>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+          <div class="card-number">03 / TRADE</div>
+          <h3>International Trade</h3>
+          <p>
+            Commercial activity connecting appropriate precious metals
+            opportunities with legitimate markets.
+          </p>
+        </div>
 
-  <section class="cta">
-    <div class="container">
-      <div class="label">06 / Connect With Meridian</div>
-      <h2>Let's Build The Next Connection.</h2>
-      <p>For commercial partnerships, supplier enquiries and precious metals business discussions, contact Meridian Gold Refinery directly.</p>
-      <a href="contact.html" class="btn btn-primary">Contact Meridian</a>
-      <a href="international-trade.html" class="btn btn-outline">International Trade</a>
-    </div>
-  </section>
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div class="eyebrow">Vision & Mission</div>
+
+        <h2>
+          Where We Are <span class="gold">Going</span>
+        </h2>
+
+      </div>
+
+
+      <div class="vision-grid">
+
+        <div class="vision-card">
+
+          <h3>Our Vision</h3>
+
+          <p>
+            To build a respected Ghanaian precious metals company with a
+            professional presence across sourcing, refining, processing and
+            international trade.
+          </p>
+
+        </div>
+
+
+        <div class="vision-card">
+
+          <h3>Our Mission</h3>
+
+          <p>
+            To conduct precious metals business with discipline, responsible
+            sourcing principles, transparent processes and a focus on
+            sustainable long-term value.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section section-dark">
+
+      <div class="section-title">
+
+        <div class="eyebrow">Corporate Values</div>
+
+        <h2>
+          Principles Behind <span class="gold">Vantara</span>
+        </h2>
+
+        <p>
+          Our corporate culture is built around principles that support
+          responsible and professional business activity.
+        </p>
+
+      </div>
+
+
+      <div class="values">
+
+        <div class="value">
+          <h3>Integrity</h3>
+          <p>
+            We value honest and responsible conduct in our business activities.
+          </p>
+        </div>
+
+        <div class="value">
+          <h3>Professionalism</h3>
+          <p>
+            We approach our work with discipline, care and commercial focus.
+          </p>
+        </div>
+
+        <div class="value">
+          <h3>Responsibility</h3>
+          <p>
+            We recognise the importance of responsible practices within the
+            precious metals supply chain.
+          </p>
+        </div>
+
+        <div class="value">
+          <h3>Long-Term Value</h3>
+          <p>
+            We focus on building a durable and credible business for the
+            future.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <div class="statement">
+
+        <div class="eyebrow">Independent Company</div>
+
+        <h2>
+          Vantara Stands on Its
+          <span class="gold">Own Identity.</span>
+        </h2>
+
+        <p>
+          Vantara Gold Refinery Ltd. is an independent, privately owned and
+          registered Ghanaian company. Our corporate identity, operations and
+          business objectives are distinct and independently managed.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="cta">
+
+      <div class="eyebrow">Vantara Gold Refinery Ltd.</div>
+
+      <h2>
+        A Ghanaian Company With a
+        <span class="gold">Global Outlook.</span>
+      </h2>
+
+      <p>
+        Explore our operations, services and international trade activities,
+        or contact Vantara directly.
+      </p>
+
+      <a href="contact.html" class="btn">
+        Contact Vantara
+      </a>
+
+    </section>
+
+  </main>
+
 
   <footer>
+
     <div class="footer-grid">
+
       <div>
-        <div class="logo"><div class="logo-symbol">◆</div><div><div class="logo-main">MERIDIAN</div><div class="logo-sub">GOLD REFINERY</div></div></div>
-        <br><p>Precious metals. Global connections.</p><p>Tarkwa, Western Region, Ghana.</p>
+
+        <h3>VANTARA</h3>
+
+        <p>
+          Vantara Gold Refinery Ltd. is a privately owned and registered
+          Ghanaian precious metals company focused on gold sourcing,
+          processing, refining and international trade.
+        </p>
+
       </div>
+
+
       <div>
-        <h3>Explore</h3>
-        <a href="index.html">Home</a>
-        <a href="operations.html">Operations</a>
-        <a href="gold-sourcing.html">Gold Sourcing</a>
-        <a href="international-trade.html">International Trade</a>
-        <a href="responsible-sourcing.html">Responsible Sourcing</a>
+
+        <h3>Navigation</h3>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="operations.html">Operations</a>
+          <a href="services.html">Services</a>
+          <a href="gold-sourcing.html">Gold Sourcing</a>
+          <a href="international-trade.html">International Trade</a>
+          <a href="corporate.html">Corporate</a>
+          <a href="responsible-sourcing.html">Responsible Sourcing</a>
+          <a href="careers.html">Careers</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
       </div>
+
+
       <div>
-        <h3>Connect</h3>
-        <a href="careers.html">Careers</a>
-        <a href="suppliers.html">Suppliers</a>
-        <a href="contact.html">Contact</a>
-        <p>meridia.goldrefinering@outlook.com</p>
-        <p>+233 (0) 550 230 7533</p>
+
+        <h3>Contact</h3>
+
+        <p>Ghana</p>
+        <p>Email: meridia.goldrefinering@outlook.com</p>
+        <p>Phone: +233 (0) 550 230 7533</p>
         <p>WhatsApp: +233 (0) 554 600 108</p>
+
       </div>
+
     </div>
-    <div class="footer-bottom"><span>© 2026 Meridian Gold Refinery. All rights reserved.</span><span>Tarkwa • Western Region • Ghana</span></div>
+
+
+    <div class="copyright">
+      © 2026 Vantara Gold Refinery Ltd. All Rights Reserved.
+    </div>
+
   </footer>
+
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      document.getElementById("nav").classList.toggle("show");
     }
-    document.querySelectorAll('.mobile-menu a').forEach(function(link){
-      link.addEventListener('click', function(){ document.getElementById('mobileMenu').style.display = 'none'; });
-    });
   </script>
+
 </body>
 </html>
