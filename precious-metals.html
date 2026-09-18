@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Precious Metals | Vantara Gold Refinery Ltd.</title>
+
+  <meta name="description" content="Vantara Gold Refinery Ltd. — Precious metals sourcing, processing, refining and international trade in Ghana.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: #111;
+      color: #d4af37;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #222;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8,8,8,0.97);
+      border-bottom: 1px solid #252525;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 78px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #d4af37;
+      white-space: nowrap;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px 16px;
+    }
+
+    .menu a {
+      font-size: 12px;
+      color: #ddd;
+      transition: 0.3s;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 20px;
+      background:
+        radial-gradient(circle at 75% 30%, rgba(212,175,55,0.13), transparent 30%),
+        linear-gradient(135deg, #080808, #111);
+      border-bottom: 1px solid #222;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 950px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: #cfcfcf;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 90px 20px;
+      border-bottom: 1px solid #222;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #d4af37;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 54px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 780px;
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    .cards {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 38px;
+      background: #0d0d0d;
+      border: 1px solid #292929;
+      transition: 0.3s;
+      min-height: 250px;
+    }
+
+    .card:hover {
+      border-color: #d4af37;
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #d4af37;
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .card ul {
+      margin-top: 18px;
+      padding-left: 18px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .card li {
+      margin-bottom: 7px;
+    }
+
+    .process {
+      background: #0b0b0b;
+    }
+
+    .process-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .process-item {
+      background: #101010;
+      border: 1px solid #292929;
+      padding: 28px;
+    }
+
+    .process-item strong {
+      display: block;
+      color: #d4af37;
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .process-item span {
+      color: #999;
+      font-size: 13px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .principle {
+      padding: 28px;
+      border: 1px solid #292929;
+      background: #0d0d0d;
+    }
+
+    .principle h3 {
+      margin-bottom: 10px;
+      color: #d4af37;
+      font-size: 18px;
+    }
+
+    .principle p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,0.12), transparent 45%),
+        #080808;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #aaa;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      background: #d4af37;
+      border: 1px solid #d4af37;
+      color: #080808;
+      font-weight: 800;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: #d4af37;
+    }
+
+    footer {
+      padding: 55px 20px 30px;
+      background: #050505;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: #d4af37;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    footer p,
+    footer a {
+      color: #999;
+      font-size: 13px;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 7px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 20px;
+      }
+
+      .menu {
+        justify-content: flex-start;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .principles {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 75px 18px;
+      }
+
+      section {
+        padding: 70px 18px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .cards,
+      .process-grid,
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    Precious Metals • Sourcing • Processing • Refining • International Trade
+  </div>
+
+  <header>
+    <div class="nav">
+
+      <a href="index.html" class="brand">
+        VANTARA GOLD REFINERY LTD.
+      </a>
+
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="operations.html">Operations</a>
+        <a href="services.html">Services</a>
+        <a href="gold-sourcing.html">Gold Sourcing</a>
+        <a href="precious-metals.html" class="active">Precious Metals</a>
+        <a href="international-trade.html">International Trade</a>
+        <a href="corporate.html">Corporate</a>
+        <a href="responsible-sourcing.html">Responsible Sourcing</a>
+        <a href="careers.html">Careers</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+
+        <div class="eyebrow">
+          Precious Metals
+        </div>
+
+        <h1>
+          Sourcing, Processing,<br>
+          <span>Refining & International Trade.</span>
+        </h1>
+
+        <p>
+          Vantara Gold Refinery Ltd. operates across key stages of the
+          precious-metals value chain, connecting responsible sourcing,
+          material processing, refining and international commercial activity.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          Our Precious Metals Activities
+        </div>
+
+        <h2>
+          From Source to Global Market.
+        </h2>
+
+        <p class="intro">
+          Our approach is structured around the movement of precious metals
+          through key stages of the value chain, with attention to
+          documentation, verification, quality and responsible business
+          practices.
+        </p>
+
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Sourcing</h3>
+
+            
+              We identify, evaluate, and secure precious metals through ethical and transparent sourcing channels, backed by thorough field inspections and due diligence at every stage. Our teams work directly with mining operations to verify provenance, quality, and compliance with applicable regulatory and industry standards.
+
+
+            
+            <h3>Processing</h3>
+
+            
+              Our processing capabilities are designed to maximize yield and purity while maintaining strict environmental and safety standards. We oversee and monitor refining and purification processes to ensure consistent, verifiable quality across every batch.
+            
+          <div class="card">
+            <h3>Refining</h3>
+
+            Leveraging advanced refining techniques and rigorous quality control, we transform raw precious metals into internationally recognized, market-ready products. Every stage of the refining process is subject to careful oversight, testing, and documentation to meet global purity and certification standards.
+              
+
+  
+
+          < class="card">
+            <h3>International Trade</h3>
+
+            <p>
+              We facilitate secure, compliant precious metals transactions across international markets, managing business transaction reviews, shipment logistics, and trade documentation with precision. Our global network and regulatory expertise help clients move precious metals efficiently and with confidence, wherever business takes them.
+            </p>
+
+            
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="process">
+      <div class="container">
+
+        <div class="section-label">
+          Value Chain
+        </div>
+
+        <h2>
+          A Structured Precious Metals Process.
+        </h2>
+
+        <p class="intro">
+          Each stage requires appropriate information, documentation and
+          professional coordination.
+        </p>
+
+
+        <div class="process-grid">
+
+          <div class="process-item">
+            <strong>Source</strong>
+            <span>
+              Identify material and review available source information.
+            </span>
+          </div>
+
+          <div class="process-item">
+            <strong>Assess</strong>
+            <span>
+              Review documentation, material characteristics and transaction
+              information.
+            </span>
+          </div>
+
+          <div class="process-item">
+            <strong>Process</strong>
+            <span>
+              Apply appropriate technical processing and refining activities.
+            </span>
+          </div>
+
+          <div class="process-item">
+            <strong>Trade</strong>
+            <span>
+              Coordinate appropriate commercial and international trade
+              processes.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          Responsible Business
+        </div>
+
+        <h2>
+          Responsible Precious Metals Activity.
+        </h2>
+
+        <p class="intro">
+          Responsible business practices are important throughout the
+          precious-metals value chain.
+        </p>
+
+
+        <div class="principles">
+
+          <div class="principle">
+            <h3>Transparency</h3>
+            <p>
+              Clear information and documentation support responsible
+              commercial activity.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Verification</h3>
+            <p>
+              Appropriate review of material, source and transaction
+              information.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Accountability</h3>
+            <p>
+              Structured processes and responsible decision-making across
+              the value chain.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Quality</h3>
+            <p>
+              Attention to material assessment, processing and quality-focused
+              procedures.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Compliance Awareness</h3>
+            <p>
+              Recognition of applicable legal, regulatory, customs and
+              documentation requirements.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Long-Term Value</h3>
+            <p>
+              Building reliable commercial relationships with suppliers and
+              clients.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cta">
+      <div class="container">
+
+        <div class="section-label">
+          Precious Metals Enquiries
+        </div>
+
+        <h2>
+          Let's Discuss Precious Metals.
+        </h2>
+
+        <p>
+          Contact Vantara Gold Refinery Ltd. for enquiries relating to
+          precious-metals sourcing, processing, refining and international
+          trade.
+        </p>
+
+        <a href="contact.html" class="btn">
+          CONTACT VANTARA
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-grid">
+
+      
+
+      
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Vantara Gold Refinery Ltd. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
